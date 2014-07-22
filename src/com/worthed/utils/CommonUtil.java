@@ -1,4 +1,4 @@
-package com.worthed;
+package com.worthed.utils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +27,7 @@ public class CommonUtil {
     }
  
     /**
-     * »ñÈ¡×î´óÄÚ´æ
+     * ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½Ú´ï¿½
      * 
      * @return
      */
@@ -37,7 +37,7 @@ public class CommonUtil {
     }
  
     /**
-     * ¼ì²éÍøÂç
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      * 
      * @param context
      * @return
@@ -72,7 +72,7 @@ public class CommonUtil {
     public static DisplayMetrics metric = new DisplayMetrics();
  
     /**
-     * µÃµ½ÆÁÄ»¸ß¶È
+     * ï¿½Ãµï¿½ï¿½ï¿½Ä»ï¿½ß¶ï¿½
      * 
      * @param context
      * @return
@@ -84,7 +84,7 @@ public class CommonUtil {
     }
  
     /**
-     * µÃµ½ÆÁÄ»¿í¶È
+     * ï¿½Ãµï¿½ï¿½ï¿½Ä»ï¿½ï¿½ï¿½
      * 
      * @param context
      * @return
@@ -96,7 +96,7 @@ public class CommonUtil {
     }
  
     /**
-     * ¸ù¾ÝÊÖ»úµÄ·Ö±æÂÊ´Ó dp µÄµ¥Î» ×ª³ÉÎª px(ÏñËØ)
+     * ï¿½ï¿½ï¿½ï¿½Ö»ï¿½Ä·Ö±ï¿½ï¿½Ê´ï¿½ dp ï¿½Äµï¿½Î» ×ªï¿½ï¿½Îª px(ï¿½ï¿½ï¿½ï¿½)
      */
  
     public static int dip2px(Context context, float dpValue) {
@@ -105,7 +105,7 @@ public class CommonUtil {
     }
  
     /**
-     * ¸ù¾ÝÊÖ»úµÄ·Ö±æÂÊ´Ó px(ÏñËØ) µÄµ¥Î» ×ª³ÉÎª dp
+     * ï¿½ï¿½ï¿½ï¿½Ö»ï¿½Ä·Ö±ï¿½ï¿½Ê´ï¿½ px(ï¿½ï¿½ï¿½ï¿½) ï¿½Äµï¿½Î» ×ªï¿½ï¿½Îª dp
      */
     public static int px2dip(Context context, float pxValue) {
  
@@ -114,7 +114,7 @@ public class CommonUtil {
     }
  
     /**
-     * ²éÑ¯ÊÖ»úÄÚ·ÇÏµÍ³Ó¦ÓÃ
+     * ï¿½ï¿½Ñ¯ï¿½Ö»ï¿½ï¿½Ú·ï¿½ÏµÍ³Ó¦ï¿½ï¿½
      * 
      * @param context
      * @return
@@ -123,11 +123,11 @@ public class CommonUtil {
  
         List<PackageInfo> apps = new ArrayList<PackageInfo>();
         PackageManager pManager = context.getPackageManager();
-        // »ñÈ¡ÊÖ»úÄÚËùÓÐÓ¦ÓÃ
+        // ï¿½ï¿½È¡ï¿½Ö»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½
         List<PackageInfo> paklist = pManager.getInstalledPackages(0);
         for (int i = 0; i < paklist.size(); i++) {
             PackageInfo pak = (PackageInfo) paklist.get(i);
-            // ÅÐ¶ÏÊÇ·ñÎª·ÇÏµÍ³Ô¤×°µÄÓ¦ÓÃ³ÌÐò
+            // ï¿½Ð¶ï¿½ï¿½Ç·ï¿½Îªï¿½ï¿½ÏµÍ³Ô¤×°ï¿½ï¿½Ó¦ï¿½Ã³ï¿½ï¿½ï¿½
             if ((pak.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) <= 0) {
                 // customs applications
                 apps.add(pak);
@@ -148,7 +148,7 @@ public class CommonUtil {
     }
  
     /**
-     * »ñÈ¡°æ±¾ºÅºÍ°æ±¾´ÎÊý
+     * ï¿½ï¿½È¡ï¿½æ±¾ï¿½ÅºÍ°æ±¾ï¿½ï¿½ï¿½ï¿½
      * 
      * @param context
      * @return
@@ -173,7 +173,7 @@ public class CommonUtil {
         }
     }
  
-    // Í¨¹ýServiceµÄÀàÃûÀ´ÅÐ¶ÏÊÇ·ñÆô¶¯Ä³¸ö·þÎñ
+    // Í¨ï¿½ï¿½Serviceï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½Ä³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     public static boolean messageServiceIsStart(
             List<ActivityManager.RunningServiceInfo> mServiceList,
             String className) {

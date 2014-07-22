@@ -1,4 +1,4 @@
-package com.worthed;
+package com.worthed.utils;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -22,7 +22,7 @@ public class ImsiUtil {
 	}
 
 	/**
-	 * »ñÈ¡IMSInfo
+	 * ï¿½ï¿½È¡IMSInfo
 	 * 
 	 * @return
 	 */
@@ -57,7 +57,7 @@ public class ImsiUtil {
 	}
 
 	/**
-	 * MTKµÄÐ¾Æ¬µÄÅÐ¶Ï
+	 * MTKï¿½ï¿½Ð¾Æ¬ï¿½ï¿½ï¿½Ð¶ï¿½
 	 * 
 	 * @param mContext
 	 * @return
@@ -100,7 +100,7 @@ public class ImsiUtil {
 	}
 
 	/**
-	 * MTKµÄÐ¾Æ¬µÄÅÐ¶Ï2
+	 * MTKï¿½ï¿½Ð¾Æ¬ï¿½ï¿½ï¿½Ð¶ï¿½2
 	 * 
 	 * @param mContext
 	 * @return
@@ -144,7 +144,7 @@ public class ImsiUtil {
 	}
 
 	/**
-	 * Õ¹Ñ¶Ð¾Æ¬µÄÅÐ¶Ï
+	 * Õ¹Ñ¶Ð¾Æ¬ï¿½ï¿½ï¿½Ð¶ï¿½
 	 * 
 	 * @param mContext
 	 * @return
@@ -179,7 +179,7 @@ public class ImsiUtil {
 	}
 
 	/**
-	 * ¸ßÍ¨Ð¾Æ¬ÅÐ¶Ï
+	 * ï¿½ï¿½Í¨Ð¾Æ¬ï¿½Ð¶ï¿½
 	 * 
 	 * @param mContext
 	 * @return
@@ -208,7 +208,7 @@ public class ImsiUtil {
 				// TODO: handle exception
 			}
 			imsInfo = new IMSInfo();
-			imsInfo.chipName = "¸ßÍ¨Ð¾Æ¬-getPreferredDataSubscription:"
+			imsInfo.chipName = "ï¿½ï¿½Í¨Ð¾Æ¬-getPreferredDataSubscription:"
 					+ statephoneType_2 + ",flag:" + flag;
 			imsInfo.imei_1 = imei_1;
 			imsInfo.imei_2 = imei_2;
@@ -223,7 +223,7 @@ public class ImsiUtil {
 	}
 
 	/**
-	 * ÏµÍ³µÄapi
+	 * ÏµÍ³ï¿½ï¿½api
 	 * 
 	 * @return
 	 */
@@ -244,11 +244,11 @@ public class ImsiUtil {
 			return imsInfo;
 		} else {
 			imsInfo = new IMSInfo();
-			imsInfo.chipName = "µ¥¿¨Ð¾Æ¬";
+			imsInfo.chipName = "ï¿½ï¿½ï¿½ï¿½Ð¾Æ¬";
 			imsInfo.imei_1 = imei_1;
-			imsInfo.imei_2 = "Ã»ÓÐ";
+			imsInfo.imei_2 = "Ã»ï¿½ï¿½";
 			imsInfo.imsi_1 = imsi_1;
-			imsInfo.imsi_2 = "Ã»ÓÐ";
+			imsInfo.imsi_2 = "Ã»ï¿½ï¿½";
 			return imsInfo;
 		}
 	}

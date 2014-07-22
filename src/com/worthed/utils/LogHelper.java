@@ -1,4 +1,4 @@
-package com.worthed;
+package com.worthed.utils;
 
 import android.util.Log;
 
