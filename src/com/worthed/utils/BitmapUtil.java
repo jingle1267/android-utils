@@ -17,7 +17,10 @@ package com.worthed.utils;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
 
+import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
 import android.graphics.BitmapFactory;
@@ -26,6 +29,7 @@ import android.graphics.Canvas;
 import android.graphics.LinearGradient;
 import android.graphics.Matrix;
 import android.graphics.Paint;
+import android.graphics.PaintFlagsDrawFilter;
 import android.graphics.PixelFormat;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuff.Mode;
@@ -33,13 +37,19 @@ import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.Shader.TileMode;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.graphics.drawable.PaintDrawable;
+import android.util.Log;
+import android.view.View;
 
 /**
  * @author jingle1267@163.com
  * 
  */
 public class BitmapUtil {
+
+	private final String TAG = BitmapUtil.class.getSimpleName();
 
 	public Bitmap combineImages(Bitmap bgd, Bitmap fg) {
 		Bitmap bmp;
@@ -62,31 +72,30 @@ public class BitmapUtil {
 
 	public Bitmap combineImagesToSameSize(Bitmap bgd, Bitmap fg) {
 		Bitmap bmp;
-		
+
 		int width = bgd.getWidth() < fg.getWidth() ? bgd.getWidth() : fg
 				.getWidth();
 		int height = bgd.getHeight() < fg.getHeight() ? bgd.getHeight() : fg
 				.getHeight();
-		
+
 		if (fg.getWidth() != width && fg.getHeight() != height) {
 			fg = zoomBitmap(fg, width, height);
 		}
 		if (bgd.getWidth() != width && bgd.getHeight() != height) {
 			bgd = zoomBitmap(bgd, width, height);
 		}
-		
+
 		bmp = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
 		Paint paint = new Paint();
 		paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_ATOP));
-		
+
 		Canvas canvas = new Canvas(bmp);
 		canvas.drawBitmap(bgd, 0, 0, null);
 		canvas.drawBitmap(fg, 0, 0, paint);
-		
+
 		return bmp;
 	}
-	
-	
+
 	public Bitmap processImage(Bitmap bitmap, float radiusParam) {
 		Bitmap bmp;
 
@@ -300,6 +309,201 @@ public class BitmapUtil {
 		paint.setXfermode(new PorterDuffXfermode(Mode.SRC_IN));
 		canvas.drawBitmap(bitmap, src, dst, paint);
 		return output;
+	}
+
+	/**
+	 * Returns a Bitmap representing the thumbnail of the specified Bitmap. The
+	 * size of the thumbnail is defined by the dimension
+	 * android.R.dimen.launcher_application_icon_size.
+	 * 
+	 * This method is not thread-safe and should be invoked on the UI thread
+	 * only.
+	 * 
+	 * @param bitmap
+	 *            The bitmap to get a thumbnail of.
+	 * @param context
+	 *            The application's context.
+	 * 
+	 * @return A thumbnail for the specified bitmap or the bitmap itself if the
+	 *         thumbnail could not be created.
+	 */
+	public Bitmap createBitmapThumbnail(Bitmap bitmap, Context context) {
+		int sIconWidth = -1;
+		int sIconHeight = -1;
+		if (sIconWidth == -1) {
+			final Resources resources = context.getResources();
+			sIconWidth = sIconHeight = (int) resources
+					.getDimension(android.R.dimen.app_icon_size);
+		}
+
+		final Paint sPaint = new Paint();
+		final Rect sBounds = new Rect();
+		final Rect sOldBounds = new Rect();
+		Canvas sCanvas = new Canvas();
+
+		int width = sIconWidth;
+		int height = sIconHeight;
+
+		sCanvas.setDrawFilter(new PaintFlagsDrawFilter(Paint.DITHER_FLAG,
+				Paint.FILTER_BITMAP_FLAG));
+
+		final int bitmapWidth = bitmap.getWidth();
+		final int bitmapHeight = bitmap.getHeight();
+
+		if (width > 0 && height > 0) {
+			if (width < bitmapWidth || height < bitmapHeight) {
+				final float ratio = (float) bitmapWidth / bitmapHeight;
+
+				if (bitmapWidth > bitmapHeight) {
+					height = (int) (width / ratio);
+				} else if (bitmapHeight > bitmapWidth) {
+					width = (int) (height * ratio);
+				}
+
+				final Bitmap.Config c = (width == sIconWidth && height == sIconHeight) ? bitmap
+						.getConfig() : Bitmap.Config.ARGB_8888;
+				final Bitmap thumb = Bitmap.createBitmap(sIconWidth,
+						sIconHeight, c);
+				final Canvas canvas = sCanvas;
+				final Paint paint = sPaint;
+				canvas.setBitmap(thumb);
+				paint.setDither(false);
+				paint.setFilterBitmap(true);
+				sBounds.set((sIconWidth - width) / 2,
+						(sIconHeight - height) / 2, width, height);
+				sOldBounds.set(0, 0, bitmapWidth, bitmapHeight);
+				canvas.drawBitmap(bitmap, sOldBounds, sBounds, paint);
+				return thumb;
+			} else if (bitmapWidth < width || bitmapHeight < height) {
+				final Bitmap.Config c = Bitmap.Config.ARGB_8888;
+				final Bitmap thumb = Bitmap.createBitmap(sIconWidth,
+						sIconHeight, c);
+				final Canvas canvas = sCanvas;
+				final Paint paint = sPaint;
+				canvas.setBitmap(thumb);
+				paint.setDither(false);
+				paint.setFilterBitmap(true);
+				canvas.drawBitmap(bitmap, (sIconWidth - bitmapWidth) / 2,
+						(sIconHeight - bitmapHeight) / 2, paint);
+				return thumb;
+			}
+		}
+
+		return bitmap;
+	}
+
+	private byte[] Bitmap2Bytes(Bitmap bm) {
+		ByteArrayOutputStream baos = new ByteArrayOutputStream();
+		bm.compress(Bitmap.CompressFormat.PNG, 100, baos);
+		return baos.toByteArray();
+	}
+
+	private Bitmap Bytes2Bimap(byte[] b) {
+		if (b.length != 0) {
+			return BitmapFactory.decodeByteArray(b, 0, b.length);
+		} else {
+			return null;
+		}
+	}
+
+	/**
+	 * create the bitmap from a byte array 生成水印图片
+	 * 
+	 * @param src
+	 *            the bitmap object you want proecss
+	 * @param watermark
+	 *            the water mark above the src
+	 * @return return a bitmap object ,if paramter's length is 0,return null
+	 */
+	private Bitmap createBitmap(Bitmap src, Bitmap watermark) {
+		if (src == null) {
+			return null;
+		}
+
+		int w = src.getWidth();
+		int h = src.getHeight();
+		int ww = watermark.getWidth();
+		int wh = watermark.getHeight();
+		// create the new blank bitmap
+		Bitmap newb = Bitmap.createBitmap(w, h, Config.ARGB_8888);// 创建一个新的和SRC长度宽度一样的位图
+		Canvas cv = new Canvas(newb);
+		// draw src into
+		cv.drawBitmap(src, 0, 0, null);// 在 0，0坐标开始画入src
+		// draw watermark into
+		cv.drawBitmap(watermark, w - ww + 5, h - wh + 5, null);// 在src的右下角画入水印
+		// save all clip
+		cv.save(Canvas.ALL_SAVE_FLAG);// 保存
+		// store
+		cv.restore();// 存储
+		return newb;
+	}
+
+	/**
+	 * 重新编码Bitmap
+	 * 
+	 * @param src
+	 *            需要重新编码的Bitmap
+	 * 
+	 * @param format
+	 *            编码后的格式（目前只支持png和jpeg这两种格式）
+	 * 
+	 * @param quality
+	 *            重新生成后的bitmap的质量
+	 * 
+	 * @return 返回重新生成后的bitmap
+	 */
+	private Bitmap codec(Bitmap src, Bitmap.CompressFormat format, int quality) {
+		ByteArrayOutputStream os = new ByteArrayOutputStream();
+		src.compress(format, quality, os);
+
+		byte[] array = os.toByteArray();
+		return BitmapFactory.decodeByteArray(array, 0, array.length);
+	}
+
+	// Stream转换成Byte
+	public byte[] streamToBytes(InputStream is) {
+		ByteArrayOutputStream os = new ByteArrayOutputStream(1024);
+		byte[] buffer = new byte[1024];
+		int len;
+		try {
+			while ((len = is.read(buffer)) >= 0) {
+				os.write(buffer, 0, len);
+			}
+		} catch (java.io.IOException e) {
+
+		}
+		return os.toByteArray();
+	}
+
+	/**
+	 * 把一个View的对象转换成bitmap
+	 */
+	public Bitmap getViewBitmap(View v) {
+
+		v.clearFocus();
+		v.setPressed(false);
+
+		// 能画缓存就返回false
+		boolean willNotCache = v.willNotCacheDrawing();
+		v.setWillNotCacheDrawing(false);
+		int color = v.getDrawingCacheBackgroundColor();
+		v.setDrawingCacheBackgroundColor(0);
+		if (color != 0) {
+			v.destroyDrawingCache();
+		}
+		v.buildDrawingCache();
+		Bitmap cacheBitmap = v.getDrawingCache();
+		if (cacheBitmap == null) {
+			Log.e(TAG, "failed getViewBitmap(" + v + ")",
+					new RuntimeException());
+			return null;
+		}
+		Bitmap bitmap = Bitmap.createBitmap(cacheBitmap);
+		// Restore the view
+		v.destroyDrawingCache();
+		v.setWillNotCacheDrawing(willNotCache);
+		v.setDrawingCacheBackgroundColor(color);
+		return bitmap;
 	}
 
 }
