@@ -15,11 +15,6 @@
  */
 package com.worthed.utils;
 
-/*  * 
- * @描      述:  主要功能有清除内/外缓存，清除数据库，清除sharedPreference，清除files和清除自定义目录  
- * @作      者
- *
- */
 import java.io.File;
 import android.content.Context;
 import android.os.Environment;
@@ -29,9 +24,12 @@ import android.os.Environment;
  * 
  * @author jingle1267@163.com
  * 
+ * @description 主要功能有清除内/外缓存，清除数据库，清除sharedPreference，清除files和清除自定义目录  
  */
 public class DataCleanManager {
 
+	private static final String INTERNAL_CACHE_DIR = "/data/data/";
+	
 	/**
 	 * 清除本应用内部缓存(/data/data/com.xxx.xxx/cache)
 	 * 
@@ -47,7 +45,7 @@ public class DataCleanManager {
 	 * @param context
 	 */
 	public static void cleanDatabases(Context context) {
-		deleteFilesByDirectory(new File("/data/data/"
+		deleteFilesByDirectory(new File(INTERNAL_CACHE_DIR
 				+ context.getPackageName() + "/databases"));
 	}
 
@@ -57,7 +55,7 @@ public class DataCleanManager {
 	 * @param context
 	 */
 	public static void cleanSharedPreference(Context context) {
-		deleteFilesByDirectory(new File("/data/data/"
+		deleteFilesByDirectory(new File(INTERNAL_CACHE_DIR
 				+ context.getPackageName() + "/shared_prefs"));
 	}
 
