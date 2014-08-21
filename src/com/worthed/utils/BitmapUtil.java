@@ -37,18 +37,19 @@ import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.Shader.TileMode;
-import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.graphics.drawable.PaintDrawable;
 import android.util.Log;
 import android.view.View;
 
 /**
  * @author jingle1267@163.com
  * 
+ * @description Bitmap工具类
+ * 
  */
 public class BitmapUtil {
 
+	private final boolean DEBUG = false;
 	private final String TAG = BitmapUtil.class.getSimpleName();
 
 	public Bitmap combineImages(Bitmap bgd, Bitmap fg) {
@@ -117,7 +118,14 @@ public class BitmapUtil {
 		return bmp;
 	}
 
-	// 放大缩小图片
+	/**
+	 * 放大缩小图片
+	 * 
+	 * @param bitmap
+	 * @param w
+	 * @param h
+	 * @return
+	 */
 	public Bitmap zoomBitmap(Bitmap bitmap, int w, int h) {
 		int width = bitmap.getWidth();
 		int height = bitmap.getHeight();
@@ -130,7 +138,12 @@ public class BitmapUtil {
 		return newbmp;
 	}
 
-	// 将Drawable转化为Bitmap
+	/**
+	 * 将Drawable转化为Bitmap
+	 * 
+	 * @param drawable
+	 * @return
+	 */
 	public Bitmap drawableToBitmap(Drawable drawable) {
 		int width = drawable.getIntrinsicWidth();
 		int height = drawable.getIntrinsicHeight();
@@ -144,7 +157,13 @@ public class BitmapUtil {
 
 	}
 
-	// 获得圆角图片的方法
+	/**
+	 * 获得圆角图片的方法
+	 * 
+	 * @param bitmap
+	 * @param roundPx
+	 * @return
+	 */
 	public Bitmap getRoundedCornerBitmap(Bitmap bitmap, float roundPx) {
 
 		Bitmap output = Bitmap.createBitmap(bitmap.getWidth(),
@@ -167,7 +186,12 @@ public class BitmapUtil {
 		return output;
 	}
 
-	// 获得带倒影的图片方法
+	/**
+	 * 获得带倒影的图片方法
+	 * 
+	 * @param bitmap
+	 * @return
+	 */
 	public Bitmap createReflectionImageWithOrigin(Bitmap bitmap) {
 		final int reflectionGap = 4;
 		int width = bitmap.getWidth();
@@ -203,7 +227,12 @@ public class BitmapUtil {
 		return bitmapWithReflection;
 	}
 
-	// 压缩图片大小
+	/**
+	 * 压缩图片大小
+	 * 
+	 * @param image
+	 * @return
+	 */
 	public Bitmap compressImage(Bitmap image) {
 
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -392,13 +421,13 @@ public class BitmapUtil {
 		return bitmap;
 	}
 
-	private byte[] Bitmap2Bytes(Bitmap bm) {
+	public byte[] Bitmap2Bytes(Bitmap bm) {
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 		bm.compress(Bitmap.CompressFormat.PNG, 100, baos);
 		return baos.toByteArray();
 	}
 
-	private Bitmap Bytes2Bimap(byte[] b) {
+	public Bitmap Bytes2Bimap(byte[] b) {
 		if (b.length != 0) {
 			return BitmapFactory.decodeByteArray(b, 0, b.length);
 		} else {
@@ -415,7 +444,7 @@ public class BitmapUtil {
 	 *            the water mark above the src
 	 * @return return a bitmap object ,if paramter's length is 0,return null
 	 */
-	private Bitmap createBitmap(Bitmap src, Bitmap watermark) {
+	public Bitmap createBitmap(Bitmap src, Bitmap watermark) {
 		if (src == null) {
 			return null;
 		}
@@ -452,7 +481,7 @@ public class BitmapUtil {
 	 * 
 	 * @return 返回重新生成后的bitmap
 	 */
-	private Bitmap codec(Bitmap src, Bitmap.CompressFormat format, int quality) {
+	public Bitmap codec(Bitmap src, Bitmap.CompressFormat format, int quality) {
 		ByteArrayOutputStream os = new ByteArrayOutputStream();
 		src.compress(format, quality, os);
 
@@ -460,7 +489,12 @@ public class BitmapUtil {
 		return BitmapFactory.decodeByteArray(array, 0, array.length);
 	}
 
-	// Stream转换成Byte
+	/** 
+	 * Stream转换成Byte
+	 * 
+	 * @param is
+	 * @return
+	 */
 	public byte[] streamToBytes(InputStream is) {
 		ByteArrayOutputStream os = new ByteArrayOutputStream(1024);
 		byte[] buffer = new byte[1024];
@@ -477,6 +511,7 @@ public class BitmapUtil {
 
 	/**
 	 * 把一个View的对象转换成bitmap
+	 * 
 	 */
 	public Bitmap getViewBitmap(View v) {
 
@@ -494,8 +529,10 @@ public class BitmapUtil {
 		v.buildDrawingCache();
 		Bitmap cacheBitmap = v.getDrawingCache();
 		if (cacheBitmap == null) {
-			Log.e(TAG, "failed getViewBitmap(" + v + ")",
-					new RuntimeException());
+			if (DEBUG) {
+				Log.e(TAG, "failed getViewBitmap(" + v + ")",
+						new RuntimeException());
+			}
 			return null;
 		}
 		Bitmap bitmap = Bitmap.createBitmap(cacheBitmap);

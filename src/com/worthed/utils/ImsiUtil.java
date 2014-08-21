@@ -1,3 +1,18 @@
+/**
+ * Copyright 2014 Zhenguo Jin
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.worthed.utils;
 
 import java.lang.reflect.Field;
@@ -7,7 +22,14 @@ import android.content.Context;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 
+/**
+ * IMSI工具类
+ * 
+ * @author jingle1267@163.com
+ * 
+ */
 public class ImsiUtil {
+	
 	private Integer simId_1 = 0;
 	private Integer simId_2 = 1;
 	private String imsi_1 = "";
@@ -22,7 +44,7 @@ public class ImsiUtil {
 	}
 
 	/**
-	 * ��ȡIMSInfo
+	 * 获取IMSInfo
 	 * 
 	 * @return
 	 */
@@ -57,7 +79,7 @@ public class ImsiUtil {
 	}
 
 	/**
-	 * MTK��оƬ���ж�
+	 * MTK的芯片的判断
 	 * 
 	 * @param mContext
 	 * @return
@@ -86,7 +108,7 @@ public class ImsiUtil {
 			imei_2 = (String) m1.invoke(tm, simId_2);
 
 			imsInfo = new IMSInfo();
-			imsInfo.chipName = "MTKоƬ";
+			imsInfo.chipName = "MTK芯片";
 			imsInfo.imei_1 = imei_1;
 			imsInfo.imei_2 = imei_2;
 			imsInfo.imsi_1 = imsi_1;
@@ -100,7 +122,7 @@ public class ImsiUtil {
 	}
 
 	/**
-	 * MTK��оƬ���ж�2
+	 * MTK的芯片的判断2
 	 * 
 	 * @param mContext
 	 * @return
@@ -130,7 +152,7 @@ public class ImsiUtil {
 			imei_2 = tm2.getDeviceId();
 
 			imsInfo = new IMSInfo();
-			imsInfo.chipName = "MTKоƬ";
+			imsInfo.chipName = "MTK芯片";
 			imsInfo.imei_1 = imei_1;
 			imsInfo.imei_2 = imei_2;
 			imsInfo.imsi_1 = imsi_1;
@@ -144,7 +166,7 @@ public class ImsiUtil {
 	}
 
 	/**
-	 * չѶоƬ���ж�
+	 * 展讯芯片的判断
 	 * 
 	 * @param mContext
 	 * @return
@@ -166,7 +188,7 @@ public class ImsiUtil {
 			imsi_2 = tm1.getSubscriberId();
 			imei_2 = tm1.getDeviceId();
 			imsInfo = new IMSInfo();
-			imsInfo.chipName = "չѶоƬ";
+			imsInfo.chipName = "展讯芯片";
 			imsInfo.imei_1 = imei_1;
 			imsInfo.imei_2 = imei_2;
 			imsInfo.imsi_1 = imsi_1;
@@ -179,7 +201,7 @@ public class ImsiUtil {
 	}
 
 	/**
-	 * ��ͨоƬ�ж�
+	 * 高通芯片判断
 	 * 
 	 * @param mContext
 	 * @return
@@ -208,7 +230,7 @@ public class ImsiUtil {
 				// TODO: handle exception
 			}
 			imsInfo = new IMSInfo();
-			imsInfo.chipName = "��ͨоƬ-getPreferredDataSubscription:"
+			imsInfo.chipName = "高通芯片-getPreferredDataSubscription:"
 					+ statephoneType_2 + ",flag:" + flag;
 			imsInfo.imei_1 = imei_1;
 			imsInfo.imei_2 = imei_2;
@@ -223,7 +245,7 @@ public class ImsiUtil {
 	}
 
 	/**
-	 * ϵͳ��api
+	 * 系统的api
 	 * 
 	 * @return
 	 */
@@ -244,11 +266,11 @@ public class ImsiUtil {
 			return imsInfo;
 		} else {
 			imsInfo = new IMSInfo();
-			imsInfo.chipName = "����оƬ";
+			imsInfo.chipName = "单卡芯片";
 			imsInfo.imei_1 = imei_1;
-			imsInfo.imei_2 = "û��";
+			imsInfo.imei_2 = "没有";
 			imsInfo.imsi_1 = imsi_1;
-			imsInfo.imsi_2 = "û��";
+			imsInfo.imsi_2 = "没有";
 			return imsInfo;
 		}
 	}
