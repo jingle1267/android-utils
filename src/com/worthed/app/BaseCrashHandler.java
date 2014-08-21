@@ -13,12 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.worthed.utils;
+package com.worthed.app;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.lang.Thread.UncaughtExceptionHandler;
 import java.util.Date;
+
+import com.worthed.utils.LogUtils;
 
 import android.content.Context;
 import android.os.Environment;
@@ -27,6 +29,7 @@ import android.widget.Toast;
 
 /**
  * @author jingle1267@163.com
+ * 
  * @description 在Application中统一捕获异常，保存到文件中下次再打开时上传
  * 
  */
@@ -38,25 +41,27 @@ public class BaseCrashHandler implements UncaughtExceptionHandler {
 	 */
 	public static final boolean DEBUG = true;
 
-	/** 系统默认的UncaughtException处理类 */
-
+	/**
+	 * 系统默认的UncaughtException处理类
+	 */
 	private Thread.UncaughtExceptionHandler mDefaultHandler;
 
-	/** CrashHandler实例 */
-
+	/**
+	 * CrashHandler实例
+	 */
 	private static BaseCrashHandler INSTANCE;
-
-	/** 程序的Context对象 */
 
 	private Context mContext;
 
-	/** 保证只有一个CrashHandler实例 */
-
+	/**
+	 * 保证只有一个CrashHandler实例
+	 */
 	private BaseCrashHandler() {
 	}
 
-	/** 获取CrashHandler实例 ,单例模式 */
-
+	/**
+	 * 获取CrashHandler实例 ,单例模式
+	 */
 	public static BaseCrashHandler getInstance() {
 
 		if (INSTANCE == null) {

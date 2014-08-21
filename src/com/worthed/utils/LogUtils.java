@@ -28,10 +28,9 @@ import android.util.Log;
 public class LogUtils {
 
 	/**
-	 * Master switch.When it is true, you can see the log. Otherwise, you
-	 * cannot.
+	 * Master switch.To catch error info you need set this value below Log.WARN
 	 */
-	public static final boolean DEBUG = true;
+	public static final int DEBUG_LEVEL = 0;
 
 	/**
 	 * 'System.out' switch.When it is true, you can see the 'System.out' log.
@@ -45,7 +44,7 @@ public class LogUtils {
 	 * @param obj
 	 */
 	public static void v(Object obj) {
-		if (DEBUG) {
+		if (Log.VERBOSE > DEBUG_LEVEL) {
 			String tag = getClassName();
 			String msg = obj != null ? obj.toString() : "obj == null";
 			Log.v(tag, msg);
@@ -53,12 +52,12 @@ public class LogUtils {
 	}
 
 	/**
-	 * Send a {@link #DEBUG} log message.
+	 * Send a {@link #DEBUG_LEVEL} log message.
 	 * 
 	 * @param obj
 	 */
 	public static void d(Object obj) {
-		if (DEBUG) {
+		if (Log.DEBUG > DEBUG_LEVEL) {
 			String tag = getClassName();
 			String msg = obj != null ? obj.toString() : "obj == null";
 			Log.d(tag, msg);
@@ -71,7 +70,7 @@ public class LogUtils {
 	 * @param obj
 	 */
 	public static void i(Object obj) {
-		if (DEBUG) {
+		if (Log.INFO > DEBUG_LEVEL) {
 			String tag = getClassName();
 			String msg = obj != null ? obj.toString() : "obj == null";
 			Log.i(tag, msg);
@@ -84,7 +83,7 @@ public class LogUtils {
 	 * @param obj
 	 */
 	public static void w(Object obj) {
-		if (DEBUG) {
+		if (Log.WARN > DEBUG_LEVEL) {
 			String tag = getClassName();
 			String msg = obj != null ? obj.toString() : "obj == null";
 			Log.w(tag, msg);
@@ -97,7 +96,7 @@ public class LogUtils {
 	 * @param obj
 	 */
 	public static void e(Object obj) {
-		if (DEBUG) {
+		if (Log.ERROR > DEBUG_LEVEL) {
 			String tag = getClassName();
 			String msg = obj != null ? obj.toString() : "obj == null";
 			Log.e(tag, msg);
@@ -114,7 +113,7 @@ public class LogUtils {
 	 * @param obj
 	 */
 	public static void wtf(Object obj) {
-		if (DEBUG) {
+		if (Log.ASSERT > DEBUG_LEVEL) {
 			String tag = getClassName();
 			String msg = obj != null ? obj.toString() : "obj == null";
 			Log.wtf(tag, msg);
@@ -122,86 +121,104 @@ public class LogUtils {
 	}
 
 	/**
-     * Send a {@link #VERBOSE} log message.
-     * @param tag Used to identify the source of a log message.  It usually identifies
-     *        the class or activity where the log call occurs.
-     * @param msg The message you would like logged.
-     */
+	 * Send a {@link #VERBOSE} log message.
+	 * 
+	 * @param tag
+	 *            Used to identify the source of a log message. It usually
+	 *            identifies the class or activity where the log call occurs.
+	 * @param msg
+	 *            The message you would like logged.
+	 */
 	public static void v(String tag, String msg) {
-		if (DEBUG) {
+		if (Log.VERBOSE > DEBUG_LEVEL) {
 			Log.v(tag, msg);
 		}
 	}
-	
+
 	/**
-     * Send a {@link #DEBUG} log message.
-     * @param tag Used to identify the source of a log message.  It usually identifies
-     *        the class or activity where the log call occurs.
-     * @param msg The message you would like logged.
-     */
+	 * Send a {@link #DEBUG_LEVEL} log message.
+	 * 
+	 * @param tag
+	 *            Used to identify the source of a log message. It usually
+	 *            identifies the class or activity where the log call occurs.
+	 * @param msg
+	 *            The message you would like logged.
+	 */
 	public static void d(String tag, String msg) {
-		if (DEBUG) {
+		if (Log.DEBUG > DEBUG_LEVEL) {
 			Log.d(tag, msg);
 		}
 	}
-	
+
 	/**
-     * Send an {@link #INFO} log message.
-     * @param tag Used to identify the source of a log message.  It usually identifies
-     *        the class or activity where the log call occurs.
-     * @param msg The message you would like logged.
-     */
+	 * Send an {@link #INFO} log message.
+	 * 
+	 * @param tag
+	 *            Used to identify the source of a log message. It usually
+	 *            identifies the class or activity where the log call occurs.
+	 * @param msg
+	 *            The message you would like logged.
+	 */
 	public static void i(String tag, String msg) {
-		if (DEBUG) {
+		if (Log.INFO > DEBUG_LEVEL) {
 			Log.i(tag, msg);
 		}
 	}
-	
+
 	/**
-     * Send a {@link #WARN} log message.
-     * @param tag Used to identify the source of a log message.  It usually identifies
-     *        the class or activity where the log call occurs.
-     * @param msg The message you would like logged.
-     */
+	 * Send a {@link #WARN} log message.
+	 * 
+	 * @param tag
+	 *            Used to identify the source of a log message. It usually
+	 *            identifies the class or activity where the log call occurs.
+	 * @param msg
+	 *            The message you would like logged.
+	 */
 	public static void w(String tag, String msg) {
-		if (DEBUG) {
+		if (Log.WARN > DEBUG_LEVEL) {
 			Log.w(tag, msg);
 		}
 	}
-	
+
 	/**
-     * Send an {@link #ERROR} log message.
-     * @param tag Used to identify the source of a log message.  It usually identifies
-     *        the class or activity where the log call occurs.
-     * @param msg The message you would like logged.
-     */
+	 * Send an {@link #ERROR} log message.
+	 * 
+	 * @param tag
+	 *            Used to identify the source of a log message. It usually
+	 *            identifies the class or activity where the log call occurs.
+	 * @param msg
+	 *            The message you would like logged.
+	 */
 	public static void e(String tag, String msg) {
-		if (DEBUG) {
+		if (Log.ERROR > DEBUG_LEVEL) {
 			Log.e(tag, msg);
 		}
 	}
-	
+
 	/**
-     * What a Terrible Failure: Report a condition that should never happen.
-     * The error will always be logged at level ASSERT with the call stack.
-     * Depending on system configuration, a report may be added to the
-     * {@link android.os.DropBoxManager} and/or the process may be terminated
-     * immediately with an error dialog.
-     * @param tag Used to identify the source of a log message.
-     * @param msg The message you would like logged.
-     */
+	 * What a Terrible Failure: Report a condition that should never happen. The
+	 * error will always be logged at level ASSERT with the call stack.
+	 * Depending on system configuration, a report may be added to the
+	 * {@link android.os.DropBoxManager} and/or the process may be terminated
+	 * immediately with an error dialog.
+	 * 
+	 * @param tag
+	 *            Used to identify the source of a log message.
+	 * @param msg
+	 *            The message you would like logged.
+	 */
 	public static void wtf(String tag, String msg) {
-		if (DEBUG) {
+		if (Log.ASSERT > DEBUG_LEVEL) {
 			Log.wtf(tag, msg);
 		}
 	}
-	
+
 	/**
 	 * Send a {@link #VERBOSE} log message. And just print method name and
 	 * position in black.
 	 */
 	public static void print() {
-		if (DEBUG) {
+		if (Log.VERBOSE > DEBUG_LEVEL) {
 			String tag = getClassName();
 			String method = callMethodAndLine();
 			Log.v(tag, method);
@@ -212,13 +229,13 @@ public class LogUtils {
 	}
 
 	/**
-	 * Send a {@link #DEBUG} log message.
+	 * Send a {@link #DEBUG_LEVEL} log message.
 	 * 
 	 * @param object
 	 *            The object to print.
 	 */
 	public static void print(Object object) {
-		if (DEBUG) {
+		if (Log.DEBUG > DEBUG_LEVEL) {
 			String tag = getClassName();
 			String method = callMethodAndLine();
 			String content = "";
@@ -242,7 +259,7 @@ public class LogUtils {
 	 *            The object to print.
 	 */
 	public static void printError(Object object) {
-		if (DEBUG) {
+		if (Log.ERROR > DEBUG_LEVEL) {
 			String tag = getClassName();
 			String method = callMethodAndLine();
 			String content = "";
@@ -265,7 +282,7 @@ public class LogUtils {
 	 * @return
 	 */
 	public static void printCallHierarchy() {
-		if (DEBUG) {
+		if (Log.VERBOSE > DEBUG_LEVEL) {
 			String tag = getClassName();
 			String method = callMethodAndLine();
 			String hierarchy = getCallHierarchy();
@@ -283,7 +300,7 @@ public class LogUtils {
 	 *            The object to print.
 	 */
 	public static void printMyLog(Object object) {
-		if (DEBUG) {
+		if (Log.DEBUG > DEBUG_LEVEL) {
 			String tag = "MYLOG";
 			String method = callMethodAndLine();
 			String content = "";
