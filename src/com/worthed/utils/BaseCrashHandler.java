@@ -123,7 +123,7 @@ public class BaseCrashHandler implements UncaughtExceptionHandler {
 				Toast.makeText(mContext,
 						"程序出现异常,3秒后即将关闭该页面,请联系我们,我们会尽快处理,给你带来的不便请原谅!",
 						Toast.LENGTH_LONG).show();
-				LogUtils.Log(message);
+				LogUtils.i(message);
 				dosave(stack, message);
 				Looper.loop();
 			}

@@ -15,27 +15,322 @@
  */
 package com.worthed.utils;
 
-
 import android.util.Log;
 
 /**
- * 应用Log工具类
+ * This class can replace android.util.Log.
  * 
  * @author jingle1267@163.com
- *
+ * 
+ * @description And you can turn off the log by set DEBUG to false.
+ * 
  */
 public class LogUtils {
 
-	public static  boolean debug = true;
+	/**
+	 * Master switch.When it is true, you can see the log. Otherwise, you
+	 * cannot.
+	 */
+	public static final boolean DEBUG = true;
 
-	public static boolean isDebug() {
-		return debug;
+	/**
+	 * 'System.out' switch.When it is true, you can see the 'System.out' log.
+	 * Otherwise, you cannot.
+	 */
+	public static final boolean DEBUG_SYSOUT = false;
+
+	/**
+	 * Send a {@link #VERBOSE} log message.
+	 * 
+	 * @param obj
+	 */
+	public static void v(Object obj) {
+		if (DEBUG) {
+			String tag = getClassName();
+			String msg = obj != null ? obj.toString() : "obj == null";
+			Log.v(tag, msg);
+		}
 	}
 
-	public static void Log(String data) {
-		if (debug) {
-			Log.d("调试",data);
+	/**
+	 * Send a {@link #DEBUG} log message.
+	 * 
+	 * @param obj
+	 */
+	public static void d(Object obj) {
+		if (DEBUG) {
+			String tag = getClassName();
+			String msg = obj != null ? obj.toString() : "obj == null";
+			Log.d(tag, msg);
 		}
+	}
+
+	/**
+	 * Send an {@link #INFO} log message.
+	 * 
+	 * @param obj
+	 */
+	public static void i(Object obj) {
+		if (DEBUG) {
+			String tag = getClassName();
+			String msg = obj != null ? obj.toString() : "obj == null";
+			Log.i(tag, msg);
+		}
+	}
+
+	/**
+	 * Send a {@link #WARN} log message.
+	 * 
+	 * @param obj
+	 */
+	public static void w(Object obj) {
+		if (DEBUG) {
+			String tag = getClassName();
+			String msg = obj != null ? obj.toString() : "obj == null";
+			Log.w(tag, msg);
+		}
+	}
+
+	/**
+	 * Send an {@link #ERROR} log message.
+	 * 
+	 * @param obj
+	 */
+	public static void e(Object obj) {
+		if (DEBUG) {
+			String tag = getClassName();
+			String msg = obj != null ? obj.toString() : "obj == null";
+			Log.e(tag, msg);
+		}
+	}
+
+	/**
+	 * What a Terrible Failure: Report a condition that should never happen. The
+	 * error will always be logged at level ASSERT with the call stack.
+	 * Depending on system configuration, a report may be added to the
+	 * {@link android.os.DropBoxManager} and/or the process may be terminated
+	 * immediately with an error dialog.
+	 * 
+	 * @param obj
+	 */
+	public static void wtf(Object obj) {
+		if (DEBUG) {
+			String tag = getClassName();
+			String msg = obj != null ? obj.toString() : "obj == null";
+			Log.wtf(tag, msg);
+		}
+	}
+
+	/**
+     * Send a {@link #VERBOSE} log message.
+     * @param tag Used to identify the source of a log message.  It usually identifies
+     *        the class or activity where the log call occurs.
+     * @param msg The message you would like logged.
+     */
+	public static void v(String tag, String msg) {
+		if (DEBUG) {
+			Log.v(tag, msg);
+		}
+	}
+	
+	/**
+     * Send a {@link #DEBUG} log message.
+     * @param tag Used to identify the source of a log message.  It usually identifies
+     *        the class or activity where the log call occurs.
+     * @param msg The message you would like logged.
+     */
+	public static void d(String tag, String msg) {
+		if (DEBUG) {
+			Log.d(tag, msg);
+		}
+	}
+	
+	/**
+     * Send an {@link #INFO} log message.
+     * @param tag Used to identify the source of a log message.  It usually identifies
+     *        the class or activity where the log call occurs.
+     * @param msg The message you would like logged.
+     */
+	public static void i(String tag, String msg) {
+		if (DEBUG) {
+			Log.i(tag, msg);
+		}
+	}
+	
+	/**
+     * Send a {@link #WARN} log message.
+     * @param tag Used to identify the source of a log message.  It usually identifies
+     *        the class or activity where the log call occurs.
+     * @param msg The message you would like logged.
+     */
+	public static void w(String tag, String msg) {
+		if (DEBUG) {
+			Log.w(tag, msg);
+		}
+	}
+	
+	/**
+     * Send an {@link #ERROR} log message.
+     * @param tag Used to identify the source of a log message.  It usually identifies
+     *        the class or activity where the log call occurs.
+     * @param msg The message you would like logged.
+     */
+	public static void e(String tag, String msg) {
+		if (DEBUG) {
+			Log.e(tag, msg);
+		}
+	}
+	
+	/**
+     * What a Terrible Failure: Report a condition that should never happen.
+     * The error will always be logged at level ASSERT with the call stack.
+     * Depending on system configuration, a report may be added to the
+     * {@link android.os.DropBoxManager} and/or the process may be terminated
+     * immediately with an error dialog.
+     * @param tag Used to identify the source of a log message.
+     * @param msg The message you would like logged.
+     */
+	public static void wtf(String tag, String msg) {
+		if (DEBUG) {
+			Log.wtf(tag, msg);
+		}
+	}
+	
+	/**
+	 * Send a {@link #VERBOSE} log message. And just print method name and
+	 * position in black.
+	 */
+	public static void print() {
+		if (DEBUG) {
+			String tag = getClassName();
+			String method = callMethodAndLine();
+			Log.v(tag, method);
+			if (DEBUG_SYSOUT) {
+				System.out.println(tag + "  " + method);
+			}
+		}
+	}
+
+	/**
+	 * Send a {@link #DEBUG} log message.
+	 * 
+	 * @param object
+	 *            The object to print.
+	 */
+	public static void print(Object object) {
+		if (DEBUG) {
+			String tag = getClassName();
+			String method = callMethodAndLine();
+			String content = "";
+			if (object != null) {
+				content = object.toString() + "                    ----    "
+						+ method;
+			} else {
+				content = " ## " + "                ----    " + method;
+			}
+			Log.d(tag, content);
+			if (DEBUG_SYSOUT) {
+				System.out.println(tag + "  " + content + "  " + method);
+			}
+		}
+	}
+
+	/**
+	 * Send an {@link #ERROR} log message.
+	 * 
+	 * @param object
+	 *            The object to print.
+	 */
+	public static void printError(Object object) {
+		if (DEBUG) {
+			String tag = getClassName();
+			String method = callMethodAndLine();
+			String content = "";
+			if (object != null) {
+				content = object.toString() + "                    ----    "
+						+ method;
+			} else {
+				content = " ## " + "                    ----    " + method;
+			}
+			Log.e(tag, content);
+			if (DEBUG_SYSOUT) {
+				System.err.println(tag + "  " + method + "  " + content);
+			}
+		}
+	}
+
+	/**
+	 * Print the array of stack trace elements of this method in black.
+	 * 
+	 * @return
+	 */
+	public static void printCallHierarchy() {
+		if (DEBUG) {
+			String tag = getClassName();
+			String method = callMethodAndLine();
+			String hierarchy = getCallHierarchy();
+			Log.v(tag, method + hierarchy);
+			if (DEBUG_SYSOUT) {
+				System.out.println(tag + "  " + method + hierarchy);
+			}
+		}
+	}
+
+	/**
+	 * Print debug log in blue.
+	 * 
+	 * @param object
+	 *            The object to print.
+	 */
+	public static void printMyLog(Object object) {
+		if (DEBUG) {
+			String tag = "MYLOG";
+			String method = callMethodAndLine();
+			String content = "";
+			if (object != null) {
+				content = object.toString() + "                    ----    "
+						+ method;
+			} else {
+				content = " ## " + "                ----    " + method;
+			}
+			Log.d(tag, content);
+			if (DEBUG_SYSOUT) {
+				System.out.println(tag + "  " + content + "  " + method);
+			}
+		}
+	}
+
+	private static String getCallHierarchy() {
+		String result = "";
+		StackTraceElement[] trace = (new Exception()).getStackTrace();
+		for (int i = 2; i < trace.length; i++) {
+			result += "\r\t" + trace[i].getClassName() + "."
+					+ trace[i].getMethodName() + "():"
+					+ trace[i].getLineNumber();
+		}
+		return result;
+	}
+
+	private static String getClassName() {
+		String result = "";
+		StackTraceElement thisMethodStack = (new Exception()).getStackTrace()[2];
+		result = thisMethodStack.getClassName();
+		return result;
+	}
+
+	/**
+	 * Realization of double click jump events.
+	 * 
+	 * @return
+	 */
+	private static String callMethodAndLine() {
+		String result = "at ";
+		StackTraceElement thisMethodStack = (new Exception()).getStackTrace()[2];
+		result += thisMethodStack.getClassName() + ".";
+		result += thisMethodStack.getMethodName();
+		result += "(" + thisMethodStack.getFileName();
+		result += ":" + thisMethodStack.getLineNumber() + ")  ";
+		return result;
 	}
 
 }

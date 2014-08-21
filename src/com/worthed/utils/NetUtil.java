@@ -50,21 +50,21 @@ public class NetUtil {
 				NetworkInfo info = connectivity
 						.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
 				if (info != null && info.isConnectedOrConnecting()) {
-					LogUtils.Log("当前网络:" + info.getTypeName());
-					LogUtils.Log("WIFI连接开启");
+					LogUtils.i("当前网络:" + info.getTypeName());
+					LogUtils.i("WIFI连接开启");
 					return true;
 				} else {
-					LogUtils.Log("WIFI连接未开启");
+					LogUtils.i("WIFI连接未开启");
 				}
 				info = connectivity
 						.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
 				if (info != null
 						&& info.isConnectedOrConnecting()
 						&& telephonyManager.getDataState() == TelephonyManager.DATA_CONNECTED) {
-					LogUtils.Log("2G数据连接开启");
+					LogUtils.i("2G数据连接开启");
 					return true;
 				} else {
-					LogUtils.Log("2G数据连接未开启");
+					LogUtils.i("2G数据连接未开启");
 				}
 			}
 
