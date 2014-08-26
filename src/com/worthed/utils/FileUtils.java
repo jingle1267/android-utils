@@ -16,6 +16,7 @@
 package com.worthed.utils;
 
 import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileFilter;
 import java.io.FileInputStream;
@@ -31,9 +32,13 @@ import java.util.HashMap;
 import java.util.List;
 
 import android.app.Activity;
+import android.content.CursorLoader;
 import android.content.Intent;
+import android.database.Cursor;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Environment;
+import android.provider.MediaStore;
 import android.text.TextUtils;
 
 /**
@@ -621,6 +626,26 @@ public class FileUtils {
 	}
 
 	/**
+	 * 输入流转byte[]
+	 */
+	public static final byte[] input2byte(InputStream inStream) {
+		if (inStream == null)
+			return null;
+		ByteArrayOutputStream swapStream = new ByteArrayOutputStream();
+		byte[] buff = new byte[100];
+		int rc = 0;
+		try {
+			while ((rc = inStream.read(buff, 0, 100)) > 0) {
+				swapStream.write(buff, 0, rc);
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		byte[] in2b = swapStream.toByteArray();
+		return in2b;
+	}
+
+	/**
 	 * read file to string list, a element of list is a line
 	 * 
 	 * @param filePath
@@ -926,6 +951,35 @@ public class FileUtils {
 
 		File file = new File(path);
 		return (file.exists() && file.isFile() ? file.length() : -1);
+	}
+
+	/**
+	 * 把uri转为File对象
+	 */
+	public static File uri2File(Activity aty, Uri uri) {
+		if (Build.VERSION.SDK_INT < 11) {
+			// 在API11以下可以使用：managedQuery
+			String[] proj = { MediaStore.Images.Media.DATA };
+			@SuppressWarnings("deprecation")
+			Cursor actualimagecursor = aty.managedQuery(uri, proj, null, null,
+					null);
+			int actual_image_column_index = actualimagecursor
+					.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+			actualimagecursor.moveToFirst();
+			String img_path = actualimagecursor
+					.getString(actual_image_column_index);
+			return new File(img_path);
+		} else {
+			// 在API11以上：要转为使用CursorLoader,并使用loadInBackground来返回
+			String[] projection = { MediaStore.Images.Media.DATA };
+			CursorLoader loader = new CursorLoader(aty, uri, projection, null,
+					null, null);
+			Cursor cursor = loader.loadInBackground();
+			int column_index = cursor
+					.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+			cursor.moveToFirst();
+			return new File(cursor.getString(column_index));
+		}
 	}
 
 }

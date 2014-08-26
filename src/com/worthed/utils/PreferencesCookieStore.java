@@ -164,7 +164,7 @@ public class PreferencesCookieStore implements CookieStore {
 			ObjectInputStream ois = new ObjectInputStream(is);
 			cookie = ((SerializableCookie) ois.readObject()).getCookie();
 		} catch (Throwable e) {
-			LogUtils.e(e.getMessage(), e);
+			e.printStackTrace();
 		}
 
 		return cookie;
