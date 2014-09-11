@@ -12,6 +12,13 @@ Developed By
 * [Zhenguo Jin](https://worthed.com) - <jinzhenguo1990@gmail.com>
 
 
+Proguard
+============
+``` xml
+-keep class com.worthed.** { *; }
+-keepclassmembers class com.worthed.** { *; }
+-dontwarn com.worthed.**
+```
 
 License
 =======
