@@ -19,6 +19,8 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.graphics.Paint;
+import android.graphics.Paint.FontMetrics;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -132,6 +134,18 @@ public class ViewUtils {
 		return height;
 	}
 
+	/**
+	 * get Font height
+	 * @param view
+	 * @return
+	 */
+	public static int getFontHeight(TextView view) {
+		Paint paint = new Paint();
+		paint.setTextSize(view.getTextSize());
+		FontMetrics fm = paint.getFontMetrics();
+		return (int) (Math.ceil(fm.descent - fm.ascent));
+	}
+	
 	/**
 	 * set view height
 	 * 
