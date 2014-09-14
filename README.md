@@ -2,10 +2,11 @@ android-utils
 =============
 
   It contains most of the utility classes. 
+  
   Android utility class, include BitmapUtil, DataCleanManager, FileUtils, HanziToPinyin, NetUtil, PreferencesCookieStore, RandomUtils, Singleton, LogUtils, BaseCrashHandler, and so on.
 
 Permission requirement
-======================
+----------------------
 
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />
@@ -14,7 +15,7 @@ Permission requirement
 ```
 
 Configuration
-=============
+-------------
 
 ```xml
 <application
@@ -22,7 +23,7 @@ Configuration
 ```
 
 Proguard
-============
+--------
 
 ``` xml
 -keep class com.worthed.** { *; }
@@ -31,13 +32,13 @@ Proguard
 ```
 
 Developer
-=========
+---------
 
 * [Zhenguo Jin](https://worthed.com) - <jinzhenguo1990@gmail.com>
 
 
 License
-=======
+-------
 
     Copyright 2014 Zhenguo Jin
 
