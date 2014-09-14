@@ -3,7 +3,7 @@ android-utils
 
   It contains most of the utility classes. 
   
-  Android utility class, include BitmapUtil, DataCleanManager, FileUtils, HanziToPinyin, NetUtil, PreferencesCookieStore, RandomUtils, Singleton, LogUtils, BaseCrashHandler, and so on.
+  Android utility class, include [BitmapUtil](https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/BitmapUtil.java), [DataCleanManager](https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/DataCleanManager.java), [FileUtils](https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/FileUtils.java), [HanziToPinyin](https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/HanziToPinyin.java), [NetUtil](https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/NetUtil.java), [PreferencesCookieStore](https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/PreferencesCookieStore.java), [RandomUtils](https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/RandomUtils.java), [Singleton](https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/Singleton.java), [LogUtils](https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/LogUtils.java), [BaseCrashHandler](https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/app/BaseCrashHandler.java), and [so on](https://github.com/jingle1267/android-utils/tree/master/src/com/worthed/util).
 
 Permission requirement
 ----------------------
