@@ -1,24 +1,40 @@
 android-utils
 =============
 
- It contains most of the utility classes. 
+  It contains most of the utility classes. 
+  Android utility class, include BitmapUtil, DataCleanManager, FileUtils, HanziToPinyin, NetUtil, PreferencesCookieStore, RandomUtils, Singleton, LogUtils, BaseCrashHandler, and so on.
 
+Permission requirement
+======================
 
+```xml
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+```
 
+Configuration
+=============
 
-Developed By
-============
-
-* [Zhenguo Jin](https://worthed.com) - <jinzhenguo1990@gmail.com>
-
+```xml
+<application
+        android:name="com.worthed.app.BaseApplication" >
+```
 
 Proguard
 ============
+
 ``` xml
 -keep class com.worthed.** { *; }
 -keepclassmembers class com.worthed.** { *; }
 -dontwarn com.worthed.**
 ```
+
+Developer
+=========
+
+* [Zhenguo Jin](https://worthed.com) - <jinzhenguo1990@gmail.com>
+
 
 License
 =======
