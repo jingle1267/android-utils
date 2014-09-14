@@ -20,7 +20,7 @@ import java.io.FileOutputStream;
 import java.lang.Thread.UncaughtExceptionHandler;
 import java.util.Date;
 
-import com.worthed.utils.LogUtils;
+import com.worthed.util.LogUtils;
 
 import android.content.Context;
 import android.os.Environment;

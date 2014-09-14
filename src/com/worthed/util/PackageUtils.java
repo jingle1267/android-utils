@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.worthed.utils;
+package com.worthed.util;
 
 import java.io.File;
 import java.util.List;
 
-import com.worthed.utils.ShellUtils.CommandResult;
+import com.worthed.util.ShellUtils.CommandResult;
 
 import android.annotation.SuppressLint;
 import android.app.ActivityManager;
