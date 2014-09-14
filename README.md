@@ -22,6 +22,14 @@ Configuration
         android:name="com.worthed.app.BaseApplication" >
 ```
 
+Third party library
+-------------------
+
+```
+%JAVA_HOME%\jre\lib\rt.jar
+```
+
+
 Proguard
 --------
 
