@@ -34,7 +34,8 @@ public final class CipherUtils {
 
 	/**
 	 * MD5加密
-	 * 
+	 * <br>http://stackoverflow.com/questions/1057041/difference-between-java-and-php5-md5-hash
+	 * <br>http://code.google.com/p/roboguice/issues/detail?id=89
 	 * @param string
 	 * @return
 	 */
