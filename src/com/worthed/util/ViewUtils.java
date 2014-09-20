@@ -19,6 +19,8 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.content.Context;
+import android.content.res.Configuration;
 import android.graphics.Paint;
 import android.graphics.Paint.FontMetrics;
 import android.view.View;
@@ -136,6 +138,7 @@ public class ViewUtils {
 
 	/**
 	 * get Font height
+	 * 
 	 * @param view
 	 * @return
 	 */
@@ -145,7 +148,7 @@ public class ViewUtils {
 		FontMetrics fm = paint.getFontMetrics();
 		return (int) (Math.ceil(fm.descent - fm.ascent));
 	}
-	
+
 	/**
 	 * set view height
 	 * 
@@ -250,4 +253,15 @@ public class ViewUtils {
 		}
 		return descendedViewList;
 	}
+
+	/**
+	 * Helps determine if the app is running in a Tablet context.
+	 * 
+	 * @param context
+	 * @return
+	 */
+	public static boolean isTablet(Context context) {
+		return (context.getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) >= Configuration.SCREENLAYOUT_SIZE_LARGE;
+	}
+
 }
