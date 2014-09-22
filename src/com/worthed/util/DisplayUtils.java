@@ -18,6 +18,7 @@ package com.worthed.util;
 import android.app.Activity;
 import android.content.Context;
 import android.util.DisplayMetrics;
+import android.view.inputmethod.InputMethodManager;
 
 /**
  * 系统显示相关工具类
@@ -114,4 +115,19 @@ public class DisplayUtils {
 		return h;
 	}
 
+	/**
+	 * Toggle keyboard If the keyboard is visible,then hidden it,if it's
+	 * invisible,then show it
+	 * 
+	 * @param context
+	 */
+	public static void toggleKeyboard(Context context) {
+		InputMethodManager imm = (InputMethodManager) context
+				.getSystemService(Context.INPUT_METHOD_SERVICE);
+		if (imm.isActive()) {
+			imm.toggleSoftInput(InputMethodManager.SHOW_IMPLICIT,
+					InputMethodManager.HIDE_NOT_ALWAYS);
+		}
+	}
+	
 }

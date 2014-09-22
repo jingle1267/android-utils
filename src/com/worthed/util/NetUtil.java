@@ -40,39 +40,24 @@ public class NetUtil {
 	 * @return
 	 */
 	public static boolean isNetworkAvailable(Context context) {
-		try {
-			TelephonyManager telephonyManager = (TelephonyManager) context
-					.getSystemService(Context.TELEPHONY_SERVICE);
+		boolean netstate = false;
+		ConnectivityManager connectivity = (ConnectivityManager) context
+				.getSystemService(Context.CONNECTIVITY_SERVICE);
+		if (connectivity != null) {
 
-			ConnectivityManager connectivity = (ConnectivityManager) context
-					.getSystemService(Context.CONNECTIVITY_SERVICE);
-			if (connectivity != null) {
-				NetworkInfo info = connectivity
-						.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
-				if (info != null && info.isConnectedOrConnecting()) {
-					LogUtils.i("当前网络:" + info.getTypeName());
-					LogUtils.i("WIFI连接开启");
-					return true;
-				} else {
-					LogUtils.i("WIFI连接未开启");
-				}
-				info = connectivity
-						.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
-				if (info != null
-						&& info.isConnectedOrConnecting()
-						&& telephonyManager.getDataState() == TelephonyManager.DATA_CONNECTED) {
-					LogUtils.i("2G数据连接开启");
-					return true;
-				} else {
-					LogUtils.i("2G数据连接未开启");
+			NetworkInfo[] info = connectivity.getAllNetworkInfo();
+			if (info != null) {
+				for (int i = 0; i < info.length; i++) {
+
+					if (info[i].getState() == NetworkInfo.State.CONNECTED) {
+
+						netstate = true;
+						break;
+					}
 				}
 			}
-
-		} catch (Exception e) {
-			return false;
 		}
-		return false;
-
+		return netstate;
 	}
 
 	/**
