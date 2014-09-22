@@ -21,6 +21,7 @@ Configuration
 <application
         android:name="com.worthed.app.BaseApplication" >
 ```
+You need set 'LogUtils.DEBUG_SYSOUT = false' for release version.
 
 Third party library
 -------------------
