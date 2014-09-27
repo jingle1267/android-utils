@@ -34,6 +34,8 @@ Third party library
 Proguard
 --------
 
+  ProGuard obfuscates method names. Use the following snip in your ProGuard configuration file (proguard.cfg):
+
 ``` xml
 -keep class com.worthed.** { *; }
 -keepclassmembers class com.worthed.** { *; }
