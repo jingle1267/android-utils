@@ -28,6 +28,8 @@ import android.graphics.Bitmap.Config;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.ColorMatrix;
+import android.graphics.ColorMatrixColorFilter;
 import android.graphics.LinearGradient;
 import android.graphics.Matrix;
 import android.graphics.Paint;
@@ -179,6 +181,7 @@ public class BitmapUtil {
 
 	/**
 	 * 把bytes转化为bitmap
+	 * 
 	 * @param bm
 	 * @return
 	 */
@@ -207,9 +210,10 @@ public class BitmapUtil {
 		}
 		return os.toByteArray();
 	}
-	
+
 	/**
 	 * 获取一个指定大小的bitmap
+	 * 
 	 * @param b
 	 * @return
 	 */
@@ -220,7 +224,7 @@ public class BitmapUtil {
 			return null;
 		}
 	}
-	
+
 	/**
 	 * 获取一个指定大小的bitmap<br>
 	 * 实际调用的方法是bitmapFromByteArray(data, 0, data.length, w, h);
@@ -263,21 +267,25 @@ public class BitmapUtil {
 
 	/**
 	 * 从View获取Bitmap
+	 * 
 	 * @param view
 	 * @return
 	 */
-	public static Bitmap getBitmapFromView(View view){
-		Bitmap bitmap = Bitmap.createBitmap(view.getWidth(), view.getHeight(), Bitmap.Config.ARGB_8888);
+	public static Bitmap getBitmapFromView(View view) {
+		Bitmap bitmap = Bitmap.createBitmap(view.getWidth(), view.getHeight(),
+				Bitmap.Config.ARGB_8888);
 		Canvas canvas = new Canvas(bitmap);
 
-		view.layout(view.getLeft(), view.getTop(), view.getRight(), view.getBottom());
+		view.layout(view.getLeft(), view.getTop(), view.getRight(),
+				view.getBottom());
 		view.draw(canvas);
 
 		return bitmap;
 	}
-	
+
 	/**
 	 * 把一个View的对象转换成bitmap
+	 * 
 	 * @param v
 	 * @return
 	 */
@@ -310,7 +318,7 @@ public class BitmapUtil {
 		v.setDrawingCacheBackgroundColor(color);
 		return bitmap;
 	}
-	
+
 	/**
 	 * 将Drawable转化为Bitmap
 	 * 
@@ -329,7 +337,7 @@ public class BitmapUtil {
 		return bitmap;
 
 	}
-	
+
 	public static Bitmap combineImages(Bitmap bgd, Bitmap fg) {
 		Bitmap bmp;
 
@@ -705,7 +713,8 @@ public class BitmapUtil {
 	 * 
 	 * @return 返回重新生成后的bitmap
 	 */
-	public static Bitmap codec(Bitmap src, Bitmap.CompressFormat format, int quality) {
+	public static Bitmap codec(Bitmap src, Bitmap.CompressFormat format,
+			int quality) {
 		ByteArrayOutputStream os = new ByteArrayOutputStream();
 		src.compress(format, quality, os);
 
@@ -825,6 +834,34 @@ public class BitmapUtil {
 		matrix.postRotate(angle);
 		return Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(),
 				bitmap.getHeight(), matrix, true);
+	}
+
+	/**
+	 * 水平翻转处理
+	 * 
+	 * @param bitmap
+	 *            原图
+	 * @return 水平翻转后的图片
+	 */
+	public static Bitmap reverseByHorizontal(Bitmap bitmap) {
+		Matrix matrix = new Matrix();
+		matrix.preScale(-1, 1);
+		return Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(),
+				bitmap.getHeight(), matrix, false);
+	}
+
+	/**
+	 * 垂直翻转处理
+	 * 
+	 * @param bitmap
+	 *            原图
+	 * @return 垂直翻转后的图片
+	 */
+	public static Bitmap reverseByVertical(Bitmap bitmap) {
+		Matrix matrix = new Matrix();
+		matrix.preScale(1, -1);
+		return Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(),
+				bitmap.getHeight(), matrix, false);
 	}
 
 	/**
@@ -1223,6 +1260,507 @@ public class BitmapUtil {
 		Log.e("pix", w + " " + h + " " + pix.length);
 		bitmap.setPixels(pix, 0, w, 0, 0, w, h);
 		return (bitmap);
+	}
+
+	/**
+	 * 饱和度处理
+	 * 
+	 * @param bitmap
+	 *            原图
+	 * @param saturationValue
+	 *            新的饱和度值
+	 * @return 改变了饱和度值之后的图片
+	 */
+	public static Bitmap saturation(Bitmap bitmap, int saturationValue) {
+		// 计算出符合要求的饱和度值
+		float newSaturationValue = saturationValue * 1.0F / 127;
+		// 创建一个颜色矩阵
+		ColorMatrix saturationColorMatrix = new ColorMatrix();
+		// 设置饱和度值
+		saturationColorMatrix.setSaturation(newSaturationValue);
+		// 创建一个画笔并设置其颜色过滤器
+		Paint paint = new Paint();
+		paint.setColorFilter(new ColorMatrixColorFilter(saturationColorMatrix));
+		// 创建一个新的图片并创建画布
+		Bitmap newBitmap = Bitmap.createBitmap(bitmap.getWidth(),
+				bitmap.getHeight(), Bitmap.Config.ARGB_8888);
+		Canvas canvas = new Canvas(newBitmap);
+		// 将原图使用给定的画笔画到画布上
+		canvas.drawBitmap(bitmap, 0, 0, paint);
+		return newBitmap;
+	}
+
+	/**
+	 * 亮度处理
+	 * 
+	 * @param bitmap
+	 *            原图
+	 * @param lumValue
+	 *            新的亮度值
+	 * @return 改变了亮度值之后的图片
+	 */
+	public static Bitmap lum(Bitmap bitmap, int lumValue) {
+		// 计算出符合要求的亮度值
+		float newlumValue = lumValue * 1.0F / 127;
+		// 创建一个颜色矩阵
+		ColorMatrix lumColorMatrix = new ColorMatrix();
+		// 设置亮度值
+		lumColorMatrix.setScale(newlumValue, newlumValue, newlumValue, 1);
+		// 创建一个画笔并设置其颜色过滤器
+		Paint paint = new Paint();
+		paint.setColorFilter(new ColorMatrixColorFilter(lumColorMatrix));
+		// 创建一个新的图片并创建画布
+		Bitmap newBitmap = Bitmap.createBitmap(bitmap.getWidth(),
+				bitmap.getHeight(), Bitmap.Config.ARGB_8888);
+		Canvas canvas = new Canvas(newBitmap);
+		// 将原图使用给定的画笔画到画布上
+		canvas.drawBitmap(bitmap, 0, 0, paint);
+		return newBitmap;
+	}
+
+	/**
+	 * 色相处理
+	 * 
+	 * @param bitmap
+	 *            原图
+	 * @param hueValue
+	 *            新的色相值
+	 * @return 改变了色相值之后的图片
+	 */
+	public static Bitmap hue(Bitmap bitmap, int hueValue) {
+		// 计算出符合要求的色相值
+		float newHueValue = (hueValue - 127) * 1.0F / 127 * 180;
+		// 创建一个颜色矩阵
+		ColorMatrix hueColorMatrix = new ColorMatrix();
+		// 控制让红色区在色轮上旋转的角度
+		hueColorMatrix.setRotate(0, newHueValue);
+		// 控制让绿红色区在色轮上旋转的角度
+		hueColorMatrix.setRotate(1, newHueValue);
+		// 控制让蓝色区在色轮上旋转的角度
+		hueColorMatrix.setRotate(2, newHueValue);
+		// 创建一个画笔并设置其颜色过滤器
+		Paint paint = new Paint();
+		paint.setColorFilter(new ColorMatrixColorFilter(hueColorMatrix));
+		// 创建一个新的图片并创建画布
+		Bitmap newBitmap = Bitmap.createBitmap(bitmap.getWidth(),
+				bitmap.getHeight(), Bitmap.Config.ARGB_8888);
+		Canvas canvas = new Canvas(newBitmap);
+		// 将原图使用给定的画笔画到画布上
+		canvas.drawBitmap(bitmap, 0, 0, paint);
+		return newBitmap;
+	}
+
+	/**
+	 * 亮度、色相、饱和度处理
+	 * 
+	 * @param bitmap
+	 *            原图
+	 * @param lumValue
+	 *            亮度值
+	 * @param hueValue
+	 *            色相值
+	 * @param saturationValue
+	 *            饱和度值
+	 * @return 亮度、色相、饱和度处理后的图片
+	 */
+	public static Bitmap lumAndHueAndSaturation(Bitmap bitmap, int lumValue,
+			int hueValue, int saturationValue) {
+		// 计算出符合要求的饱和度值
+		float newSaturationValue = saturationValue * 1.0F / 127;
+		// 计算出符合要求的亮度值
+		float newlumValue = lumValue * 1.0F / 127;
+		// 计算出符合要求的色相值
+		float newHueValue = (hueValue - 127) * 1.0F / 127 * 180;
+
+		// 创建一个颜色矩阵并设置其饱和度
+		ColorMatrix colorMatrix = new ColorMatrix();
+
+		// 设置饱和度值
+		colorMatrix.setSaturation(newSaturationValue);
+		// 设置亮度值
+		colorMatrix.setScale(newlumValue, newlumValue, newlumValue, 1);
+		// 控制让红色区在色轮上旋转的角度
+		colorMatrix.setRotate(0, newHueValue);
+		// 控制让绿红色区在色轮上旋转的角度
+		colorMatrix.setRotate(1, newHueValue);
+		// 控制让蓝色区在色轮上旋转的角度
+		colorMatrix.setRotate(2, newHueValue);
+
+		// 创建一个画笔并设置其颜色过滤器
+		Paint paint = new Paint();
+		paint.setColorFilter(new ColorMatrixColorFilter(colorMatrix));
+		// 创建一个新的图片并创建画布
+		Bitmap newBitmap = Bitmap.createBitmap(bitmap.getWidth(),
+				bitmap.getHeight(), Bitmap.Config.ARGB_8888);
+		Canvas canvas = new Canvas(newBitmap);
+		// 将原图使用给定的画笔画到画布上
+		canvas.drawBitmap(bitmap, 0, 0, paint);
+		return newBitmap;
+	}
+
+	/**
+	 * 怀旧效果处理
+	 * 
+	 * @param bitmap
+	 *            原图
+	 * @return 怀旧效果处理后的图片
+	 */
+	public static Bitmap nostalgic(Bitmap bitmap) {
+		int width = bitmap.getWidth();
+		int height = bitmap.getHeight();
+		Bitmap newBitmap = Bitmap.createBitmap(width, height,
+				Bitmap.Config.RGB_565);
+		int pixColor = 0;
+		int pixR = 0;
+		int pixG = 0;
+		int pixB = 0;
+		int newR = 0;
+		int newG = 0;
+		int newB = 0;
+		int[] pixels = new int[width * height];
+		bitmap.getPixels(pixels, 0, width, 0, 0, width, height);
+		for (int i = 0; i < height; i++) {
+			for (int k = 0; k < width; k++) {
+				pixColor = pixels[width * i + k];
+				pixR = Color.red(pixColor);
+				pixG = Color.green(pixColor);
+				pixB = Color.blue(pixColor);
+				newR = (int) (0.393 * pixR + 0.769 * pixG + 0.189 * pixB);
+				newG = (int) (0.349 * pixR + 0.686 * pixG + 0.168 * pixB);
+				newB = (int) (0.272 * pixR + 0.534 * pixG + 0.131 * pixB);
+				int newColor = Color.argb(255, newR > 255 ? 255 : newR,
+						newG > 255 ? 255 : newG, newB > 255 ? 255 : newB);
+				pixels[width * i + k] = newColor;
+			}
+		}
+		newBitmap.setPixels(pixels, 0, width, 0, 0, width, height);
+		return newBitmap;
+	}
+
+	/**
+	 * 柔化效果处理
+	 * 
+	 * @param bitmap
+	 *            原图
+	 * @return 柔化效果处理后的图片
+	 */
+	public static Bitmap soften(Bitmap bitmap) {
+		// 高斯矩阵
+		int[] gauss = new int[] { 1, 2, 1, 2, 4, 2, 1, 2, 1 };
+
+		int width = bitmap.getWidth();
+		int height = bitmap.getHeight();
+		Bitmap newBitmap = Bitmap.createBitmap(width, height,
+				Bitmap.Config.RGB_565);
+
+		int pixR = 0;
+		int pixG = 0;
+		int pixB = 0;
+
+		int pixColor = 0;
+
+		int newR = 0;
+		int newG = 0;
+		int newB = 0;
+
+		int delta = 16; // 值越小图片会越亮，越大则越暗
+
+		int idx = 0;
+		int[] pixels = new int[width * height];
+		bitmap.getPixels(pixels, 0, width, 0, 0, width, height);
+		for (int i = 1, length = height - 1; i < length; i++) {
+			for (int k = 1, len = width - 1; k < len; k++) {
+				idx = 0;
+				for (int m = -1; m <= 1; m++) {
+					for (int n = -1; n <= 1; n++) {
+						pixColor = pixels[(i + m) * width + k + n];
+						pixR = Color.red(pixColor);
+						pixG = Color.green(pixColor);
+						pixB = Color.blue(pixColor);
+
+						newR = newR + (int) (pixR * gauss[idx]);
+						newG = newG + (int) (pixG * gauss[idx]);
+						newB = newB + (int) (pixB * gauss[idx]);
+						idx++;
+					}
+				}
+
+				newR /= delta;
+				newG /= delta;
+				newB /= delta;
+
+				newR = Math.min(255, Math.max(0, newR));
+				newG = Math.min(255, Math.max(0, newG));
+				newB = Math.min(255, Math.max(0, newB));
+
+				pixels[i * width + k] = Color.argb(255, newR, newG, newB);
+
+				newR = 0;
+				newG = 0;
+				newB = 0;
+			}
+		}
+
+		newBitmap.setPixels(pixels, 0, width, 0, 0, width, height);
+		return newBitmap;
+	}
+
+	/**
+	 * 光照效果处理
+	 * 
+	 * @param bitmap
+	 *            原图
+	 * @param centerX
+	 *            光源在X轴的位置
+	 * @param centerY
+	 *            光源在Y轴的位置
+	 * @return 光照效果处理后的图片
+	 */
+	public static Bitmap sunshine(Bitmap bitmap, int centerX, int centerY) {
+		final int width = bitmap.getWidth();
+		final int height = bitmap.getHeight();
+		Bitmap newBitmap = Bitmap.createBitmap(width, height,
+				Bitmap.Config.RGB_565);
+
+		int pixR = 0;
+		int pixG = 0;
+		int pixB = 0;
+
+		int pixColor = 0;
+
+		int newR = 0;
+		int newG = 0;
+		int newB = 0;
+		int radius = Math.min(centerX, centerY);
+
+		final float strength = 150F; // 光照强度 100~150
+		int[] pixels = new int[width * height];
+		bitmap.getPixels(pixels, 0, width, 0, 0, width, height);
+		int pos = 0;
+		for (int i = 1, length = height - 1; i < length; i++) {
+			for (int k = 1, len = width - 1; k < len; k++) {
+				pos = i * width + k;
+				pixColor = pixels[pos];
+
+				pixR = Color.red(pixColor);
+				pixG = Color.green(pixColor);
+				pixB = Color.blue(pixColor);
+
+				newR = pixR;
+				newG = pixG;
+				newB = pixB;
+
+				// 计算当前点到光照中心的距离，平面座标系中求两点之间的距离
+				int distance = (int) (Math.pow((centerY - i), 2) + Math.pow(
+						centerX - k, 2));
+				if (distance < radius * radius) {
+					// 按照距离大小计算增加的光照值
+					int result = (int) (strength * (1.0 - Math.sqrt(distance)
+							/ radius));
+					newR = pixR + result;
+					newG = pixG + result;
+					newB = pixB + result;
+				}
+
+				newR = Math.min(255, Math.max(0, newR));
+				newG = Math.min(255, Math.max(0, newG));
+				newB = Math.min(255, Math.max(0, newB));
+
+				pixels[pos] = Color.argb(255, newR, newG, newB);
+			}
+		}
+
+		newBitmap.setPixels(pixels, 0, width, 0, 0, width, height);
+		return newBitmap;
+	}
+
+	/**
+	 * 底片效果处理
+	 * 
+	 * @param bitmap
+	 *            原图
+	 * @return 底片效果处理后的图片
+	 */
+	public static Bitmap film(Bitmap bitmap) {
+		// RGBA的最大值
+		final int MAX_VALUE = 255;
+		int width = bitmap.getWidth();
+		int height = bitmap.getHeight();
+		Bitmap newBitmap = Bitmap.createBitmap(width, height,
+				Bitmap.Config.RGB_565);
+
+		int pixR = 0;
+		int pixG = 0;
+		int pixB = 0;
+
+		int pixColor = 0;
+
+		int newR = 0;
+		int newG = 0;
+		int newB = 0;
+
+		int[] pixels = new int[width * height];
+		bitmap.getPixels(pixels, 0, width, 0, 0, width, height);
+		int pos = 0;
+		for (int i = 1, length = height - 1; i < length; i++) {
+			for (int k = 1, len = width - 1; k < len; k++) {
+				pos = i * width + k;
+				pixColor = pixels[pos];
+
+				pixR = Color.red(pixColor);
+				pixG = Color.green(pixColor);
+				pixB = Color.blue(pixColor);
+
+				newR = MAX_VALUE - pixR;
+				newG = MAX_VALUE - pixG;
+				newB = MAX_VALUE - pixB;
+
+				newR = Math.min(MAX_VALUE, Math.max(0, newR));
+				newG = Math.min(MAX_VALUE, Math.max(0, newG));
+				newB = Math.min(MAX_VALUE, Math.max(0, newB));
+
+				pixels[pos] = Color.argb(MAX_VALUE, newR, newG, newB);
+			}
+		}
+
+		newBitmap.setPixels(pixels, 0, width, 0, 0, width, height);
+		return newBitmap;
+	}
+
+	/**
+	 * 锐化效果处理
+	 * 
+	 * @param bitmap
+	 *            原图
+	 * @return 锐化效果处理后的图片
+	 */
+	public static Bitmap sharpen(Bitmap bitmap) {
+		// 拉普拉斯矩阵
+		int[] laplacian = new int[] { -1, -1, -1, -1, 9, -1, -1, -1, -1 };
+
+		int width = bitmap.getWidth();
+		int height = bitmap.getHeight();
+		Bitmap newBitmap = Bitmap.createBitmap(width, height,
+				Bitmap.Config.RGB_565);
+
+		int pixR = 0;
+		int pixG = 0;
+		int pixB = 0;
+
+		int pixColor = 0;
+
+		int newR = 0;
+		int newG = 0;
+		int newB = 0;
+
+		int idx = 0;
+		float alpha = 0.3F;
+		int[] pixels = new int[width * height];
+		bitmap.getPixels(pixels, 0, width, 0, 0, width, height);
+		for (int i = 1, length = height - 1; i < length; i++) {
+			for (int k = 1, len = width - 1; k < len; k++) {
+				idx = 0;
+				for (int m = -1; m <= 1; m++) {
+					for (int n = -1; n <= 1; n++) {
+						pixColor = pixels[(i + n) * width + k + m];
+						pixR = Color.red(pixColor);
+						pixG = Color.green(pixColor);
+						pixB = Color.blue(pixColor);
+
+						newR = newR + (int) (pixR * laplacian[idx] * alpha);
+						newG = newG + (int) (pixG * laplacian[idx] * alpha);
+						newB = newB + (int) (pixB * laplacian[idx] * alpha);
+						idx++;
+					}
+				}
+
+				newR = Math.min(255, Math.max(0, newR));
+				newG = Math.min(255, Math.max(0, newG));
+				newB = Math.min(255, Math.max(0, newB));
+
+				pixels[i * width + k] = Color.argb(255, newR, newG, newB);
+				newR = 0;
+				newG = 0;
+				newB = 0;
+			}
+		}
+
+		newBitmap.setPixels(pixels, 0, width, 0, 0, width, height);
+		return newBitmap;
+	}
+
+	/**
+	 * 浮雕效果处理
+	 * 
+	 * @param bitmap
+	 *            原图
+	 * @return 浮雕效果处理后的图片
+	 */
+	public static Bitmap emboss(Bitmap bitmap) {
+		int width = bitmap.getWidth();
+		int height = bitmap.getHeight();
+		Bitmap newBitmap = Bitmap.createBitmap(width, height,
+				Bitmap.Config.RGB_565);
+
+		int pixR = 0;
+		int pixG = 0;
+		int pixB = 0;
+
+		int pixColor = 0;
+
+		int newR = 0;
+		int newG = 0;
+		int newB = 0;
+
+		int[] pixels = new int[width * height];
+		bitmap.getPixels(pixels, 0, width, 0, 0, width, height);
+		int pos = 0;
+		for (int i = 1, length = height - 1; i < length; i++) {
+			for (int k = 1, len = width - 1; k < len; k++) {
+				pos = i * width + k;
+				pixColor = pixels[pos];
+
+				pixR = Color.red(pixColor);
+				pixG = Color.green(pixColor);
+				pixB = Color.blue(pixColor);
+
+				pixColor = pixels[pos + 1];
+				newR = Color.red(pixColor) - pixR + 127;
+				newG = Color.green(pixColor) - pixG + 127;
+				newB = Color.blue(pixColor) - pixB + 127;
+
+				newR = Math.min(255, Math.max(0, newR));
+				newG = Math.min(255, Math.max(0, newG));
+				newB = Math.min(255, Math.max(0, newB));
+
+				pixels[pos] = Color.argb(255, newR, newG, newB);
+			}
+		}
+
+		newBitmap.setPixels(pixels, 0, width, 0, 0, width, height);
+		return newBitmap;
+	}
+
+	/**
+	 * 将YUV格式的图片的源数据从横屏模式转为竖屏模式，注意：将源图片的宽高互换一下就是新图片的宽高
+	 * 
+	 * @param sourceData
+	 *            YUV格式的图片的源数据
+	 * @param width
+	 *            源图片的宽
+	 * @param height
+	 *            源图片的高
+	 * @return
+	 */
+	public static final byte[] yuvLandscapeToPortrait(byte[] sourceData,
+			int width, int height) {
+		byte[] rotatedData = new byte[sourceData.length];
+		for (int y = 0; y < height; y++) {
+			for (int x = 0; x < width; x++)
+				rotatedData[x * height + height - y - 1] = sourceData[x + y
+						* width];
+		}
+		return rotatedData;
 	}
 
 }

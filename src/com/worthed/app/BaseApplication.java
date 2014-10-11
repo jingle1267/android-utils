@@ -33,6 +33,9 @@ public class BaseApplication extends Application {
 		// 异常处理
 		BaseCrashHandler handler = BaseCrashHandler.getInstance();
 		handler.init(this);
+		
+		// 程序异常关闭1s之后重新启动
+		new RebootThreadExceptionHandler(getBaseContext());
 	}
 
 	@Override

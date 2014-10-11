@@ -18,6 +18,7 @@ package com.worthed.util;
 import android.content.Context;
 
 /**
+ * R资源反射工具类
  * @author zhenguo
  * 
  */

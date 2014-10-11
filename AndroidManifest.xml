@@ -30,6 +30,10 @@
             android:name="com.worthed.activity.BitmapActivity"
             android:label="@string/app_name" >
         </activity>
+        
+        <!-- 注册自定义静态广播接收器 -->  
+        <receiver android:name="com.worthed.app.StartAppReceiver">  
+        </receiver>
     </application>
 
 </manifest>
