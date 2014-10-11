@@ -4,6 +4,7 @@ android-utils
   It contains most of the utility classes. 
   
 Android utility classes (a - z):
+
  * [AnimationUtils][1]
  * [AppUtils][2]
  * [AssetDatabaseOpenHelper][3]
@@ -41,8 +42,7 @@ Android utility classes (a - z):
  * [StringUtils][35]
  * [ViewAnimationUtils][36]
  * [ViewUtils][37]
- * [WindowUtils][38] 
-
+ * [WindowUtils][38]
  * [BaseApplication][39]
  * [BaseCrashHandler][40]
  * [RebootThreadExceptionHandler][41]
