@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="2" >
+
+    <dataSet config="main" >
+        <source path="/Users/zhenguo/Documents/develop/github/android-utils/src/androidTest/res" />
+        <source path="/Users/zhenguo/Documents/develop/github/android-utils/build/generated/res/rs/test/debug" />
+        <source path="/Users/zhenguo/Documents/develop/github/android-utils/build/generated/res/generated/test/debug" />
+    </dataSet>
+
+</merger>

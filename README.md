@@ -16,7 +16,6 @@ Android utility classes (a - z):
  * [DatabaseExportUtils][9] 导出应用数据库工具类
  * [DateUtils][10] 日期工具类
  * [DeviceStatusUtils][11] 手机状态工具类 主要包括网络、蓝牙、屏幕亮度、飞行模式、音量等
- * [DigestUtils][12] 加密工具类，此工具类需要sun的jar包(%JAVA_HOME%\jre\lib\rt.jar)
  * [DisplayUtils][13] 系统显示相关工具类（包括键盘操作）
  * [DoubleKeyValueMap][14] 双键值对
  * [DownloadManagerPro][15] 下载管理工具类
@@ -64,15 +63,7 @@ Configuration
 <application
         android:name="com.worthed.app.BaseApplication" >
 ```
-You need set 'LogUtils.DEBUG_SYSOUT = false' for release version.
-
-Third party library
--------------------
-
-```
-%JAVA_HOME%\jre\lib\rt.jar
-```
-
+You need set 'LogUtils.DEBUG_LEVEL = 8' and 'LogUtils.DEBUG_SYSOUT = false' for release version.
 
 Proguard
 --------
@@ -119,7 +110,7 @@ License
 [9]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/DatabaseExportUtils.java
 [10]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/DateUtils.java
 [11]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/DeviceStatusUtils.java
-[12]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/DigestUtils.java
+[12]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/
 [13]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/DisplayUtils.java
 [14]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/DoubleKeyValueMap.java
 [15]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/DownloadManagerPro.java

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="/Users/zhenguo/Documents/develop/github/android-utils/build/intermediates/pre-dexed/debug/rt-403e37011accb6060af32851bb4eb6f83ad7e755.jar"
+        jar="/Users/zhenguo/Documents/develop/github/android-utils/libs/rt.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="279439a9e994b7ce3832ebc12e6219c656167d54"/>
+
+</pre-dex-items>
