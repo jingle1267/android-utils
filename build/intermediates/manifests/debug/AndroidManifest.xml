@@ -19,7 +19,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.worthed.activity.MainActivity"
+            android:name="com.worthed.demo.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,7 +28,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.worthed.activity.BitmapActivity"
+            android:name="com.worthed.demo.BitmapActivity"
             android:label="@string/app_name" >
         </activity>
 
