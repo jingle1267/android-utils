@@ -22,7 +22,7 @@ import android.util.Log;
  * 
  * @author jingle1267@163.com
  * 
- * @description And you can turn off the log by set DEBUG to false.
+ * @description And you can turn off the log by set DEBUG_LEVEL = Log.ASSERT.
  * 
  */
 public class LogUtils {
