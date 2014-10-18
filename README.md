@@ -1,6 +1,6 @@
 android-utils
 =============
-
+  
   It contains most of the utility classes. 
   
 Android utility classes (a - z):
@@ -23,7 +23,7 @@ Android utility classes (a - z):
  * [HanziToPinyin][17] 汉字转拼音工具类
  * [ImsiUtil][18] IMSI工具类
  * [LocationUtils][19] 根据经纬度查询地址信息和根据地址信息查询经纬度
- * [LogUtils][20] Log工具类
+ * [LogUtils][20] Log工具类。课参考博文:[Android Log工具类][43]。
  * [NetUtil][21] 网络工具类
  * [PackageUtils][22] 应用安装下载相关
  * [PhoneUtil][23] 手机组件调用工具类
@@ -142,4 +142,5 @@ License
 [40]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/app/BaseCrashHandler.java
 [41]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/app/RebootThreadExceptionHandler.java
 [42]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/app/StartAppReceiver.java
+[43]: http://worthed.com/blog/2014/10/16/android-log/
  
