@@ -5,8 +5,9 @@ android-utils
   
 Android utility classes (a - z):
 
+
  * [AnimationUtils][1] Animation工具类
- * [AppUtils][2] APP相关信息工具类
+ * [AppUtils][2] APP相关信息工具类 
  * [AssetDatabaseOpenHelper][3] 读取Asset目录中数据库工具类
  * [BitmapUtil][4] Bitmap工具类主要包括获取Bitmap和对Bitmap的操作
  * [CipherUtils][5] 加密与解密的工具类
@@ -63,7 +64,7 @@ Configuration
 <application
         android:name="com.worthed.app.BaseApplication" >
 ```
-You need set 'LogUtils.DEBUG_LEVEL = 8' and 'LogUtils.DEBUG_SYSOUT = false' for release version.
+You need set <code>LogUtils.DEBUG_LEVEL = Log.ASSERT</code> and <code>LogUtils.DEBUG_SYSOUT = false</code> for release version.
 
 Proguard
 --------
@@ -79,7 +80,7 @@ Proguard
 Developer
 ---------
 
-* [Zhenguo Jin](https://worthed.com) - <jinzhenguo1990@gmail.com>
+* [Zhenguo Jin][44] - <jinzhenguo1990@gmail.com>
 
 
 License
@@ -143,4 +144,5 @@ License
 [41]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/app/RebootThreadExceptionHandler.java
 [42]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/app/StartAppReceiver.java
 [43]: http://worthed.com/blog/2014/10/16/android-log/
+[44]: http://worthed.com
  
