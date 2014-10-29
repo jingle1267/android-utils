@@ -15,6 +15,8 @@
  */
 package com.worthed.demo;
 
+import android.view.View;
+import android.widget.Toast;
 import com.worthed.R;
 import com.worthed.util.BitmapUtil;
 
@@ -24,6 +26,7 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
+import com.worthed.util.LogUtils;
 
 /**
  * @author jingle1267@163.com
@@ -33,7 +36,11 @@ public class BitmapActivity extends Activity {
 
 	private final String TAG = BitmapActivity.class.getSimpleName(); 
 	
-	private ImageView imageViewOrigin, imageViewCombine;
+	private ImageView imageViewOrigin, imageViewCombine, blurImageView;
+
+    private int radius;
+    private Bitmap blurOriginBitmap;
+    private Toast toast;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +49,12 @@ public class BitmapActivity extends Activity {
 		setContentView(R.layout.bitmap_layout);
 		imageViewOrigin = (ImageView) findViewById(R.id.iv_round_origin);
 		imageViewCombine = (ImageView) findViewById(R.id.iv_round_combine);
+        blurImageView = (ImageView) findViewById(R.id.iv_blur);
 		testProcess();
 		testCombine();
+
+        blurOriginBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.sea);
+        toast = Toast.makeText(this, "Radius 必须在0到25范围", Toast.LENGTH_SHORT);
 	}
 
 	private void testProcess() {
@@ -66,5 +77,31 @@ public class BitmapActivity extends Activity {
 		bitmap.recycle();
 		mask.recycle();
 	}
+
+    public void radiusSmall(View view) {
+        radius--;
+        if (radius < 0) {
+            radius = 0;
+            toast.show();
+            return;
+        }
+        long start = System.nanoTime();
+        blurImageView.setImageBitmap(BitmapUtil.blur(this, blurOriginBitmap, radius));
+        long useTime = System.nanoTime() - start;
+        LogUtils.d("blur time : " + (useTime / 1000000) + " ms");
+    }
+
+    public void radiusBig(View view) {
+        radius++;
+        if (radius > 25) {
+            radius = 25;
+            toast.show();
+            return;
+        }
+        long start = System.nanoTime();
+        blurImageView.setImageBitmap(BitmapUtil.blur(this, blurOriginBitmap, radius));
+        long useTime = System.nanoTime() - start;
+        LogUtils.d("blur time : " + (useTime / 1000000) + " ms");
+    }
 
 }
