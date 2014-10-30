@@ -9,14 +9,12 @@ import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
     private TextView title;
-    private Button bitmapBtn;
-    private ImageView imageView;
+    private Button btnBitmap, btnViewFinder;
 
     private ViewFinder finder;
 
@@ -24,14 +22,14 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-		finder = new ViewFinder(this);
-		title = finder.find(R.id.textView1);
-		bitmapBtn = finder.find(R.id.btn_bitmap);
-		imageView = finder.find(R.id.imageView1);
+        finder = new ViewFinder(this);
+        title = finder.find(R.id.title);
+        btnBitmap = finder.find(R.id.btn_bitmap);
+        btnViewFinder = finder.find(R.id.btn_view_finder);
 
-        title.setText("Demo");
-        bitmapBtn.setText("BitmapDemo");
-        imageView.setImageResource(R.drawable.beautiful);
+        title.setText("Demos:");
+        btnBitmap.setText("BitmapDemo");
+        btnViewFinder.setText("ViewFinderDemo");
     }
 
     @Override
@@ -42,8 +40,16 @@ public class MainActivity extends Activity {
     }
 
     public void onClick(View view) {
-        Intent intent = new Intent(this, BitmapActivity.class);
-        startActivity(intent);
+        switch (view.getId()) {
+            case R.id.btn_bitmap:
+                Intent intent = new Intent(this, BitmapActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_view_finder:
+                Intent intent1 = new Intent(this, ViewFinderActivity.class);
+                startActivity(intent1);
+                break;
+        }
     }
 
 }
