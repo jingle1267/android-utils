@@ -124,4 +124,39 @@ public class DateUtils {
 		return c.get(Calendar.DAY_OF_MONTH);
 	}
 
+	/**
+	 * 转换日期 将日期转为今天, 昨天, 前天, XXXX-XX-XX, ...
+	 * @param time 时间
+	 * @return
+	 */
+	public static String translateDate(Long time) {
+		long oneDay = 24 * 60 * 60 * 1000;
+		Calendar current = Calendar.getInstance();
+		Calendar today = Calendar.getInstance();	//今天
+
+		today.set(Calendar.YEAR, current.get(Calendar.YEAR));
+		today.set(Calendar.MONTH, current.get(Calendar.MONTH));
+		today.set(Calendar.DAY_OF_MONTH,current.get(Calendar.DAY_OF_MONTH));
+		//  Calendar.HOUR——12小时制的小时数 Calendar.HOUR_OF_DAY——24小时制的小时数
+		today.set( Calendar.HOUR_OF_DAY, 0);
+		today.set( Calendar.MINUTE, 0);
+		today.set(Calendar.SECOND, 0);
+
+		long todayStartTime = today.getTimeInMillis();
+
+		if (time >= todayStartTime && time < todayStartTime + oneDay) { // today
+			return "今天";
+		} else if (time >= todayStartTime - oneDay && time < todayStartTime) { // yesterday
+			return "昨天";
+		} else if (time >= todayStartTime - oneDay * 2 && time < todayStartTime - oneDay) { // the day before yesterday
+			return "前天";
+		} else if (time > todayStartTime + oneDay) { // future
+			return "将来某一天";
+		} else {
+			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+			Date date = new Date(time);
+			return dateFormat.format(date);
+		}
+	}
+
 }
