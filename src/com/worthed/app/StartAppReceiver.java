@@ -21,17 +21,15 @@ import android.content.Intent;
 
 /**
  * 启动程序广播接收器
- * 
+ *
  * @author zhenguo
- * 
  */
 public class StartAppReceiver extends BroadcastReceiver {
 
-	@Override
-	public void onReceive(Context context, Intent intent) {
-		// TODO Auto-generated method stub
-		context.startActivity(context.getPackageManager()
-				.getLaunchIntentForPackage(context.getPackageName()));
-	}
+    @Override
+    public void onReceive(Context context, Intent intent) {
+        context.startActivity(context.getPackageManager()
+                .getLaunchIntentForPackage(context.getPackageName()));
+    }
 
 }

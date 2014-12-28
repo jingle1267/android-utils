@@ -29,6 +29,8 @@ import android.widget.ImageView;
 import com.worthed.util.LogUtils;
 
 /**
+ * Bitmap测试
+ *
  * @author jingle1267@163.com
  */
 public class BitmapActivity extends Activity {

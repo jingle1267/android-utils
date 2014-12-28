@@ -29,9 +29,9 @@ import android.view.WindowManager;
  * 手机状态工具类 主要包括网络、蓝牙、屏幕亮度、飞行模式、音量等
  * 
  * @author zhenguo
- * 
  */
-@TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1) public class DeviceStatusUtils {
+@TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
+public class DeviceStatusUtils {
 
 	/**
 	 * 获取系统屏幕亮度模式的状态，需要WRITE_SETTINGS权限

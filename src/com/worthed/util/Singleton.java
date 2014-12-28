@@ -17,7 +17,7 @@ package com.worthed.util;
 
 /**
  * Singleton helper class for lazily initialization.
- * 
+ *
  * @author jingle1267@163.com
  * @date 2014-9-11
  */

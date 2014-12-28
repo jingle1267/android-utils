@@ -9,6 +9,8 @@ import com.worthed.R;
 import com.worthed.util.ViewFinder;
 
 /**
+ * viewFinder测试
+ * <p/>
  * Created by zhenguo on 14/10/30.
  */
 public class ViewFinderActivity extends Activity {

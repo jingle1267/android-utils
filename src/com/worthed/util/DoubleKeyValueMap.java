@@ -22,7 +22,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * 双键值对
- * 
+ *
  * @author jingle1267@163.com
  */
 public class DoubleKeyValueMap<K1, K2, V> {

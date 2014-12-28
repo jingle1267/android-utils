@@ -11,6 +11,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+/**
+ * 测试代码
+ */
 public class MainActivity extends Activity {
 
     private TextView title;

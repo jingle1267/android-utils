@@ -47,22 +47,22 @@ import android.text.TextUtils;
  * <li>{@link #getRandom(String, int)} get a fixed-length random string, its a mixture of chars in source</li>
  * <li>{@link #getRandom(char[], int)} get a fixed-length random string, its a mixture of chars in sourceChar</li>
  * </ul>
- * 
+ *
  * @author jingle1267@163.com
  */
 public class RandomUtils {
 
     public static final String NUMBERS_AND_LETTERS = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    public static final String NUMBERS             = "0123456789";
-    public static final String LETTERS             = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    public static final String CAPITAL_LETTERS     = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    public static final String LOWER_CASE_LETTERS  = "abcdefghijklmnopqrstuvwxyz";
+    public static final String NUMBERS = "0123456789";
+    public static final String LETTERS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    public static final String CAPITAL_LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    public static final String LOWER_CASE_LETTERS = "abcdefghijklmnopqrstuvwxyz";
 
     /**
      * get a fixed-length random string, its a mixture of uppercase, lowercase letters and numbers
-     * 
-     * @param length
-     * @return
+     *
+     * @param length 长度
+     * @return 随机字符串
      * @see RandomUtils#getRandom(String source, int length)
      */
     public static String getRandomNumbersAndLetters(int length) {
@@ -71,9 +71,9 @@ public class RandomUtils {
 
     /**
      * get a fixed-length random string, its a mixture of numbers
-     * 
-     * @param length
-     * @return
+     *
+     * @param length 长度
+     * @return 随机数字符串
      * @see RandomUtils#getRandom(String source, int length)
      */
     public static String getRandomNumbers(int length) {
@@ -82,9 +82,9 @@ public class RandomUtils {
 
     /**
      * get a fixed-length random string, its a mixture of uppercase and lowercase letters
-     * 
-     * @param length
-     * @return
+     *
+     * @param length 长度
+     * @return 随机字母字符串
      * @see RandomUtils#getRandom(String source, int length)
      */
     public static String getRandomLetters(int length) {
@@ -93,9 +93,9 @@ public class RandomUtils {
 
     /**
      * get a fixed-length random string, its a mixture of uppercase letters
-     * 
-     * @param length
-     * @return
+     *
+     * @param length 长度
+     * @return 随机字符串 包括大写字母
      * @see RandomUtils#getRandom(String source, int length)
      */
     public static String getRandomCapitalLetters(int length) {
@@ -104,9 +104,9 @@ public class RandomUtils {
 
     /**
      * get a fixed-length random string, its a mixture of lowercase letters
-     * 
-     * @param length
-     * @return
+     *
+     * @param length 长度
+     * @return 随机字符串 包括小写字母
      * @see RandomUtils#getRandom(String source, int length)
      */
     public static String getRandomLowerCaseLetters(int length) {
@@ -115,13 +115,13 @@ public class RandomUtils {
 
     /**
      * get a fixed-length random string, its a mixture of chars in source
-     * 
-     * @param source
-     * @param length
+     *
+     * @param source 源字符串
+     * @param length 长度
      * @return <ul>
-     *         <li>if source is null or empty, return null</li>
-     *         <li>else see {@link RandomUtils#getRandom(char[] sourceChar, int length)}</li>
-     *         </ul>
+     * <li>if source is null or empty, return null</li>
+     * <li>else see {@link RandomUtils#getRandom(char[] sourceChar, int length)}</li>
+     * </ul>
      */
     public static String getRandom(String source, int length) {
         return TextUtils.isEmpty(source) ? null : getRandom(source.toCharArray(), length);
@@ -129,13 +129,13 @@ public class RandomUtils {
 
     /**
      * get a fixed-length random string, its a mixture of chars in sourceChar
-     * 
-     * @param sourceChar
-     * @param length
+     *
+     * @param sourceChar 源
+     * @param length     长度
      * @return <ul>
-     *         <li>if sourceChar is null or empty, return null</li>
-     *         <li>if length less than 0, return null</li>
-     *         </ul>
+     * <li>if sourceChar is null or empty, return null</li>
+     * <li>if length less than 0, return null</li>
+     * </ul>
      */
     public static String getRandom(char[] sourceChar, int length) {
         if (sourceChar == null || sourceChar.length == 0 || length < 0) {
@@ -152,12 +152,12 @@ public class RandomUtils {
 
     /**
      * get random int between 0 and max
-     * 
-     * @param max
+     *
+     * @param max 最大随机数
      * @return <ul>
-     *         <li>if max <= 0, return 0</li>
-     *         <li>else return random int between 0 and max</li>
-     *         </ul>
+     * <li>if max <= 0, return 0</li>
+     * <li>else return random int between 0 and max</li>
+     * </ul>
      */
     public static int getRandom(int max) {
         return getRandom(0, max);
@@ -165,14 +165,14 @@ public class RandomUtils {
 
     /**
      * get random int between min and max
-     * 
-     * @param min
-     * @param max
+     *
+     * @param min 最小随机数
+     * @param max 最大随机数
      * @return <ul>
-     *         <li>if min > max, return 0</li>
-     *         <li>if min == max, return min</li>
-     *         <li>else return random int between min and max</li>
-     *         </ul>
+     * <li>if min > max, return 0</li>
+     * <li>if min == max, return min</li>
+     * <li>else return random int between min and max</li>
+     * </ul>
      */
     public static int getRandom(int min, int max) {
         if (min > max) {
@@ -186,7 +186,7 @@ public class RandomUtils {
 
     /**
      * Shuffling algorithm, Randomly permutes the specified array using a default source of randomness
-     * 
+     *
      * @param objArray
      * @return
      */
@@ -200,7 +200,7 @@ public class RandomUtils {
 
     /**
      * Shuffling algorithm, Randomly permutes the specified array
-     * 
+     *
      * @param objArray
      * @param shuffleCount
      * @return
@@ -222,7 +222,7 @@ public class RandomUtils {
 
     /**
      * Shuffling algorithm, Randomly permutes the specified int array using a default source of randomness
-     * 
+     *
      * @param intArray
      * @return
      */
@@ -236,7 +236,7 @@ public class RandomUtils {
 
     /**
      * Shuffling algorithm, Randomly permutes the specified int array
-     * 
+     *
      * @param intArray
      * @param shuffleCount
      * @return

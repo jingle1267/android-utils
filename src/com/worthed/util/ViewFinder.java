@@ -27,274 +27,273 @@ import android.widget.TextView;
 
 /**
  * Helper for finding and tweaking a view's children
- * 
+ *
  * @author zhenguo
- * 
  */
 public class ViewFinder {
 
-	private static interface FindWrapper {
+    private static interface FindWrapper {
 
-		View findViewById(int id);
+        View findViewById(int id);
 
-		Resources getResources();
-	}
+        Resources getResources();
+    }
 
-	private static class WindowWrapper implements FindWrapper {
+    private static class WindowWrapper implements FindWrapper {
 
-		private final Window window;
+        private final Window window;
 
-		WindowWrapper(final Window window) {
-			this.window = window;
-		}
+        WindowWrapper(final Window window) {
+            this.window = window;
+        }
 
-		public View findViewById(final int id) {
-			return window.findViewById(id);
-		}
+        public View findViewById(final int id) {
+            return window.findViewById(id);
+        }
 
-		public Resources getResources() {
-			return window.getContext().getResources();
-		}
-	}
+        public Resources getResources() {
+            return window.getContext().getResources();
+        }
+    }
 
-	private static class ViewWrapper implements FindWrapper {
+    private static class ViewWrapper implements FindWrapper {
 
-		private final View view;
+        private final View view;
 
-		ViewWrapper(final View view) {
-			this.view = view;
-		}
+        ViewWrapper(final View view) {
+            this.view = view;
+        }
 
-		public View findViewById(final int id) {
-			return view.findViewById(id);
-		}
+        public View findViewById(final int id) {
+            return view.findViewById(id);
+        }
 
-		public Resources getResources() {
-			return view.getResources();
-		}
-	}
+        public Resources getResources() {
+            return view.getResources();
+        }
+    }
 
-	private final FindWrapper wrapper;
+    private final FindWrapper wrapper;
 
-	/**
-	 * Create finder wrapping given view
-	 * 
-	 * @param view
-	 */
-	public ViewFinder(final View view) {
-		wrapper = new ViewWrapper(view);
-	}
+    /**
+     * Create finder wrapping given view
+     *
+     * @param view
+     */
+    public ViewFinder(final View view) {
+        wrapper = new ViewWrapper(view);
+    }
 
-	/**
-	 * Create finder wrapping given window
-	 * 
-	 * @param window
-	 */
-	public ViewFinder(final Window window) {
-		wrapper = new WindowWrapper(window);
-	}
+    /**
+     * Create finder wrapping given window
+     *
+     * @param window
+     */
+    public ViewFinder(final Window window) {
+        wrapper = new WindowWrapper(window);
+    }
 
-	/**
-	 * Create finder wrapping given activity
-	 * 
-	 * @param activity
-	 */
-	public ViewFinder(final Activity activity) {
-		this(activity.getWindow());
-	}
+    /**
+     * Create finder wrapping given activity
+     *
+     * @param activity
+     */
+    public ViewFinder(final Activity activity) {
+        this(activity.getWindow());
+    }
 
-	/**
-	 * Find view with id
-	 * 
-	 * @param id
-	 * @return found view
-	 */
-	@SuppressWarnings("unchecked")
-	public <V extends View> V find(final int id) {
-		return (V) wrapper.findViewById(id);
-	}
+    /**
+     * Find view with id
+     *
+     * @param id
+     * @return found view
+     */
+    @SuppressWarnings("unchecked")
+    public <V extends View> V find(final int id) {
+        return (V) wrapper.findViewById(id);
+    }
 
-	/**
-	 * Get image view with id
-	 * 
-	 * @param id
-	 * @return image view
-	 */
-	public ImageView imageView(final int id) {
-		return find(id);
-	}
+    /**
+     * Get image view with id
+     *
+     * @param id
+     * @return image view
+     */
+    public ImageView imageView(final int id) {
+        return find(id);
+    }
 
-	/**
-	 * Get compound button with id
-	 * 
-	 * @param id
-	 * @return image view
-	 */
-	public CompoundButton compoundButton(final int id) {
-		return find(id);
-	}
+    /**
+     * Get compound button with id
+     *
+     * @param id
+     * @return image view
+     */
+    public CompoundButton compoundButton(final int id) {
+        return find(id);
+    }
 
-	/**
-	 * Get text view with id
-	 * 
-	 * @param id
-	 * @return text view
-	 */
-	public TextView textView(final int id) {
-		return find(id);
-	}
+    /**
+     * Get text view with id
+     *
+     * @param id
+     * @return text view
+     */
+    public TextView textView(final int id) {
+        return find(id);
+    }
 
-	/**
-	 * Set text of child view with given id
-	 * 
-	 * @param id
-	 * @param content
-	 * @return text view
-	 */
-	public TextView setText(final int id, final CharSequence content) {
-		final TextView text = find(id);
-		text.setText(content);
-		return text;
-	}
+    /**
+     * Set text of child view with given id
+     *
+     * @param id
+     * @param content
+     * @return text view
+     */
+    public TextView setText(final int id, final CharSequence content) {
+        final TextView text = find(id);
+        text.setText(content);
+        return text;
+    }
 
-	/**
-	 * Set text of child view with given id
-	 * 
-	 * @param id
-	 * @param content
-	 * @return text view
-	 */
-	public TextView setText(final int id, final int content) {
-		return setText(id, wrapper.getResources().getString(content));
-	}
+    /**
+     * Set text of child view with given id
+     *
+     * @param id
+     * @param content
+     * @return text view
+     */
+    public TextView setText(final int id, final int content) {
+        return setText(id, wrapper.getResources().getString(content));
+    }
 
-	/**
-	 * Register on click listener to child view with given id
-	 * 
-	 * @param id
-	 * @param listener
-	 * @return view registered with listener
-	 */
-	public View onClick(final int id, final OnClickListener listener) {
-		View clickable = find(id);
-		clickable.setOnClickListener(listener);
-		return clickable;
-	}
+    /**
+     * Register on click listener to child view with given id
+     *
+     * @param id
+     * @param listener
+     * @return view registered with listener
+     */
+    public View onClick(final int id, final OnClickListener listener) {
+        View clickable = find(id);
+        clickable.setOnClickListener(listener);
+        return clickable;
+    }
 
-	/**
-	 * Register runnable to be invoked when child view with given id is clicked
-	 * 
-	 * @param id
-	 * @param runnable
-	 * @return view registered with runnable
-	 */
-	public View onClick(final int id, final Runnable runnable) {
-		return onClick(id, new OnClickListener() {
+    /**
+     * Register runnable to be invoked when child view with given id is clicked
+     *
+     * @param id
+     * @param runnable
+     * @return view registered with runnable
+     */
+    public View onClick(final int id, final Runnable runnable) {
+        return onClick(id, new OnClickListener() {
 
-			public void onClick(View v) {
-				runnable.run();
-			}
-		});
-	}
+            public void onClick(View v) {
+                runnable.run();
+            }
+        });
+    }
 
-	/**
-	 * Register on click listener with all given child view ids
-	 * 
-	 * @param ids
-	 * @param listener
-	 */
-	public void onClick(final OnClickListener listener, final int... ids) {
-		for (int id : ids)
-			find(id).setOnClickListener(listener);
-	}
+    /**
+     * Register on click listener with all given child view ids
+     *
+     * @param ids
+     * @param listener
+     */
+    public void onClick(final OnClickListener listener, final int... ids) {
+        for (int id : ids)
+            find(id).setOnClickListener(listener);
+    }
 
-	/**
-	 * Register runnable to be invoked when all given child view ids are clicked
-	 * 
-	 * @param ids
-	 * @param runnable
-	 */
-	public void onClick(final Runnable runnable, final int... ids) {
-		onClick(new OnClickListener() {
+    /**
+     * Register runnable to be invoked when all given child view ids are clicked
+     *
+     * @param ids
+     * @param runnable
+     */
+    public void onClick(final Runnable runnable, final int... ids) {
+        onClick(new OnClickListener() {
 
-			public void onClick(View v) {
-				runnable.run();
-			}
-		}, ids);
-	}
+            public void onClick(View v) {
+                runnable.run();
+            }
+        }, ids);
+    }
 
-	/**
-	 * Set drawable on child image view
-	 * 
-	 * @param id
-	 * @param drawable
-	 * @return image view
-	 */
-	public ImageView setDrawable(final int id, final int drawable) {
-		ImageView image = imageView(id);
-		image.setImageDrawable(image.getResources().getDrawable(drawable));
-		return image;
-	}
+    /**
+     * Set drawable on child image view
+     *
+     * @param id
+     * @param drawable
+     * @return image view
+     */
+    public ImageView setDrawable(final int id, final int drawable) {
+        ImageView image = imageView(id);
+        image.setImageDrawable(image.getResources().getDrawable(drawable));
+        return image;
+    }
 
-	/**
-	 * Register on checked change listener to child view with given id
-	 * 
-	 * @param id
-	 * @param listener
-	 * @return view registered with listener
-	 */
-	public CompoundButton onCheck(final int id,
-			final OnCheckedChangeListener listener) {
-		CompoundButton checkable = find(id);
-		checkable.setOnCheckedChangeListener(listener);
-		return checkable;
-	}
+    /**
+     * Register on checked change listener to child view with given id
+     *
+     * @param id
+     * @param listener
+     * @return view registered with listener
+     */
+    public CompoundButton onCheck(final int id,
+                                  final OnCheckedChangeListener listener) {
+        CompoundButton checkable = find(id);
+        checkable.setOnCheckedChangeListener(listener);
+        return checkable;
+    }
 
-	/**
-	 * Register runnable to be invoked when child view with given id is
-	 * checked/unchecked
-	 * 
-	 * @param id
-	 * @param runnable
-	 * @return view registered with runnable
-	 */
-	public CompoundButton onCheck(final int id, final Runnable runnable) {
-		return onCheck(id, new OnCheckedChangeListener() {
+    /**
+     * Register runnable to be invoked when child view with given id is
+     * checked/unchecked
+     *
+     * @param id
+     * @param runnable
+     * @return view registered with runnable
+     */
+    public CompoundButton onCheck(final int id, final Runnable runnable) {
+        return onCheck(id, new OnCheckedChangeListener() {
 
-			public void onCheckedChanged(CompoundButton buttonView,
-					boolean isChecked) {
-				runnable.run();
-			}
-		});
-	}
+            public void onCheckedChanged(CompoundButton buttonView,
+                                         boolean isChecked) {
+                runnable.run();
+            }
+        });
+    }
 
-	/**
-	 * Register on checked change listener with all given child view ids
-	 * 
-	 * @param ids
-	 * @param listener
-	 */
-	public void onCheck(final OnCheckedChangeListener listener,
-			final int... ids) {
-		for (int id : ids)
-			compoundButton(id).setOnCheckedChangeListener(listener);
-	}
+    /**
+     * Register on checked change listener with all given child view ids
+     *
+     * @param ids
+     * @param listener
+     */
+    public void onCheck(final OnCheckedChangeListener listener,
+                        final int... ids) {
+        for (int id : ids)
+            compoundButton(id).setOnCheckedChangeListener(listener);
+    }
 
-	/**
-	 * Register runnable to be invoked when all given child view ids are
-	 * checked/unchecked
-	 * 
-	 * @param ids
-	 * @param runnable
-	 */
-	public void onCheck(final Runnable runnable, final int... ids) {
-		onCheck(new OnCheckedChangeListener() {
+    /**
+     * Register runnable to be invoked when all given child view ids are
+     * checked/unchecked
+     *
+     * @param ids
+     * @param runnable
+     */
+    public void onCheck(final Runnable runnable, final int... ids) {
+        onCheck(new OnCheckedChangeListener() {
 
-			public void onCheckedChanged(CompoundButton buttonView,
-					boolean isChecked) {
-				runnable.run();
-			}
-		}, ids);
-	}
+            public void onCheckedChanged(CompoundButton buttonView,
+                                         boolean isChecked) {
+                runnable.run();
+            }
+        }, ids);
+    }
 
 }
