@@ -8,13 +8,9 @@ import android.app.Application;
 
 /**
  * 捕获应用异常Application
+ * 在这里完成整个应用退出；在这里进行全局变量的传递；在这里完成低内存的释放；在这里捕获未抓住的异常；用于应用配置, 预加载处理
  *
  * @author jingle1267@163.com
- * @description 在这里完成整个应用退出
- * @description 在这里进行全局变量的传递
- * @description 在这里完成低内存的释放
- * @description 在这里捕获未抓住的异常
- * @description 用于应用配置, 预加载处理
  */
 
 public class BaseApplication extends Application {

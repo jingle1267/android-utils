@@ -1,9 +1,9 @@
-android-utils
-=============
+android工具类库
+==============
   
-  It contains most of the utility classes. 
+  囊括了一大部分Android应用开发过程当中常用的工具类。工具类来源整理自网络和自己编写。
   
-Android utility classes (a - z):
+所有的工具类简介 (a - z):
 
 
  * [AnimationUtils][1] Animation工具类
@@ -38,18 +38,19 @@ Android utility classes (a - z):
  * [SettingUtils][31] 应用配置工具类
  * [ShellUtils][32] shell工具类
  * [ShortCutUtils][33] 快捷方式工具类
- * [Singleton][34] 单例模式简单实现方式
+ * [Singleton][34] 单例模式抽象类
  * [StringUtils][35] 字符串操作工具包。字符串其他操作可以使用TextUtils类。
  * [ViewAnimationUtils][36] 视图动画工具箱，提供简单的控制视图的动画的工具方法
  * [ViewUtils][37] View相关工具类
+ * [ViewFinder][45] findViewById替代工具类
  * [WindowUtils][38] 窗口工具类
  * [BaseApplication][39] 应用Application此处主要是为了错误处理。
  * [BaseCrashHandler][40] 在Application中统一捕获异常，保存到文件中下次再打开时上传
  * [RebootThreadExceptionHandler][41] 重启线程异常处理器，当发生未知异常时会提示异常信息并在一秒钟后重新启动应用。
  * [StartAppReceiver][42] 重启应用广播接收器。
 
-Permission requirement
-----------------------
+需要权限(Permission)
+-------------------
 
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />
@@ -57,19 +58,19 @@ Permission requirement
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-Configuration
--------------
+配置(Configuration)
+------------------
 
 ```xml
 <application
         android:name="com.worthed.app.BaseApplication" >
 ```
-You need set <code>LogUtils.DEBUG_LEVEL = Log.ASSERT</code> and <code>LogUtils.DEBUG_SYSOUT = false</code> for release version.
+发布正式版本注释Log只需要设置 <code>LogUtils.DEBUG_LEVEL = Log.ASSERT</code> 。
 
-Proguard
---------
+混淆(Proguard)
+-------------
 
-  ProGuard obfuscates method names. Use the following snip in your ProGuard configuration file (proguard.cfg):
+  代码混淆只需要在Proguard规则文件中添加如下代码即可(Eclipse下为proguard.cfg文件)：
 
 ``` xml
 -keep class com.worthed.** { *; }
@@ -77,8 +78,8 @@ Proguard
 -dontwarn com.worthed.**
 ```
 
-Developer
----------
+开发者(Developer)
+----------------
 
 * [Zhenguo Jin][44] - <jinzhenguo1990@gmail.com>
 
@@ -145,4 +146,5 @@ License
 [42]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/app/StartAppReceiver.java
 [43]: http://worthed.com/blog/2014/10/16/android-log/
 [44]: http://worthed.com
+[45]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/ViewFinder.java
  

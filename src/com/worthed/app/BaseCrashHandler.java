@@ -28,8 +28,9 @@ import android.os.Looper;
 import android.widget.Toast;
 
 /**
+ * 在Application中统一捕获异常，保存到文件中下次再打开时上传
+ *
  * @author jingle1267@163.com
- * @description 在Application中统一捕获异常，保存到文件中下次再打开时上传
  */
 public class BaseCrashHandler implements UncaughtExceptionHandler {
 
@@ -70,11 +71,10 @@ public class BaseCrashHandler implements UncaughtExceptionHandler {
     /**
      * 初始化,注册Context对象, 获取系统默认的UncaughtException处理器, 设置该CrashHandler为程序的默认处理器
      *
-     * @param ctx
+     * @param context 上下文
      */
-
-    public void init(Context ctx) {
-        mContext = ctx;
+    public void init(Context context) {
+        mContext = context;
         mDefaultHandler = Thread.getDefaultUncaughtExceptionHandler();
         Thread.setDefaultUncaughtExceptionHandler(this);
     }
@@ -82,7 +82,6 @@ public class BaseCrashHandler implements UncaughtExceptionHandler {
     /**
      * 当UncaughtException发生时会转入该函数来处理
      */
-
     @Override
     public void uncaughtException(Thread thread, Throwable ex) {
         if (!handleException(ex) && mDefaultHandler != null) {
@@ -106,7 +105,6 @@ public class BaseCrashHandler implements UncaughtExceptionHandler {
      * false代表不处理该异常(可以将该log信息存储起来)然后交给上层(这里就到了系统的异常处理)去处理，
      * 简单来说就是true不会弹出那个错误提示框，false就会弹出
      */
-
     private boolean handleException(final Throwable ex) {
         if (ex == null) {
             return false;
