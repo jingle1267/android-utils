@@ -34,6 +34,13 @@ import android.view.WindowManager;
 public class DeviceStatusUtils {
 
 	/**
+	 * Don't let anyone instantiate this class.
+	 */
+	private DeviceStatusUtils() {
+		throw new Error("Do not need instantiate!");
+	}
+
+	/**
 	 * 获取系统屏幕亮度模式的状态，需要WRITE_SETTINGS权限
 	 * 
 	 * @param context

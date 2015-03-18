@@ -39,12 +39,19 @@ import java.util.List;
  *
  * @author jingle1267@163.com
  */
-public class ShellUtils {
+public final class ShellUtils {
 
     public static final String COMMAND_SU = "su";
     public static final String COMMAND_SH = "sh";
     public static final String COMMAND_EXIT = "exit\n";
     public static final String COMMAND_LINE_END = "\n";
+
+    /**
+     * Don't let anyone instantiate this class.
+     */
+    private ShellUtils() {
+        throw new Error("Do not need instantiate!");
+    }
 
     /**
      * check whether has root permission

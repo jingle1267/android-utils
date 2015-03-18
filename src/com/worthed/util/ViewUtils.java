@@ -60,7 +60,14 @@ import android.widget.TextView;
  *
  * @author jingle1267@163.com
  */
-public class ViewUtils {
+public final class ViewUtils {
+
+    /**
+     * Don't let anyone instantiate this class.
+     */
+    private ViewUtils() {
+        throw new Error("Do not need instantiate!");
+    }
 
     /**
      * get ListView height according to every children

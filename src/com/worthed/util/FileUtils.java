@@ -73,7 +73,7 @@ import android.text.TextUtils;
  *
  * @author jingle1267@163.com
  */
-public class FileUtils {
+public final class FileUtils {
 
     public static final long GB = 1073741824; // 1024 * 1024 * 1024
     public static final long MB = 1048576; // 1024 * 1024
@@ -93,12 +93,19 @@ public class FileUtils {
     private static final String FILENAME_REGIX = "^[^\\/?\"*:<>\\]{1,255}$";
 
     /**
+     * Don't let anyone instantiate this class.
+     */
+    private FileUtils() {
+        throw new Error("Do not need instantiate!");
+    }
+
+    /**
      * 删除文件或者空的文件夹
      *
      * @param file File对象
      * @return 执行结果
      */
-    public boolean deleteFile(File file) {
+    public static boolean deleteFile(File file) {
 
         return file.delete();
     }
@@ -108,7 +115,7 @@ public class FileUtils {
      *
      * @param file 要删除的根目录
      */
-    public void DeleteFile(File file) {
+    public static void DeleteFile(File file) {
         if (file.exists() == false) {
             return;
         } else {
@@ -137,7 +144,7 @@ public class FileUtils {
      * @param newFileName 新的文件名
      * @return 执行结果
      */
-    public boolean renameFile(File file, String newFileName) {
+    public static boolean renameFile(File file, String newFileName) {
         if (newFileName.matches(FILENAME_REGIX)) {
             File newFile = null;
             if (file.isDirectory()) {

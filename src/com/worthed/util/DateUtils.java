@@ -25,7 +25,7 @@ import java.util.Date;
  *
  * @author jingle1267@163.com
  */
-public class DateUtils {
+public final class DateUtils {
 
     /**
      * 日期类型 *

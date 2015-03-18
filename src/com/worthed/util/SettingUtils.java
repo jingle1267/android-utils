@@ -30,10 +30,17 @@ import android.preference.PreferenceManager;
  * @author jingle1267@163.com
  */
 @SuppressLint("CommitPrefEdits")
-public class SettingUtils {
+public final class SettingUtils {
 
     private final static boolean DEBUG = true;
     private final static String TAG = "SettingUtils";
+
+    /**
+     * Don't let anyone instantiate this class.
+     */
+    private SettingUtils() {
+        throw new Error("Do not need instantiate!");
+    }
 
     public static boolean contains(Context context, int resId) {
         return contains(context, context.getString(resId));

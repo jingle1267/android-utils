@@ -37,10 +37,17 @@ import android.util.Log;
  *
  * @author jingle1267@163.com
  */
-public class LocationUtils {
+public final class LocationUtils {
 
     private final static boolean DEBUG = true;
     private final static String TAG = "LocationUtils";
+
+    /**
+     * Don't let anyone instantiate this class.
+     */
+    private LocationUtils() {
+        throw new Error("Do not need instantiate!");
+    }
 
     /**
      * 根据地址获取对应的经纬度

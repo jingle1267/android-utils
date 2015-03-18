@@ -66,7 +66,7 @@ import android.util.Log;
  *
  * @author jingle1267@163.com
  */
-public class PackageUtils {
+public final class PackageUtils {
 
     public static final String TAG = "PackageUtils";
     /**
@@ -75,6 +75,13 @@ public class PackageUtils {
     public static final int APP_INSTALL_AUTO = 0;
     public static final int APP_INSTALL_INTERNAL = 1;
     public static final int APP_INSTALL_EXTERNAL = 2;
+
+    /**
+     * Don't let anyone instantiate this class.
+     */
+    private PackageUtils() {
+        throw new Error("Do not need instantiate!");
+    }
 
     /**
      * install according conditions

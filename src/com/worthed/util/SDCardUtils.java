@@ -24,7 +24,15 @@ import java.io.FileOutputStream;
  *
  * @author jingle1267@163.com
  */
-public class SDCardUtils {
+public final class SDCardUtils {
+
+    /**
+     * Don't let anyone instantiate this class.
+     */
+    private SDCardUtils() {
+        throw new Error("Do not need instantiate!");
+    }
+
     /**
      * Check the SD card
      *

@@ -56,10 +56,17 @@ import android.view.View;
  *
  * @author jingle1267@163.com
  */
-public class BitmapUtil {
+public final class BitmapUtil {
 
     private static final boolean DEBUG = false;
     private static final String TAG = BitmapUtil.class.getSimpleName();
+
+    /**
+     * Don't let anyone instantiate this class.
+     */
+    private BitmapUtil() {
+        throw new Error("Do not need instantiate!");
+    }
 
     /**
      * 图片压缩处理（使用Options的方法）

@@ -32,7 +32,14 @@ import android.net.Uri;
  *         <p/>
  *         需要权限: com.android.launcher.permission.INSTALL_SHORTCUT com.android.launcher.permission.UNINSTALL_SHORTCUT
  */
-public class ShortCutUtils {
+public final class ShortCutUtils {
+
+    /**
+     * Don't let anyone instantiate this class.
+     */
+    private ShortCutUtils() {
+        throw new Error("Do not need instantiate!");
+    }
 
     /**
      * 检测是否存在快捷键
@@ -40,7 +47,7 @@ public class ShortCutUtils {
      * @param activity Activity
      * @return 是否存在桌面图标
      */
-    public boolean hasShortcut(Activity activity) {
+    public static boolean hasShortcut(Activity activity) {
         boolean isInstallShortcut = false;
         final ContentResolver cr = activity.getContentResolver();
         final String AUTHORITY = "com.android.launcher.settings";
@@ -84,7 +91,7 @@ public class ShortCutUtils {
      *
      * @param activity Activity
      */
-    public void delShortcut(Activity activity) {
+    public static void delShortcut(Activity activity) {
         Intent shortcut = new Intent(
                 "com.android.launcher.action.UNINSTALL_SHORTCUT");
         // 快捷方式的名称

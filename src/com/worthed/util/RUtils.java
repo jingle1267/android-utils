@@ -22,7 +22,7 @@ import android.content.Context;
  *
  * @author zhenguo
  */
-public class RUtils {
+public final class RUtils {
 
     public static final String POINT = ".";
     public static final String R = "R";
@@ -39,6 +39,13 @@ public class RUtils {
     public static final String STRING = "string";
     public static final String STYLE = "style";
     public static final String STYLEABLE = "styleable";
+
+    /**
+     * Don't let anyone instantiate this class.
+     */
+    private RUtils() {
+        throw new Error("Do not need instantiate!");
+    }
 
     /**
      * 获取动画ID

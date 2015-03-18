@@ -24,7 +24,14 @@ import android.net.Uri;
  *
  * @author jingle1267@163.com
  */
-public class PhoneUtil {
+public final class PhoneUtil {
+
+    /**
+     * Don't let anyone instantiate this class.
+     */
+    private PhoneUtil() {
+        throw new Error("Do not need instantiate!");
+    }
 
     /**
      * 调用系统发短信界面

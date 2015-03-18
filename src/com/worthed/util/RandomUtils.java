@@ -50,13 +50,20 @@ import android.text.TextUtils;
  *
  * @author jingle1267@163.com
  */
-public class RandomUtils {
+public final class RandomUtils {
 
     public static final String NUMBERS_AND_LETTERS = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
     public static final String NUMBERS = "0123456789";
     public static final String LETTERS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
     public static final String CAPITAL_LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     public static final String LOWER_CASE_LETTERS = "abcdefghijklmnopqrstuvwxyz";
+
+    /**
+     * Don't let anyone instantiate this class.
+     */
+    private RandomUtils() {
+        throw new Error("Do not need instantiate!");
+    }
 
     /**
      * get a fixed-length random string, its a mixture of uppercase, lowercase letters and numbers

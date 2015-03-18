@@ -25,7 +25,14 @@ import android.view.inputmethod.InputMethodManager;
  *
  * @author jingle1267@163.com
  */
-public class DisplayUtils {
+public final class DisplayUtils {
+
+    /**
+     * Don't let anyone instantiate this class.
+     */
+    private DisplayUtils() {
+        throw new Error("Do not need instantiate!");
+    }
 
     /**
      * 根据手机的分辨率从 dp 的单位 转成为 px(像素)

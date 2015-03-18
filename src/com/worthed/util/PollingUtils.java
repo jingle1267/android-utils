@@ -27,10 +27,17 @@ import android.text.TextUtils;
  *
  * @author jingle1267@163.com
  */
-public class PollingUtils {
+public final class PollingUtils {
 
     private static final boolean DEBUG = true;
     private static final String TAG = "PollingUtils";
+
+    /**
+     * Don't let anyone instantiate this class.
+     */
+    private PollingUtils() {
+        throw new Error("Do not need instantiate!");
+    }
 
     /**
      * 判断是否存在轮询服务

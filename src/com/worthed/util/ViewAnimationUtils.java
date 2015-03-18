@@ -27,7 +27,14 @@ import android.view.animation.TranslateAnimation;
  *
  * @author zhenguo
  */
-public class ViewAnimationUtils {
+public final class ViewAnimationUtils {
+
+    /**
+     * Don't let anyone instantiate this class.
+     */
+    private ViewAnimationUtils() {
+        throw new Error("Do not need instantiate!");
+    }
 
     // /**
     // * 默认动画持续时间

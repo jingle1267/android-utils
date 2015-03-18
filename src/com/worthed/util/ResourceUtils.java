@@ -29,7 +29,14 @@ import android.text.TextUtils;
  *
  * @author jingle1267@163.com
  */
-public class ResourceUtils {
+public final class ResourceUtils {
+
+    /**
+     * Don't let anyone instantiate this class.
+     */
+    private ResourceUtils() {
+        throw new Error("Do not need instantiate!");
+    }
 
     /**
      * get an asset using ACCESS_STREAMING mode. This provides access to files that have been bundled with an

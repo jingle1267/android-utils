@@ -24,10 +24,17 @@ import android.text.TextUtils;
  *
  * @author jingle1267@163.com
  */
-public class DatabaseExportUtils {
+public final class DatabaseExportUtils {
 
     private static final boolean DEBUG = true;
     private static final String TAG = "DatabaseExportUtils";
+
+    /**
+     * Don't let anyone instantiate this class.
+     */
+    private DatabaseExportUtils() {
+        throw new Error("Do not need instantiate!");
+    }
 
     /**
      * 开始导出数据 此操作比较耗时,建议在线程中进行

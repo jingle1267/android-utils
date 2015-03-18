@@ -23,7 +23,14 @@ import android.util.Log;
  * @author jingle1267@163.com
  * @description And you can turn off the log by set DEBUG_LEVEL = Log.ASSERT.
  */
-public class LogUtils {
+public final class LogUtils {
+
+    /**
+     * Don't let anyone instantiate this class.
+     */
+    private LogUtils() {
+        throw new Error("Do not need instantiate!");
+    }
 
     /**
      * Master switch.To catch error info you need set this value below Log.WARN

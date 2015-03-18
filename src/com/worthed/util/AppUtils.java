@@ -46,10 +46,17 @@ import android.text.TextUtils;
  *
  * @author jingle1267@163.com
  */
-public class AppUtils {
+public final class AppUtils {
 
     private static final boolean DEBUG = true;
     private static final String TAG = "AppUtils";
+
+    /**
+     * Don't let anyone instantiate this class.
+     */
+    private AppUtils() {
+        throw new Error("Do not need instantiate!");
+    }
 
     /**
      * 得到软件版本号

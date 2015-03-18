@@ -25,7 +25,14 @@ import android.text.TextUtils;
  *
  * @author jingle1267@163.com
  */
-public class RegUtils {
+public final class RegUtils {
+
+    /**
+     * Don't let anyone instantiate this class.
+     */
+    private RegUtils() {
+        throw new Error("Do not need instantiate!");
+    }
 
     /**
      * 邮箱检测

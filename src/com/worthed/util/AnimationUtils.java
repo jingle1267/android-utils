@@ -26,7 +26,14 @@ import android.view.animation.ScaleAnimation;
  *
  * @author zhenguo
  */
-public class AnimationUtils {
+public final class AnimationUtils {
+
+    /**
+     * Don't let anyone instantiate this class.
+     */
+    private AnimationUtils() {
+        throw new Error("Do not need instantiate!");
+    }
 
     /**
      * 默认动画持续时间

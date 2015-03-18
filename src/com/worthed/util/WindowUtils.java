@@ -25,7 +25,14 @@ import android.view.Surface;
  *
  * @author zhenguo
  */
-public class WindowUtils {
+public final class WindowUtils {
+
+    /**
+     * Don't let anyone instantiate this class.
+     */
+    private WindowUtils() {
+        throw new Error("Do not need instantiate!");
+    }
 
     /**
      * 获取当前窗口的旋转角度

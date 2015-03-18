@@ -20,7 +20,14 @@ package com.worthed.util;
  *
  * @author jingle1267@163.com
  */
-public class Colors {
+public final class Colors {
+
+    /**
+     * Don't let anyone instantiate this class.
+     */
+    private Colors() {
+        throw new Error("Do not need instantiate!");
+    }
 
     /**
      * 白色

@@ -29,7 +29,7 @@ import java.util.Locale;
  * This class is implemented to achieve the best runtime performance and minimum
  * runtime resources with tolerable sacrifice of accuracy. This implementation
  * highly depends on zh_CN ICU collation data and must be always synchronized with
- * ICU.
+ * ICU.(Singleton Design Pattern)
  */
 public class HanziToPinyin {
     private static final boolean DEBUG = true;

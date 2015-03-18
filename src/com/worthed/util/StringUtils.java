@@ -21,11 +21,18 @@ import java.util.regex.Pattern;
 import android.text.TextUtils;
 
 /**
- * 字符串操作工具包
+ * 字符串操作工具包 结合android.text.TextUtils使用
  *
  * @author jingle1267@163.com
  */
-public class StringUtils {
+public final class StringUtils{
+
+    /**
+     * Don't let anyone instantiate this class.
+     */
+    private StringUtils() {
+        throw new Error("Do not need instantiate!");
+    }
 
     /**
      * Returns true if the string is null or 0-length.
