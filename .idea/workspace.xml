@@ -33,8 +33,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b743213-adcf-4678-a4a6-335d055bd1d3" name="Default" comment="[Change] Make demo more simple.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/worthed/util/DateUtils.java" afterPath="$PROJECT_DIR$/src/com/worthed/util/DateUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/worthed/util/AppUtils.java" afterPath="$PROJECT_DIR$/src/com/worthed/util/AppUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/worthed/util/NetUtil.java" afterPath="$PROJECT_DIR$/src/com/worthed/util/NetUtil.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="android-utils.iws" />
@@ -64,34 +64,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ShellUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/worthed/util/ShellUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="53" column="5" selection-start-line="48" selection-start-column="4" selection-end-line="53" selection-end-column="5" />
-              <folding>
-                <element signature="e#1890#1891#0" expanded="false" />
-                <element signature="e#1962#1963#0" expanded="false" />
-                <element signature="e#8430#8431#0" expanded="false" />
-                <element signature="e#8474#8475#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShortCutUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/worthed/util/ShortCutUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="41" selection-end-column="5" />
-              <folding>
-                <element signature="n#!!doc" expanded="false" />
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="StringUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/worthed/util/StringUtils.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -198,12 +170,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DateUtils.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DateUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/worthed/util/DateUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.7756813">
+            <state vertical-scroll-proportion="0.0">
               <caret line="163" column="23" selection-start-line="163" selection-start-column="23" selection-end-line="163" selection-end-column="23" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NetUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/worthed/util/NetUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="150" column="30" selection-start-line="150" selection-start-column="26" selection-end-line="150" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppUtils.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/worthed/util/AppUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.8427673">
+              <caret line="499" column="0" selection-start-line="499" selection-start-column="0" selection-end-line="499" selection-end-column="0" />
+              <folding>
+                <element signature="e#2015#2016#0" expanded="true" />
+                <element signature="e#2074#2075#0" expanded="true" />
+                <element signature="e#13108#13109#0" expanded="true" />
+                <element signature="e#13163#13164#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -799,7 +796,6 @@
         <option value="$PROJECT_DIR$/src/com/worthed/util/CommonUtil.java" />
         <option value="$PROJECT_DIR$/src/com/worthed/util/DoubleKeyValueMap.java" />
         <option value="$PROJECT_DIR$/src/com/worthed/util/DownloadManagerPro.java" />
-        <option value="$PROJECT_DIR$/src/com/worthed/util/NetUtil.java" />
         <option value="$PROJECT_DIR$/src/com/worthed/util/PreferencesCookieStore.java" />
         <option value="$PROJECT_DIR$/src/com/worthed/util/Singleton.java" />
         <option value="$PROJECT_DIR$/src/com/worthed/app/RebootThreadExceptionHandler.java" />
@@ -809,7 +805,6 @@
         <option value="$PROJECT_DIR$/src/com/worthed/util/DataCleanManager.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/com/worthed/util/AnimationUtils.java" />
-        <option value="$PROJECT_DIR$/src/com/worthed/util/AppUtils.java" />
         <option value="$PROJECT_DIR$/src/com/worthed/util/BitmapUtil.java" />
         <option value="$PROJECT_DIR$/src/com/worthed/util/Colors.java" />
         <option value="$PROJECT_DIR$/src/com/worthed/util/DatabaseExportUtils.java" />
@@ -837,6 +832,8 @@
         <option value="$PROJECT_DIR$/src/com/worthed/util/WindowUtils.java" />
         <option value="$PROJECT_DIR$/src/com/worthed/util/ViewFinder.java" />
         <option value="$PROJECT_DIR$/src/com/worthed/util/DateUtils.java" />
+        <option value="$PROJECT_DIR$/src/com/worthed/util/NetUtil.java" />
+        <option value="$PROJECT_DIR$/src/com/worthed/util/AppUtils.java" />
       </list>
     </option>
   </component>
@@ -1196,7 +1193,7 @@
       <workItem from="1419740104766" duration="6447000" />
       <workItem from="1419929612274" duration="1438000" />
       <workItem from="1426654204838" duration="1397000" />
-      <workItem from="1427717987640" duration="335000" />
+      <workItem from="1427717987640" duration="1399000" />
     </task>
     <task id="LOCAL-00001" summary="[Change] Add Intellij Idea configuration files and blur bitmap demo.">
       <created>1414577721952</created>
@@ -1214,7 +1211,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16712000" />
+    <option name="totallyTimeSpent" value="17776000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
@@ -1315,13 +1312,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/worthed/util/NetUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="191" column="6" selection-start-line="191" selection-start-column="6" selection-end-line="191" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../adt-bundle-mac-x86_64-20140702/sdk/sources/android-20/java/io/File.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1413,13 +1403,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/worthed/util/AppUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="4" selection-start-line="53" selection-start-column="4" selection-end-line="58" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -1749,9 +1732,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/util/DateUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.7756813">
+        <state vertical-scroll-proportion="0.0">
           <caret line="163" column="23" selection-start-line="163" selection-start-column="23" selection-end-line="163" selection-end-column="23" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/worthed/util/NetUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="150" column="30" selection-start-line="150" selection-start-column="26" selection-end-line="150" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/worthed/util/AppUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8427673">
+          <caret line="499" column="0" selection-start-line="499" selection-start-column="0" selection-end-line="499" selection-end-column="0" />
+          <folding>
+            <element signature="e#2015#2016#0" expanded="true" />
+            <element signature="e#2074#2075#0" expanded="true" />
+            <element signature="e#13108#13109#0" expanded="true" />
+            <element signature="e#13163#13164#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

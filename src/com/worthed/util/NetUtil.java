@@ -32,7 +32,7 @@ import android.telephony.TelephonyManager;
  *
  * @author jingle1267@163.com
  */
-public class NetUtil {
+public final class NetUtil {
 
     /**
      * 判断网络连接是否打开,包括移动数据连接

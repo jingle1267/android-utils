@@ -15,12 +15,16 @@
  */
 package com.worthed.util;
 
+import java.io.ByteArrayInputStream;
 import java.io.File;
 
 import java.io.FileFilter;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.security.MessageDigest;
+import java.security.cert.CertificateException;
+import java.security.cert.CertificateFactory;
+import java.security.cert.X509Certificate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
@@ -37,8 +41,11 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.content.pm.Signature;
 import android.net.Uri;
 import android.text.TextUtils;
+
+import javax.security.auth.x500.X500Principal;
 
 /**
  * APP工具类
@@ -465,6 +472,36 @@ public final class AppUtils {
         } catch (ClassNotFoundException e) {
             return "SystemProperties class is not found";
         }
+    }
+
+    private final static X500Principal DEBUG_DN = new X500Principal(
+            "CN=Android Debug,O=Android,C=US");
+
+    /**
+     * 检测当前应用是否是Debug版本
+     *
+     * @param ctx
+     * @return
+     */
+    public static boolean isDebuggable(Context ctx) {
+        boolean debuggable = false;
+        try {
+            PackageInfo pinfo = ctx.getPackageManager().getPackageInfo(ctx.getPackageName(), PackageManager.GET_SIGNATURES);
+            Signature signatures[] = pinfo.signatures;
+            for (int i = 0; i < signatures.length; i++) {
+                CertificateFactory cf = CertificateFactory.getInstance("X.509");
+                ByteArrayInputStream stream = new ByteArrayInputStream(signatures[i].toByteArray());
+                X509Certificate cert = (X509Certificate) cf
+                        .generateCertificate(stream);
+                debuggable = cert.getSubjectX500Principal().equals(DEBUG_DN);
+                if (debuggable)
+                    break;
+            }
+
+        } catch (NameNotFoundException e) {
+        } catch (CertificateException e) {
+        }
+        return debuggable;
     }
 
 }
