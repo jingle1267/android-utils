@@ -33,34 +33,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b743213-adcf-4678-a4a6-335d055bd1d3" name="Default" comment="[Change] Make demo more simple.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/worthed/util/AnimationUtils.java" afterPath="$PROJECT_DIR$/src/com/worthed/util/AnimationUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/worthed/util/AppUtils.java" afterPath="$PROJECT_DIR$/src/com/worthed/util/AppUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/worthed/util/BitmapUtil.java" afterPath="$PROJECT_DIR$/src/com/worthed/util/BitmapUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/worthed/util/Colors.java" afterPath="$PROJECT_DIR$/src/com/worthed/util/Colors.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/worthed/util/DatabaseExportUtils.java" afterPath="$PROJECT_DIR$/src/com/worthed/util/DatabaseExportUtils.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/worthed/util/DateUtils.java" afterPath="$PROJECT_DIR$/src/com/worthed/util/DateUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/worthed/util/DeviceStatusUtils.java" afterPath="$PROJECT_DIR$/src/com/worthed/util/DeviceStatusUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/worthed/util/DisplayUtils.java" afterPath="$PROJECT_DIR$/src/com/worthed/util/DisplayUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/worthed/util/FileUtils.java" afterPath="$PROJECT_DIR$/src/com/worthed/util/FileUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/worthed/util/HanziToPinyin.java" afterPath="$PROJECT_DIR$/src/com/worthed/util/HanziToPinyin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/worthed/util/LocationUtils.java" afterPath="$PROJECT_DIR$/src/com/worthed/util/LocationUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/worthed/util/LogUtils.java" afterPath="$PROJECT_DIR$/src/com/worthed/util/LogUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/worthed/util/PackageUtils.java" afterPath="$PROJECT_DIR$/src/com/worthed/util/PackageUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/worthed/util/PhoneUtil.java" afterPath="$PROJECT_DIR$/src/com/worthed/util/PhoneUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/worthed/util/PollingUtils.java" afterPath="$PROJECT_DIR$/src/com/worthed/util/PollingUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/worthed/util/RUtils.java" afterPath="$PROJECT_DIR$/src/com/worthed/util/RUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/worthed/util/RandomUtils.java" afterPath="$PROJECT_DIR$/src/com/worthed/util/RandomUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/worthed/util/RegUtils.java" afterPath="$PROJECT_DIR$/src/com/worthed/util/RegUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/worthed/util/ResourceUtils.java" afterPath="$PROJECT_DIR$/src/com/worthed/util/ResourceUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/worthed/util/SDCardUtils.java" afterPath="$PROJECT_DIR$/src/com/worthed/util/SDCardUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/worthed/util/SettingUtils.java" afterPath="$PROJECT_DIR$/src/com/worthed/util/SettingUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/worthed/util/ShellUtils.java" afterPath="$PROJECT_DIR$/src/com/worthed/util/ShellUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/worthed/util/ShortCutUtils.java" afterPath="$PROJECT_DIR$/src/com/worthed/util/ShortCutUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/worthed/util/StringUtils.java" afterPath="$PROJECT_DIR$/src/com/worthed/util/StringUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/worthed/util/ViewAnimationUtils.java" afterPath="$PROJECT_DIR$/src/com/worthed/util/ViewAnimationUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/worthed/util/ViewFinder.java" afterPath="$PROJECT_DIR$/src/com/worthed/util/ViewFinder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/worthed/util/ViewUtils.java" afterPath="$PROJECT_DIR$/src/com/worthed/util/ViewUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/worthed/util/WindowUtils.java" afterPath="$PROJECT_DIR$/src/com/worthed/util/WindowUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="android-utils.iws" />
@@ -84,38 +58,22 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="DaemonCodeAnalyzer">
-    <disable_hints />
-  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="android-utils" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SDCardUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/worthed/util/SDCardUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1785">
-              <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
-              <folding>
-                <element signature="e#915#916#0" expanded="true" />
-                <element signature="e#974#975#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ShellUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/worthed/util/ShellUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="3960">
+            <state vertical-scroll-proportion="0.0">
               <caret line="53" column="5" selection-start-line="48" selection-start-column="4" selection-end-line="53" selection-end-column="5" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="imports" expanded="true" />
-                <element signature="e#1701#1702#0" expanded="true" />
-                <element signature="e#1760#1761#0" expanded="true" />
+                <element signature="e#1890#1891#0" expanded="false" />
+                <element signature="e#1962#1963#0" expanded="false" />
+                <element signature="e#8430#8431#0" expanded="false" />
+                <element signature="e#8474#8475#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -124,14 +82,11 @@
       <file leaf-file-name="ShortCutUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/worthed/util/ShortCutUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1380">
+            <state vertical-scroll-proportion="0.0">
               <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="41" selection-end-column="5" />
               <folding>
-                <element signature="e#1205#1206#0" expanded="true" />
-                <element signature="e#1264#1265#0" expanded="true" />
-                <element signature="e#1845#1882#0" expanded="true" />
-                <element signature="e#2371#2408#0" expanded="true" />
-                <element signature="e#3279#3316#0" expanded="true" />
+                <element signature="n#!!doc" expanded="false" />
+                <element signature="imports" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -140,13 +95,13 @@
       <file leaf-file-name="StringUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/worthed/util/StringUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="1710">
+            <state vertical-scroll-proportion="0.0">
               <caret line="34" column="5" selection-start-line="29" selection-start-column="4" selection-end-line="34" selection-end-column="5" />
               <folding>
-                <element signature="e#914#915#0" expanded="true" />
-                <element signature="e#973#974#0" expanded="true" />
-                <element signature="e#1200#1201#0" expanded="true" />
-                <element signature="e#1245#1246#0" expanded="true" />
+                <element signature="n#!!doc" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#3377#3378#0" expanded="false" />
+                <element signature="e#3443#3444#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -155,15 +110,11 @@
       <file leaf-file-name="ViewAnimationUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/worthed/util/ViewAnimationUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="9195">
+            <state vertical-scroll-proportion="0.0">
               <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="36" selection-end-column="5" />
               <folding>
-                <element signature="e#1117#1118#0" expanded="true" />
-                <element signature="e#1176#1177#0" expanded="true" />
-                <element signature="e#20578#20579#0" expanded="true" />
-                <element signature="e#20654#20655#0" expanded="true" />
-                <element signature="e#21286#21287#0" expanded="true" />
-                <element signature="e#21357#21358#0" expanded="true" />
+                <element signature="n#!!doc" expanded="false" />
+                <element signature="imports" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -172,11 +123,11 @@
       <file leaf-file-name="ViewUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/worthed/util/ViewUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="3690">
+            <state vertical-scroll-proportion="0.0">
               <caret line="64" column="4" selection-start-line="64" selection-start-column="4" selection-end-line="69" selection-end-column="5" />
               <folding>
-                <element signature="e#2185#2186#0" expanded="true" />
-                <element signature="e#2244#2245#0" expanded="true" />
+                <element signature="n#!!doc" expanded="false" />
+                <element signature="imports" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -185,24 +136,74 @@
       <file leaf-file-name="WindowUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/worthed/util/WindowUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="416" max-vertical-offset="1005">
+            <state vertical-scroll-proportion="0.0">
               <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
               <folding>
-                <element signature="e#944#945#0" expanded="true" />
-                <element signature="e#1003#1004#0" expanded="true" />
+                <element signature="n#!!doc" expanded="false" />
+                <element signature="imports" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ViewFinder.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ViewFinder.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/worthed/util/ViewFinder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25466892" vertical-offset="0" max-vertical-offset="3525">
+            <state vertical-scroll-proportion="0.0">
               <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
               <folding>
-                <element signature="e#2671#2701#0" expanded="true" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#1354#1355#0" expanded="false" />
+                <element signature="e#1398#1399#0" expanded="false" />
+                <element signature="e#1448#1449#0" expanded="false" />
+                <element signature="e#1502#1503#0" expanded="false" />
+                <element signature="e#1545#1546#0" expanded="false" />
+                <element signature="e#1610#1611#0" expanded="false" />
+                <element signature="e#1753#1754#0" expanded="false" />
+                <element signature="e#1793#1794#0" expanded="false" />
+                <element signature="e#1843#1844#0" expanded="false" />
+                <element signature="e#1895#1896#0" expanded="false" />
+                <element signature="e#1938#1939#0" expanded="false" />
+                <element signature="e#1988#1989#0" expanded="false" />
+                <element signature="e#2159#2160#0" expanded="false" />
+                <element signature="e#2206#2207#0" expanded="false" />
+                <element signature="e#2339#2340#0" expanded="false" />
+                <element signature="e#2390#2391#0" expanded="false" />
+                <element signature="e#2531#2532#0" expanded="false" />
+                <element signature="e#2573#2574#0" expanded="false" />
+                <element signature="e#2751#2752#0" expanded="false" />
+                <element signature="e#2802#2803#0" expanded="false" />
+                <element signature="e#2946#2947#0" expanded="false" />
+                <element signature="e#2977#2978#0" expanded="false" />
+                <element signature="e#3136#3137#0" expanded="false" />
+                <element signature="e#3167#3168#0" expanded="false" />
+                <element signature="e#3307#3308#0" expanded="false" />
+                <element signature="e#3338#3339#0" expanded="false" />
+                <element signature="e#4618#4619#0" expanded="false" />
+                <element signature="e#4664#4665#0" expanded="false" />
+                <element signature="e#5269#5270#0" expanded="false" />
+                <element signature="e#5315#5316#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BitmapUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/worthed/util/BitmapUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="65" column="7" selection-start-line="65" selection-start-column="7" selection-end-line="65" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DateUtils.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/worthed/util/DateUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.7756813">
+              <caret line="163" column="23" selection-start-line="163" selection-start-column="23" selection-end-line="163" selection-end-column="23" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -210,21 +211,39 @@
       <file leaf-file-name="TextUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../adt-bundle-mac-x86_64-20140702/sdk/sources/android-20/android/text/TextUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="25680">
+            <state vertical-scroll-proportion="0.0">
               <caret line="16" column="20" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SettingUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/worthed/util/SettingUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="2805">
-              <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="42" selection-end-column="5" />
               <folding>
-                <element signature="e#1250#1251#0" expanded="true" />
-                <element signature="e#1309#1310#0" expanded="true" />
+                <element signature="e#0#59445#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#3077#3078#0" expanded="false" />
+                <element signature="e#3117#3118#0" expanded="false" />
+                <element signature="e#4507#4508#0" expanded="false" />
+                <element signature="e#4564#4565#0" expanded="false" />
+                <element signature="e#6164#6165#0" expanded="false" />
+                <element signature="e#6220#6221#0" expanded="false" />
+                <element signature="e#12965#12966#0" expanded="false" />
+                <element signature="e#13011#13012#0" expanded="false" />
+                <element signature="e#13317#13318#0" expanded="false" />
+                <element signature="e#13352#13353#0" expanded="false" />
+                <element signature="e#13388#13389#0" expanded="false" />
+                <element signature="e#13438#13439#0" expanded="false" />
+                <element signature="e#13802#13803#0" expanded="false" />
+                <element signature="e#13867#13868#0" expanded="false" />
+                <element signature="e#16490#16491#0" expanded="false" />
+                <element signature="e#16534#16535#0" expanded="false" />
+                <element signature="e#16788#16789#0" expanded="false" />
+                <element signature="e#16854#16855#0" expanded="false" />
+                <element signature="e#16893#16894#0" expanded="false" />
+                <element signature="e#16982#16983#0" expanded="false" />
+                <element signature="e#25315#25316#0" expanded="false" />
+                <element signature="e#25368#25369#0" expanded="false" />
+                <element signature="e#56198#56199#0" expanded="false" />
+                <element signature="e#56249#56250#0" expanded="false" />
+                <element signature="e#56516#56517#0" expanded="false" />
+                <element signature="e#56559#56560#0" expanded="false" />
+                <element signature="e#56824#56825#0" expanded="false" />
+                <element signature="e#56882#56883#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -794,7 +813,6 @@
         <option value="$PROJECT_DIR$/src/com/worthed/util/BitmapUtil.java" />
         <option value="$PROJECT_DIR$/src/com/worthed/util/Colors.java" />
         <option value="$PROJECT_DIR$/src/com/worthed/util/DatabaseExportUtils.java" />
-        <option value="$PROJECT_DIR$/src/com/worthed/util/DateUtils.java" />
         <option value="$PROJECT_DIR$/src/com/worthed/util/DeviceStatusUtils.java" />
         <option value="$PROJECT_DIR$/src/com/worthed/util/DisplayUtils.java" />
         <option value="$PROJECT_DIR$/src/com/worthed/util/FileUtils.java" />
@@ -818,19 +836,23 @@
         <option value="$PROJECT_DIR$/src/com/worthed/util/ViewUtils.java" />
         <option value="$PROJECT_DIR$/src/com/worthed/util/WindowUtils.java" />
         <option value="$PROJECT_DIR$/src/com/worthed/util/ViewFinder.java" />
+        <option value="$PROJECT_DIR$/src/com/worthed/util/DateUtils.java" />
       </list>
     </option>
   </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
   </component>
   <component name="MavenProjectNavigator">
     <treeState />
   </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="713" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -860,6 +882,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -943,7 +967,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -960,7 +983,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="recentsLimit" value="5" />
-    <property name="FullScreen" value="false" />
+    <property name="FullScreen" value="true" />
     <property name="LayoutCode.rearrangeEntriesXML" value="false" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -968,6 +991,7 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="LayoutCode.rearrangeEntriesJava" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -980,6 +1004,26 @@
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="USB_DEVICE" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
@@ -1003,53 +1047,13 @@
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <method />
-    </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
+      <module />
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1088,24 +1092,40 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="USB_DEVICE" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
       <method />
     </configuration>
     <configuration default="false" name="android-utils" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -1160,11 +1180,6 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SliceManager">
-    <option name="analysisUIOptions">
-      <AnalysisUIOptions />
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration>$USER_HOME$/.subversion</configuration>
   </component>
@@ -1180,7 +1195,8 @@
       <workItem from="1419734873489" duration="3886000" />
       <workItem from="1419740104766" duration="6447000" />
       <workItem from="1419929612274" duration="1438000" />
-      <workItem from="1426654204838" duration="1131000" />
+      <workItem from="1426654204838" duration="1397000" />
+      <workItem from="1427717987640" duration="335000" />
     </task>
     <task id="LOCAL-00001" summary="[Change] Add Intellij Idea configuration files and blur bitmap demo.">
       <created>1414577721952</created>
@@ -1198,35 +1214,34 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16111000" />
+    <option name="totallyTimeSpent" value="16712000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="713" extended-state="6" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28267047" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286119" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39235127" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24878837" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2536349" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32739726" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1236,6 +1251,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32739726" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32739726" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1251,9 +1267,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="myTodoPanelSettings">
-      <TodoPanelSettings />
-    </option>
     <MESSAGE value="[Change] Add Intellij Idea configuration files and blur bitmap demo." />
     <MESSAGE value="[Change] Make demo more simple." />
     <option name="LAST_COMMIT_MESSAGE" value="[Change] Make demo more simple." />
@@ -1269,63 +1282,63 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/worthed/demo/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="825">
+        <state vertical-scroll-proportion="0.0">
           <caret line="27" column="30" selection-start-line="0" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/demo/ViewFinderActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+        <state vertical-scroll-proportion="0.0">
           <caret line="22" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/util/CipherUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1034" max-vertical-offset="1710">
+        <state vertical-scroll-proportion="0.0">
           <caret line="87" column="17" selection-start-line="87" selection-start-column="17" selection-end-line="87" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/util/CommonUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
+        <state vertical-scroll-proportion="0.0">
           <caret line="41" column="19" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../adt-bundle-mac-x86_64-20140702/sdk/sources/android-20/android/app/DownloadManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3323077" vertical-offset="19554" max-vertical-offset="20775">
+        <state vertical-scroll-proportion="0.3323077">
           <caret line="1364" column="79" selection-start-line="1364" selection-start-column="73" selection-end-line="1364" selection-end-column="79" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/util/NetUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2562" max-vertical-offset="3600">
+        <state vertical-scroll-proportion="0.0">
           <caret line="191" column="6" selection-start-line="191" selection-start-column="6" selection-end-line="191" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../adt-bundle-mac-x86_64-20140702/sdk/sources/android-20/java/io/File.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1320" max-vertical-offset="16740">
+        <state vertical-scroll-proportion="0.0">
           <caret line="133" column="30" selection-start-line="133" selection-start-column="20" selection-end-line="133" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../adt-bundle-mac-x86_64-20140702/sdk/sources/android-20/java/util/regex/Pattern.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="2899" max-vertical-offset="6585">
+        <state vertical-scroll-proportion="0.33333334">
           <caret line="224" column="19" selection-start-line="224" selection-start-column="19" selection-end-line="224" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lint.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="444">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -1333,7 +1346,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -1341,49 +1354,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/app/RebootThreadExceptionHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="975">
+        <state vertical-scroll-proportion="0.0">
           <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/app/BaseApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
+        <state vertical-scroll-proportion="0.0">
           <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/app/BaseCrashHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="2805">
+        <state vertical-scroll-proportion="0.0">
           <caret line="107" column="4" selection-start-line="107" selection-start-column="4" selection-end-line="107" selection-end-column="4" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/app/StartAppReceiver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
+        <state vertical-scroll-proportion="0.0">
           <caret line="30" column="42" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/util/Singleton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30405405" vertical-offset="0" max-vertical-offset="444">
+        <state vertical-scroll-proportion="0.30405405">
           <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.034802783" vertical-offset="345" max-vertical-offset="2340">
+        <state vertical-scroll-proportion="0.034802783">
           <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
           <folding />
         </state>
@@ -1391,380 +1397,361 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/util/DataCleanManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1191" max-vertical-offset="1890">
+        <state vertical-scroll-proportion="0.0">
           <caret line="124" column="25" selection-start-line="124" selection-start-column="25" selection-end-line="124" selection-end-column="25" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/util/AnimationUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="4410">
+        <state vertical-scroll-proportion="0.0">
           <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="35" selection-end-column="5" />
-          <folding>
-            <element signature="e#1057#1058#0" expanded="true" />
-            <element signature="e#1116#1117#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/util/AssetDatabaseOpenHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1335">
+        <state vertical-scroll-proportion="0.0">
           <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/util/AppUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6480">
+        <state vertical-scroll-proportion="0.0">
           <caret line="53" column="4" selection-start-line="53" selection-start-column="4" selection-end-line="58" selection-end-column="5" />
-          <folding>
-            <element signature="e#1756#1757#0" expanded="true" />
-            <element signature="e#1815#1816#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/worthed/util/BitmapUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="24930">
-          <caret line="63" column="4" selection-start-line="63" selection-start-column="4" selection-end-line="68" selection-end-column="5" />
-          <folding>
-            <element signature="e#2174#2175#0" expanded="true" />
-            <element signature="e#2233#2234#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/util/Colors.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5535">
+        <state vertical-scroll-proportion="0.0">
           <caret line="29" column="5" selection-start-line="24" selection-start-column="4" selection-end-line="29" selection-end-column="5" />
-          <folding>
-            <element signature="e#820#821#0" expanded="true" />
-            <element signature="e#879#880#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/util/DatabaseExportUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="990">
+        <state vertical-scroll-proportion="0.0">
           <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="36" selection-end-column="5" />
-          <folding>
-            <element signature="e#1041#1042#0" expanded="true" />
-            <element signature="e#1100#1101#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/worthed/util/DateUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="2250">
-          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/util/DeviceStatusUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5460">
+        <state vertical-scroll-proportion="0.0">
           <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="40" selection-end-column="5" />
-          <folding>
-            <element signature="e#1174#1175#0" expanded="true" />
-            <element signature="e#1224#1225#0" expanded="true" />
-            <element signature="e#5421#5453#0" expanded="true" />
-            <element signature="e#6260#6292#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/util/DisplayUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="2220">
+        <state vertical-scroll-proportion="0.0">
           <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="34" selection-end-column="5" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#978#979#0" expanded="true" />
-            <element signature="e#1037#1038#0" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#978#979#0" expanded="false" />
+            <element signature="e#1037#1038#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/util/DoubleKeyValueMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1575">
+        <state vertical-scroll-proportion="0.0">
           <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/util/DownloadManagerPro.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="6405">
+        <state vertical-scroll-proportion="0.0">
           <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/util/FileUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="13965">
+        <state vertical-scroll-proportion="0.0">
           <caret line="94" column="4" selection-start-line="94" selection-start-column="4" selection-end-line="99" selection-end-column="5" />
           <folding>
-            <element signature="e#3437#3438#0" expanded="true" />
-            <element signature="e#3496#3497#0" expanded="true" />
-            <element signature="e#31702#31734#1" expanded="true" />
+            <element signature="e#3437#3438#0" expanded="false" />
+            <element signature="e#3496#3497#0" expanded="false" />
+            <element signature="e#31702#31734#1" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/util/HanziToPinyin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.923077" vertical-offset="0" max-vertical-offset="7305">
+        <state vertical-scroll-proportion="-6.923077">
           <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/util/ImsiUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4020">
+        <state vertical-scroll-proportion="0.0">
           <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/util/LocationUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2805">
+        <state vertical-scroll-proportion="0.0">
           <caret line="44" column="4" selection-start-line="44" selection-start-column="4" selection-end-line="49" selection-end-column="5" />
-          <folding>
-            <element signature="e#1470#1471#0" expanded="true" />
-            <element signature="e#1529#1530#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/util/LogUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="5235">
+        <state vertical-scroll-proportion="0.0">
           <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="32" selection-end-column="5" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#928#929#0" expanded="true" />
-            <element signature="e#987#988#0" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#928#929#0" expanded="false" />
+            <element signature="e#987#988#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/util/PackageUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="344" max-vertical-offset="13080">
+        <state vertical-scroll-proportion="0.0">
           <caret line="78" column="4" selection-start-line="78" selection-start-column="4" selection-end-line="83" selection-end-column="5" />
-          <folding>
-            <element signature="e#2867#2868#0" expanded="true" />
-            <element signature="e#2926#2927#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/util/PhoneUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930">
+        <state vertical-scroll-proportion="0.0">
           <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
-          <folding>
-            <element signature="e#883#884#0" expanded="true" />
-            <element signature="e#942#943#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/util/PollingUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1665">
+        <state vertical-scroll-proportion="0.0">
           <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="39" selection-end-column="5" />
-          <folding>
-            <element signature="e#1121#1122#0" expanded="true" />
-            <element signature="e#1180#1181#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/util/PreferencesCookieStore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3195">
+        <state vertical-scroll-proportion="0.0">
           <caret line="42" column="12" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/util/RandomUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="3675">
+        <state vertical-scroll-proportion="0.0">
           <caret line="65" column="5" selection-start-line="60" selection-start-column="4" selection-end-line="65" selection-end-column="5" />
-          <folding>
-            <element signature="e#2893#2894#0" expanded="true" />
-            <element signature="e#2952#2953#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/util/RegUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2670">
+        <state vertical-scroll-proportion="0.0">
           <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="34" selection-end-column="5" />
-          <folding>
-            <element signature="e#885#886#0" expanded="true" />
-            <element signature="e#944#945#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/util/RUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4155">
+        <state vertical-scroll-proportion="0.0">
           <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="47" selection-end-column="5" />
-          <folding>
-            <element signature="e#1543#1544#0" expanded="true" />
-            <element signature="e#1602#1603#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/util/ResourceUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2085">
+        <state vertical-scroll-proportion="0.0">
           <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="38" selection-end-column="5" />
-          <folding>
-            <element signature="e#1016#1017#0" expanded="true" />
-            <element signature="e#1075#1076#0" expanded="true" />
-            <element signature="e#3528#3536#0" expanded="true" />
-            <element signature="e#4389#4397#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/util/SDCardUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1785">
+        <state vertical-scroll-proportion="0.0">
           <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
-          <folding>
-            <element signature="e#915#916#0" expanded="true" />
-            <element signature="e#974#975#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/util/SettingUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="2805">
+        <state vertical-scroll-proportion="0.0">
           <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="42" selection-end-column="5" />
           <folding>
-            <element signature="e#1250#1251#0" expanded="true" />
-            <element signature="e#1309#1310#0" expanded="true" />
+            <element signature="e#1250#1251#0" expanded="false" />
+            <element signature="e#1309#1310#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/util/ShellUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="3960">
+        <state vertical-scroll-proportion="0.0">
           <caret line="53" column="5" selection-start-line="48" selection-start-column="4" selection-end-line="53" selection-end-column="5" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#1701#1702#0" expanded="true" />
-            <element signature="e#1760#1761#0" expanded="true" />
+            <element signature="e#1890#1891#0" expanded="false" />
+            <element signature="e#1962#1963#0" expanded="false" />
+            <element signature="e#8430#8431#0" expanded="false" />
+            <element signature="e#8474#8475#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/util/ShortCutUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1380">
+        <state vertical-scroll-proportion="0.0">
           <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="41" selection-end-column="5" />
           <folding>
-            <element signature="e#1205#1206#0" expanded="true" />
-            <element signature="e#1264#1265#0" expanded="true" />
-            <element signature="e#1845#1882#0" expanded="true" />
-            <element signature="e#2371#2408#0" expanded="true" />
-            <element signature="e#3279#3316#0" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../adt-bundle-mac-x86_64-20140702/sdk/sources/android-20/android/text/TextUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="25680">
+        <state vertical-scroll-proportion="0.0">
           <caret line="16" column="20" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="20" />
-          <folding />
+          <folding>
+            <element signature="e#0#59445#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#3077#3078#0" expanded="false" />
+            <element signature="e#3117#3118#0" expanded="false" />
+            <element signature="e#4507#4508#0" expanded="false" />
+            <element signature="e#4564#4565#0" expanded="false" />
+            <element signature="e#6164#6165#0" expanded="false" />
+            <element signature="e#6220#6221#0" expanded="false" />
+            <element signature="e#12965#12966#0" expanded="false" />
+            <element signature="e#13011#13012#0" expanded="false" />
+            <element signature="e#13317#13318#0" expanded="false" />
+            <element signature="e#13352#13353#0" expanded="false" />
+            <element signature="e#13388#13389#0" expanded="false" />
+            <element signature="e#13438#13439#0" expanded="false" />
+            <element signature="e#13802#13803#0" expanded="false" />
+            <element signature="e#13867#13868#0" expanded="false" />
+            <element signature="e#16490#16491#0" expanded="false" />
+            <element signature="e#16534#16535#0" expanded="false" />
+            <element signature="e#16788#16789#0" expanded="false" />
+            <element signature="e#16854#16855#0" expanded="false" />
+            <element signature="e#16893#16894#0" expanded="false" />
+            <element signature="e#16982#16983#0" expanded="false" />
+            <element signature="e#25315#25316#0" expanded="false" />
+            <element signature="e#25368#25369#0" expanded="false" />
+            <element signature="e#56198#56199#0" expanded="false" />
+            <element signature="e#56249#56250#0" expanded="false" />
+            <element signature="e#56516#56517#0" expanded="false" />
+            <element signature="e#56559#56560#0" expanded="false" />
+            <element signature="e#56824#56825#0" expanded="false" />
+            <element signature="e#56882#56883#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/util/StringUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="1710">
+        <state vertical-scroll-proportion="0.0">
           <caret line="34" column="5" selection-start-line="29" selection-start-column="4" selection-end-line="34" selection-end-column="5" />
           <folding>
-            <element signature="e#914#915#0" expanded="true" />
-            <element signature="e#973#974#0" expanded="true" />
-            <element signature="e#1200#1201#0" expanded="true" />
-            <element signature="e#1245#1246#0" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#3377#3378#0" expanded="false" />
+            <element signature="e#3443#3444#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/util/ViewAnimationUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="9195">
+        <state vertical-scroll-proportion="0.0">
           <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="36" selection-end-column="5" />
           <folding>
-            <element signature="e#1117#1118#0" expanded="true" />
-            <element signature="e#1176#1177#0" expanded="true" />
-            <element signature="e#20578#20579#0" expanded="true" />
-            <element signature="e#20654#20655#0" expanded="true" />
-            <element signature="e#21286#21287#0" expanded="true" />
-            <element signature="e#21357#21358#0" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/util/WindowUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="416" max-vertical-offset="1005">
+        <state vertical-scroll-proportion="0.0">
           <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
           <folding>
-            <element signature="e#944#945#0" expanded="true" />
-            <element signature="e#1003#1004#0" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/util/ViewUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="3690">
+        <state vertical-scroll-proportion="0.0">
           <caret line="64" column="4" selection-start-line="64" selection-start-column="4" selection-end-line="69" selection-end-column="5" />
           <folding>
-            <element signature="e#2185#2186#0" expanded="true" />
-            <element signature="e#2244#2245#0" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worthed/util/ViewFinder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25466892" vertical-offset="0" max-vertical-offset="3525">
+        <state vertical-scroll-proportion="0.0">
           <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
           <folding>
-            <element signature="e#2671#2701#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1354#1355#0" expanded="false" />
+            <element signature="e#1398#1399#0" expanded="false" />
+            <element signature="e#1448#1449#0" expanded="false" />
+            <element signature="e#1502#1503#0" expanded="false" />
+            <element signature="e#1545#1546#0" expanded="false" />
+            <element signature="e#1610#1611#0" expanded="false" />
+            <element signature="e#1753#1754#0" expanded="false" />
+            <element signature="e#1793#1794#0" expanded="false" />
+            <element signature="e#1843#1844#0" expanded="false" />
+            <element signature="e#1895#1896#0" expanded="false" />
+            <element signature="e#1938#1939#0" expanded="false" />
+            <element signature="e#1988#1989#0" expanded="false" />
+            <element signature="e#2159#2160#0" expanded="false" />
+            <element signature="e#2206#2207#0" expanded="false" />
+            <element signature="e#2339#2340#0" expanded="false" />
+            <element signature="e#2390#2391#0" expanded="false" />
+            <element signature="e#2531#2532#0" expanded="false" />
+            <element signature="e#2573#2574#0" expanded="false" />
+            <element signature="e#2751#2752#0" expanded="false" />
+            <element signature="e#2802#2803#0" expanded="false" />
+            <element signature="e#2946#2947#0" expanded="false" />
+            <element signature="e#2977#2978#0" expanded="false" />
+            <element signature="e#3136#3137#0" expanded="false" />
+            <element signature="e#3167#3168#0" expanded="false" />
+            <element signature="e#3307#3308#0" expanded="false" />
+            <element signature="e#3338#3339#0" expanded="false" />
+            <element signature="e#4618#4619#0" expanded="false" />
+            <element signature="e#4664#4665#0" expanded="false" />
+            <element signature="e#5269#5270#0" expanded="false" />
+            <element signature="e#5315#5316#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/worthed/util/BitmapUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="65" column="7" selection-start-line="65" selection-start-column="7" selection-end-line="65" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/worthed/util/DateUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.7756813">
+          <caret line="163" column="23" selection-start-line="163" selection-start-column="23" selection-end-line="163" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>

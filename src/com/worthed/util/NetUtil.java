@@ -15,6 +15,8 @@
  */
 package com.worthed.util;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -230,5 +232,26 @@ public class NetUtil {
         }
         return stateCode;
     }
-    
+
+    /**
+     * 获取URL中参数 并返回Map
+     * @param url
+     * @return
+     */
+    public static Map<String, String> getUrlParams(String url) {
+        Map<String, String> map = null;
+
+        if (url != null && url.indexOf("&") > -1 && url.indexOf("=") > -1) {
+            map = new HashMap<String, String>();
+
+            String[] arrTemp = url.split("&");
+            for (String str : arrTemp) {
+                String[] qs = str.split("=");
+                map.put(qs[0], qs[1]);
+            }
+        }
+
+        return map;
+    }
+
 }
