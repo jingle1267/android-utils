@@ -144,7 +144,7 @@ License
 [40]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/app/BaseCrashHandler.java
 [41]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/app/RebootThreadExceptionHandler.java
 [42]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/app/StartAppReceiver.java
-[43]: http://worthed.com/blog/2014/10/16/android-log/
-[44]: http://worthed.com
+[43]: http://ihongqiqu.com/blog/2014/10/16/android-log/
+[44]: http://ihongqiqu.com
 [45]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/ViewFinder.java
  
