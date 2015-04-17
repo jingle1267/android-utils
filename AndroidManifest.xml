@@ -7,18 +7,20 @@
     <uses-sdk
             android:minSdkVersion="8"
             android:targetSdkVersion="8"/>
+    <!-- 工具库中有些工具类需要这些权限 可根据应用需求进行删减 -->
     <uses-permission android:name="android.permission.GET_TASKS"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
-            android:name="com.worthed.app.BaseApplication"
+            android:name="com.ihongqiqu.app.BaseApplication"
             android:allowBackup="true"
             android:icon="@drawable/ic_launcher"
             android:label="@string/app_name"
             android:theme="@style/AppTheme">
+        <!-- 工具库中不需要下列测试Activity -->
         <activity
-                android:name="com.worthed.demo.MainActivity"
+                android:name="com.ihongqiqu.demo.MainActivity"
                 android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -27,16 +29,15 @@
             </intent-filter>
         </activity>
         <activity
-                android:name="com.worthed.demo.BitmapActivity"
+                android:name="com.ihongqiqu.demo.BitmapActivity"
                 android:label="BitmapDemo"></activity>
         <activity
-                android:name="com.worthed.demo.ViewFinderActivity"
+                android:name="com.ihongqiqu.demo.ViewFinderActivity"
                 android:label="ViewFinderDemo">
         </activity>
 
-        <!-- 注册自定义静态广播接收器 -->
-        <receiver android:name="com.worthed.app.StartAppReceiver">
-        </receiver>
+        <!-- 注册自定义静态广播接收器 开机启动工具类需要此配置 -->
+        <receiver android:name="com.ihongqiqu.app.StartAppReceiver" />
     </application>
 
 </manifest>
