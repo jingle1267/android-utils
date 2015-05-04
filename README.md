@@ -23,6 +23,7 @@ android工具类库
  * [FileUtils][16] 文件操作工具类
  * [HanziToPinyin][17] 汉字转拼音工具类
  * [ImsiUtil][18] IMSI工具类
+ * [JSONUtils][46] Json解析工具类
  * [LocationUtils][19] 根据经纬度查询地址信息和根据地址信息查询经纬度
  * [LogUtils][20] Log工具类。课参考博文:[Android Log工具类][43]。
  * [NetUtil][21] 网络工具类
@@ -49,7 +50,7 @@ android工具类库
  * [RebootThreadExceptionHandler][41] 重启线程异常处理器，当发生未知异常时会提示异常信息并在一秒钟后重新启动应用。
  * [StartAppReceiver][42] 重启应用广播接收器。
 
-需要权限(Permission)
+需要权限 (Permission)
 -------------------
 
 ```xml
@@ -58,7 +59,7 @@ android工具类库
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-配置(Configuration)
+配置 (Configuration)
 ------------------
 
 ```xml
@@ -67,7 +68,7 @@ android工具类库
 ```
 发布正式版本注释Log只需要设置 <code>LogUtils.DEBUG_LEVEL = Log.ASSERT</code> 。
 
-混淆(Proguard)
+混淆 (Proguard)
 -------------
 
   代码混淆只需要在Proguard规则文件中添加如下代码即可(Eclipse下为proguard.cfg文件)：
@@ -78,7 +79,7 @@ android工具类库
 -dontwarn com.worthed.**
 ```
 
-开发者(Developer)
+开发者 (Developer)
 ----------------
 
 * [Zhenguo Jin][44] - <jinzhenguo1990@gmail.com>
@@ -87,7 +88,7 @@ android工具类库
 License
 -------
 
-    Copyright 2014 Zhenguo Jin
+    Copyright 2014-2015 Zhenguo Jin
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -101,50 +102,51 @@ License
     See the License for the specific language governing permissions and
     limitations under the License.
 
-[1]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/AnimationUtils.java
-[2]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/AppUtils.java
-[3]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/AssetDatabaseOpenHelper.java
-[4]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/BitmapUtil.java
-[5]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/CipherUtils.java
-[6]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/Colors.java
-[7]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/CommonUtil.java
-[8]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/DataCleanManager.java
-[9]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/DatabaseExportUtils.java
-[10]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/DateUtils.java
-[11]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/DeviceStatusUtils.java
-[12]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/
-[13]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/DisplayUtils.java
-[14]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/DoubleKeyValueMap.java
-[15]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/DownloadManagerPro.java
-[16]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/FileUtils.java
-[17]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/HanziToPinyin.java
-[18]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/ImsiUtil.java
-[19]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/LocationUtils.java
-[20]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/LogUtils.java
-[21]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/NetUtil.java
-[22]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/PackageUtils.java
-[23]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/PhoneUtil.java
-[24]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/PollingUtils.java
-[25]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/PreferencesCookieStore.java
-[26]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/RUtils.java
-[27]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/RandomUtils.java
-[28]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/RegUtils.java
-[29]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/ResourceUtils.java
-[30]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/SDCardUtils.java
-[31]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/SettingUtils.java
-[32]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/ShellUtils.java
-[33]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/ShortCutUtils.java
-[34]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/Singleton.java
-[35]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/StringUtils.java
-[36]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/ViewAnimationUtils.java
-[37]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/ViewUtils.java
-[38]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/WindowUtils.java
+[1]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/AnimationUtils.java
+[2]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/AppUtils.java
+[3]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/AssetDatabaseOpenHelper.java
+[4]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/BitmapUtil.java
+[5]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/CipherUtils.java
+[6]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/Colors.java
+[7]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/CommonUtil.java
+[8]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/DataCleanManager.java
+[9]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/DatabaseExportUtils.java
+[10]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/DateUtils.java
+[11]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/DeviceStatusUtils.java
+[12]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/
+[13]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/DisplayUtils.java
+[14]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/DoubleKeyValueMap.java
+[15]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/DownloadManagerPro.java
+[16]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/FileUtils.java
+[17]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/HanziToPinyin.java
+[18]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/ImsiUtil.java
+[19]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/LocationUtils.java
+[20]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/LogUtils.java
+[21]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/NetUtil.java
+[22]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/PackageUtils.java
+[23]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/PhoneUtil.java
+[24]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/PollingUtils.java
+[25]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/PreferencesCookieStore.java
+[26]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/RUtils.java
+[27]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/RandomUtils.java
+[28]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/RegUtils.java
+[29]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/ResourceUtils.java
+[30]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/SDCardUtils.java
+[31]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/SettingUtils.java
+[32]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/ShellUtils.java
+[33]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/ShortCutUtils.java
+[34]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/Singleton.java
+[35]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/StringUtils.java
+[36]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/ViewAnimationUtils.java
+[37]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/ViewUtils.java
+[38]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/WindowUtils.java
+[46]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/JSONUtils.java
 
-[39]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/app/BaseApplication.java
-[40]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/app/BaseCrashHandler.java
-[41]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/app/RebootThreadExceptionHandler.java
-[42]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/app/StartAppReceiver.java
+[39]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/app/BaseApplication.java
+[40]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/app/BaseCrashHandler.java
+[41]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/app/RebootThreadExceptionHandler.java
+[42]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/app/StartAppReceiver.java
 [43]: http://ihongqiqu.com/blog/2014/10/16/android-log/
 [44]: http://ihongqiqu.com
-[45]: https://github.com/jingle1267/android-utils/blob/master/src/com/worthed/util/ViewFinder.java
+[45]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/ViewFinder.java
  
