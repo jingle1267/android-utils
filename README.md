@@ -64,7 +64,7 @@ android工具类库
 
 ```xml
 <application
-        android:name="com.worthed.app.BaseApplication" >
+        android:name="com.ihongqiqu.app.BaseApplication" >
 ```
 发布正式版本注释Log只需要设置 <code>LogUtils.DEBUG_LEVEL = Log.ASSERT</code> 。
 
@@ -74,9 +74,9 @@ android工具类库
   代码混淆只需要在Proguard规则文件中添加如下代码即可(Eclipse下为proguard.cfg文件)：
 
 ``` xml
--keep class com.worthed.** { *; }
--keepclassmembers class com.worthed.** { *; }
--dontwarn com.worthed.**
+-keep class com.ihongqiqu.** { *; }
+-keepclassmembers class com.ihongqiqu.** { *; }
+-dontwarn com.ihongqiqu.**
 ```
 
 开发者 (Developer)
