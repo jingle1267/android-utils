@@ -151,4 +151,4 @@ License
 [44]: http://ihongqiqu.com
 [45]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/ViewFinder.java
 [46]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/ChannelUtil.java
-[46]: http://ihongqiqu.com/blog/2015/07/16/android-mutiple-channel-build/
+[47]: http://ihongqiqu.com/blog/2015/07/16/android-mutiple-channel-build/
