@@ -13,6 +13,7 @@ android工具类库
  * [CipherUtils][5] 加密与解密的工具类
  * [Colors][6] 常用颜色色值工具类
  * [CommonUtil][7] 一些通用的方法
+ * [ChannelUtil][46] 为打包而生的渠道工具类 [极速打包传送门][47]
  * [DataCleanManager][8] 应用数据清除类，主要功能有清除内/外缓存，清除数据库，清除sharedPreference，清除files和清除自定义目录
  * [DatabaseExportUtils][9] 导出应用数据库工具类
  * [DateUtils][10] 日期工具类
@@ -149,4 +150,5 @@ License
 [43]: http://ihongqiqu.com/blog/2014/10/16/android-log/
 [44]: http://ihongqiqu.com
 [45]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/ViewFinder.java
- 
+[46]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/ChannelUtil.java
+[46]: http://ihongqiqu.com/blog/2015/07/16/android-mutiple-channel-build/
