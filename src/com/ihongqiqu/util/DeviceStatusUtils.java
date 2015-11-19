@@ -20,6 +20,7 @@ import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
 import android.content.Intent;
+import android.media.AudioManager;
 import android.os.Build;
 import android.provider.Settings;
 import android.view.Window;
@@ -342,8 +343,7 @@ public class DeviceStatusUtils {
 	 * @return 铃声音量，取值范围为0-7；默认为0
 	 */
 	public static int getRingVolume(Context context) {
-		return Settings.System.getInt(context.getContentResolver(),
-				Settings.System.VOLUME_RING, 0);
+		return ((AudioManager) context.getSystemService(Context.AUDIO_SERVICE)).getStreamVolume(AudioManager.STREAM_RING);
 	}
 
 	/**
