@@ -3,10 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/android-utils.iml" filepath="$PROJECT_DIR$/android-utils.iml" />
-      <module fileurl="file://$PROJECT_DIR$/android-utils-jingle1267.iml" filepath="$PROJECT_DIR$/android-utils-jingle1267.iml" />
-      <module fileurl="file://$PROJECT_DIR$/build/generated/source/buildConfig/buildConfig.iml" filepath="$PROJECT_DIR$/build/generated/source/buildConfig/buildConfig.iml" />
-      <module fileurl="file://$PROJECT_DIR$/build/generated/source/r/r.iml" filepath="$PROJECT_DIR$/build/generated/source/r/r.iml" />
-      <module fileurl="file://$PROJECT_DIR$/build/generated/source/buildConfig/test/test.iml" filepath="$PROJECT_DIR$/build/generated/source/buildConfig/test/test.iml" />
     </modules>
   </component>
 </project>

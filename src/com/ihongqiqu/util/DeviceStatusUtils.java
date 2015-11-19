@@ -273,7 +273,6 @@ public class DeviceStatusUtils {
 	 * 判断蓝牙是否打开
 	 * 
 	 * @return true：已经打开或者正在打开；false：已经关闭或者正在关闭
-	 * @throws DeviceNotFoundException
 	 *             没有找到蓝牙设备
 	 */
 	public static boolean isBluetoothOpen() throws Exception {
@@ -288,7 +287,6 @@ public class DeviceStatusUtils {
 	 * 
 	 * @param enable
 	 *            打开
-	 * @throws DeviceNotFoundException
 	 *             没有找到蓝牙设备
 	 */
 	public static void setBluetooth(boolean enable) throws Exception {
@@ -353,7 +351,7 @@ public class DeviceStatusUtils {
 	 *            上下文
 	 * @return 媒体音量，取值范围为0-7
 	 */
-	public static boolean setRingVolume(Context context, int ringVloume) {
+	public static void setRingVolume(Context context, int ringVloume) {
 		if (ringVloume < 0) {
 			ringVloume = 0;
 		} else if (ringVloume > 7) {
@@ -362,8 +360,9 @@ public class DeviceStatusUtils {
 				ringVloume = 7;
 			}
 		}
-		return Settings.System.putInt(context.getContentResolver(),
-				Settings.System.VOLUME_MUSIC, ringVloume);
+
+		((AudioManager) context.getSystemService(Context.AUDIO_SERVICE)).setStreamVolume(AudioManager.STREAM_RING,
+				ringVloume, AudioManager.FLAG_PLAY_SOUND);
 	}
 
 	// /**
