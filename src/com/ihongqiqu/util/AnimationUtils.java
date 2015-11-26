@@ -256,7 +256,7 @@ public final class AnimationUtils {
      * @return
      */
     public static ScaleAnimation getLessenScaleAnimation(long durationMillis) {
-        return getLessenScaleAnimation(DEFAULT_ANIMATION_DURATION);
+        return getLessenScaleAnimation(durationMillis, null);
     }
 
     /**
@@ -266,7 +266,7 @@ public final class AnimationUtils {
      * @return
      */
     public static ScaleAnimation getLessenScaleAnimation(AnimationListener animationListener) {
-        return getLessenScaleAnimation(DEFAULT_ANIMATION_DURATION, null);
+        return getLessenScaleAnimation(DEFAULT_ANIMATION_DURATION, animationListener);
     }
 
     /**
@@ -290,7 +290,7 @@ public final class AnimationUtils {
      * @return
      */
     public static ScaleAnimation getAmplificationAnimation(long durationMillis) {
-        return getLessenScaleAnimation(DEFAULT_ANIMATION_DURATION);
+        return getAmplificationAnimation(durationMillis, null);
     }
 
     /**
@@ -300,7 +300,7 @@ public final class AnimationUtils {
      * @return
      */
     public static ScaleAnimation getAmplificationAnimation(AnimationListener animationListener) {
-        return getLessenScaleAnimation(DEFAULT_ANIMATION_DURATION, null);
+        return getAmplificationAnimation(DEFAULT_ANIMATION_DURATION, animationListener);
     }
 
 }
