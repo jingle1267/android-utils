@@ -149,8 +149,8 @@ License
 [40]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/app/BaseCrashHandler.java
 [41]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/app/RebootThreadExceptionHandler.java
 [42]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/app/StartAppReceiver.java
-[43]: http://ihongqiqu.com/blog/2014/10/16/android-log/
+[43]: http://ihongqiqu.com/2014/10/16/android-log/
 [44]: http://ihongqiqu.com
 [45]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/ViewFinder.java
 [46]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/ChannelUtil.java
-[47]: http://ihongqiqu.com/blog/2015/07/16/android-mutiple-channel-build/
+[47]: http://ihongqiqu.com/2015/07/16/android-mutiple-channel-build/
