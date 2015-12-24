@@ -1,55 +1,56 @@
-android工具类库
+Android工具类库
 ==============
   
   囊括了一大部分Android应用开发过程当中常用的工具类。工具类来源整理自网络和自己编写。
   
 所有的工具类简介 (a - z):
 
-
- * [AnimationUtils][1] Animation工具类
- * [AppUtils][2] APP相关信息工具类 
- * [AssetDatabaseOpenHelper][3] 读取Asset目录中数据库工具类
- * [BitmapUtil][4] Bitmap工具类主要包括获取Bitmap和对Bitmap的操作
- * [CipherUtils][5] 加密与解密的工具类
- * [Colors][6] 常用颜色色值工具类
- * [CommonUtil][7] 一些通用的方法
- * [ChannelUtil][46] 为打包而生的渠道工具类 [极速打包传送门][47]
- * [DataCleanManager][8] 应用数据清除类，主要功能有清除内/外缓存，清除数据库，清除sharedPreference，清除files和清除自定义目录
- * [DatabaseExportUtils][9] 导出应用数据库工具类
- * [DateUtils][10] 日期工具类
- * [DeviceStatusUtils][11] 手机状态工具类 主要包括网络、蓝牙、屏幕亮度、飞行模式、音量等
- * [DisplayUtils][13] 系统显示相关工具类（包括键盘操作）
- * [DoubleKeyValueMap][14] 双键值对
- * [DownloadManagerPro][15] 下载管理工具类
- * [FileUtils][16] 文件操作工具类
- * [HanziToPinyin][17] 汉字转拼音工具类
- * [ImsiUtil][18] IMSI工具类
- * [JSONUtils][46] Json解析工具类
- * [LocationUtils][19] 根据经纬度查询地址信息和根据地址信息查询经纬度
- * [LogUtils][20] Log工具类。课参考博文:[Android Log工具类][43]。
- * [NetUtil][21] 网络工具类
- * [PackageUtils][22] 应用安装下载相关
- * [PhoneUtil][23] 手机组件调用工具类
- * [PollingUtils][24] 轮询服务工具类
- * [PreferencesCookieStore][25] Cookie存储工具类
- * [RUtils][26] R反射资源ID工具类
- * [RandomUtils][27] 随机工具类
- * [RegUtils][28] 数据校验工具类
- * [ResourceUtils][29] 文件资源读取工具类
- * [SDCardUtils][30] SDcard操作工具类
- * [SettingUtils][31] 应用配置工具类
- * [ShellUtils][32] shell工具类
- * [ShortCutUtils][33] 快捷方式工具类
- * [Singleton][34] 单例模式抽象类
- * [StringUtils][35] 字符串操作工具包。字符串其他操作可以使用TextUtils类。
- * [ViewAnimationUtils][36] 视图动画工具箱，提供简单的控制视图的动画的工具方法
- * [ViewUtils][37] View相关工具类
- * [ViewFinder][45] findViewById替代工具类
- * [WindowUtils][38] 窗口工具类
- * [BaseApplication][39] 应用Application此处主要是为了错误处理。
- * [BaseCrashHandler][40] 在Application中统一捕获异常，保存到文件中下次再打开时上传
- * [RebootThreadExceptionHandler][41] 重启线程异常处理器，当发生未知异常时会提示异常信息并在一秒钟后重新启动应用。
- * [StartAppReceiver][42] 重启应用广播接收器。
+|类|介绍|
+| ------ | ------------ |
+|[AnimationUtils][1]|Animation工具类|
+|[AppUtils][2]|APP相关信息工具类|
+|[AssetDatabaseOpenHelper][3]|读取Asset目录中数据库工具类|
+|[BitmapUtil][4]|Bitmap工具类主要包括获取Bitmap和对Bitmap的操作|
+|[CipherUtils][5]|加密与解密的工具类|
+|[Colors][6]|常用颜色色值工具类|
+|[CommonUtil][7]|一些通用的方法|
+|[ChannelUtil][46]|为打包而生的渠道工具类 [极速打包传送门][47]|
+|[DataCleanManager][8]|应用数据清除类，主要功能有清除内/外缓存，清除数据库，清除sharedPreference，清除files和清除自定义目录|
+|[DatabaseExportUtils][9]|导出应用数据库工具类|
+|[DateUtils][10]|日期工具类|
+|[DeviceStatusUtils][11]|手机状态工具类 主要包括网络、蓝牙、屏幕亮度、飞行模式、音量等|
+|[DisplayUtils][13]|系统显示相关工具类（包括键盘操作|
+|[DoubleKeyValueMap][14]|双键值对|
+|[DownloadManagerPro][15]|下载管理工具类|
+|[FileUtils][16]|文件操作工具类|
+|[HanziToPinyin][17]|汉字转拼音工具类|
+|[ImsiUtil][18]|IMSI工具类|
+|[JSONUtils][46]|Json解析工具类|
+|[LocationUtils][19]|根据经纬度查询地址信息和根据地址信息查询经纬度|
+|[LogUtils][20]|Log工具类。课参考博文:[Android Log工具类][43]。|
+|[NetUtil][21]|网络工具类|
+|[PackageUtils][22]|应用安装下载相关|
+|[PhoneUtil][23]|手机组件调用工具类|
+|[PollingUtils][24]|轮询服务工具类|
+|[PreferencesCookieStore][25]|Cookie存储工具类|
+|[RUtils][26]|R反射资源ID工具类|
+|[RandomUtils][27]|随机工具类|
+|[RegUtils][28]|数据校验工具类|
+|[ResourceUtils][29]|文件资源读取工具类|
+|[SDCardUtils][30]|SDcard操作工具类|
+|[SettingUtils][31]|应用配置工具类|
+|[ShellUtils][32]|shell工具类|
+|[ShortCutUtils][33]|快捷方式工具类|
+|[Singleton][34]|单例模式抽象类|
+|[StringUtils][35]|字符串操作工具包。字符串其他操作可以使用TextUtils类。|
+|[ViewAnimationUtils][36]|视图动画工具箱，提供简单的控制视图的动画的工具方法|
+|[ViewUtils][37]|View相关工具类|
+|[ViewFinder][45]|findViewById替代工具类|
+|[WindowUtils][38]|窗口工具类|
+|[BaseApplication][39]|应用Application此处主要是为了错误处理。|
+|[BaseCrashHandler][40]|在Application中统一捕获异常，保存到文件中下次再打开时上传|
+|[RebootThreadExceptionHandler][41]|重启线程异常处理器，当发生未知异常时会提示异常信息并在一秒钟后重新启动应用。|
+|[StartAppReceiver][42]|重启应用广播接收器。|
 
 需要权限 (Permission)
 -------------------
