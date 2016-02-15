@@ -116,14 +116,20 @@ public class DataCleanManager {
     }
 
     /**
-     * 删除方法 这里只会删除某个文件夹下的文件，如果传入的directory是个文件，将不做处理
+     * 删除方法 这里只会删除某个文件夹下的文件。 此操作较危险，请慎用；
+     *
      *
      * @param directory 文件夹File对象
      */
     private static void deleteFilesByDirectory(File directory) {
         if (directory != null && directory.exists() && directory.isDirectory()) {
             for (File item : directory.listFiles()) {
-                item.delete();
+                // delete file and folder. It's dangerous!
+                if (item.isDirectory()) {
+                    deleteFilesByDirectory(item);
+                } else {
+                    item.delete();
+                }
             }
         }
     }
