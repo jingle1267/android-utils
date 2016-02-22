@@ -15,6 +15,9 @@
  */
 package com.ihongqiqu.util;
 
+import android.telephony.TelephonyManager;
+import android.util.Log;
+import com.worthed.BuildConfig;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 
@@ -27,6 +30,7 @@ import java.security.cert.CertificateFactory;
 import java.security.cert.X509Certificate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 import java.util.regex.Pattern;
 
 import android.app.ActivityManager;
@@ -502,6 +506,26 @@ public final class AppUtils {
         } catch (CertificateException e) {
         }
         return debuggable;
+    }
+
+    /**
+     * 获取设备唯一标识
+     * @param context
+     * @return
+     */
+    public static String getUUID(Context context) {
+        final TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+
+        final String tmDevice, tmSerial, tmPhone, androidId;
+        tmDevice = "" + tm.getDeviceId();
+        tmSerial = "" + tm.getSimSerialNumber();
+        androidId = "" + android.provider.Settings.Secure.getString(context.getContentResolver(), android.provider.Settings.Secure.ANDROID_ID);
+
+        UUID deviceUuid = new UUID(androidId.hashCode(), ((long)tmDevice.hashCode() << 32) | tmSerial.hashCode());
+        String uniqueId = deviceUuid.toString();
+       if (BuildConfig.DEBUG) Log.d(TAG, "uuid=" + uniqueId);
+
+        return uniqueId;
     }
 
 }

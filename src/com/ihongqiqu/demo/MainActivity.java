@@ -1,5 +1,7 @@
 package com.ihongqiqu.demo;
 
+import android.util.Log;
+import com.ihongqiqu.util.AppUtils;
 import com.ihongqiqu.util.ViewFinder;
 import com.worthed.R;
 
@@ -33,6 +35,8 @@ public class MainActivity extends Activity {
         title.setText("Demos:");
         btnBitmap.setText("BitmapDemo");
         btnViewFinder.setText("ViewFinderDemo");
+
+        Log.d("MainActivity", AppUtils.getUUID(this));
     }
 
     @Override

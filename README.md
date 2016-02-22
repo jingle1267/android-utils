@@ -61,6 +61,8 @@ Android工具类库
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 <uses-permission android:name="android.permission.BLUETOOTH" />
+<!-- 获取UUID用到 -->
+<uses-permission android:name="android.permission.READ_PHONE_STATE" />
 ```
 
 配置 (Configuration)
