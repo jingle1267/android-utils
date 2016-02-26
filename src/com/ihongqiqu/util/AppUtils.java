@@ -528,4 +528,21 @@ public final class AppUtils {
         return uniqueId;
     }
 
+    /**
+     * 是否是主线程
+     * @return
+     */
+    public static boolean isMainProcess(Context context) {
+        ActivityManager am = ((ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE));
+        List<RunningAppProcessInfo> processInfos = am.getRunningAppProcesses();
+        String mainProcessName = context.getPackageName();
+        int myPid = android.os.Process.myPid();
+        for (RunningAppProcessInfo info : processInfos) {
+            if (info.pid == myPid && mainProcessName.equals(info.processName)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
