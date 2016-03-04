@@ -2,6 +2,7 @@ package com.ihongqiqu.demo;
 
 import android.util.Log;
 import com.ihongqiqu.util.AppUtils;
+import com.ihongqiqu.util.NetUtil;
 import com.ihongqiqu.util.ViewFinder;
 import com.worthed.R;
 
@@ -12,6 +13,7 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import java.util.Map;
 
 /**
  * 测试代码
@@ -37,6 +39,7 @@ public class MainActivity extends Activity {
         btnViewFinder.setText("ViewFinderDemo");
 
         Log.d("MainActivity", AppUtils.getUUID(this));
+        netTest();
     }
 
     @Override
@@ -56,6 +59,25 @@ public class MainActivity extends Activity {
                 Intent intent1 = new Intent(this, ViewFinderActivity.class);
                 startActivity(intent1);
                 break;
+        }
+    }
+
+    void netTest() {
+        String url = "http://baidu.com";
+        String url2 = "ftp://baidu.com?a=1&b=";
+        String url3 = "https://baidu.com?a=1&b=";
+        String url4 = "010%";
+        String url5 = " ";
+        Log.d("MainActivity", "NetUtil.isUrl(url):" + NetUtil.isUrl(url));
+        Log.d("MainActivity", "NetUtil.isUrl(url2):" + NetUtil.isUrl(url2));
+        Log.d("MainActivity", "NetUtil.isUrl(url3):" + NetUtil.isUrl(url3));
+        Log.d("MainActivity", "NetUtil.isUrl(url4):" + NetUtil.isUrl(url4));
+        Log.d("MainActivity", "NetUtil.isUrl(url5):" + NetUtil.isUrl(url5));
+
+        Map<String, String> params = NetUtil.getUrlParams("http://www.baidu.com/abc/c.html?a=1&b=&c=");
+        for (String key : params.keySet()) {
+            String value = params.get(key);
+            Log.d("MainActivity", "key-value : " + key + "-" + value);
         }
     }
 
