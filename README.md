@@ -25,7 +25,7 @@ Android工具类库
 |[FileUtils][16]|文件操作工具类|
 |[HanziToPinyin][17]|汉字转拼音工具类|
 |[ImsiUtil][18]|IMSI工具类|
-|[JSONUtils][44]|Json解析工具类|
+|[JSONUtils][48]|Json解析工具类|
 |[LocationUtils][19]|根据经纬度查询地址信息和根据地址信息查询经纬度|
 |[LogUtils][20]|Log工具类。课参考博文:[Android Log工具类][43]。|
 |[NetUtil][21]|网络工具类|
@@ -146,7 +146,7 @@ License
 [36]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/ViewAnimationUtils.java
 [37]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/ViewUtils.java
 [38]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/WindowUtils.java
-[46]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/JSONUtils.java
+
 
 [39]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/app/BaseApplication.java
 [40]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/app/BaseCrashHandler.java
@@ -157,3 +157,4 @@ License
 [45]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/ViewFinder.java
 [46]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/ChannelUtil.java
 [47]: http://ihongqiqu.com/2015/07/16/android-mutiple-channel-build/
+[48]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/util/JSONUtils.java
