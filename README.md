@@ -19,7 +19,7 @@ Android工具类库
 |[DatabaseExportUtils][9]|导出应用数据库工具类|
 |[DateUtils][10]|日期工具类|
 |[DeviceStatusUtils][11]|手机状态工具类 主要包括网络、蓝牙、屏幕亮度、飞行模式、音量等|
-|[DisplayUtils][13]|系统显示相关工具类（包括键盘操作|
+|[DisplayUtils][13]|系统显示相关工具类|
 |[DoubleKeyValueMap][14]|双键值对|
 |[DownloadManagerPro][15]|下载管理工具类|
 |[FileUtils][16]|文件操作工具类|
