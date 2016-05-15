@@ -5,8 +5,9 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.worthed.R;
+
 import com.ihongqiqu.util.ViewFinder;
+import com.worthed.R;
 
 /**
  * viewFinder测试

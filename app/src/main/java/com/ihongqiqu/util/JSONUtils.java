@@ -1,12 +1,12 @@
 /**
  * Copyright 2015 Zhenguo Jin
- *
+ * <p/>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
+ * <p/>
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * <p/>
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -19,7 +19,11 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Json解析工具类 推荐使用Google的GSON
@@ -98,7 +102,7 @@ public final class JSONUtils {
      * @see JSONUtils#getLong(JSONObject, String, Long)
      */
     public static long getLong(JSONObject jsonObject, String key, long defaultValue) {
-        return getLong(jsonObject, key, (Long)defaultValue);
+        return getLong(jsonObject, key, (Long) defaultValue);
     }
 
     /**
@@ -109,7 +113,7 @@ public final class JSONUtils {
      * @see JSONUtils#getLong(String, String, Long)
      */
     public static long getLong(String jsonData, String key, long defaultValue) {
-        return getLong(jsonData, key, (Long)defaultValue);
+        return getLong(jsonData, key, (Long) defaultValue);
     }
 
     /**
@@ -176,7 +180,7 @@ public final class JSONUtils {
      * @see JSONUtils#getInt(JSONObject, String, Integer)
      */
     public static int getInt(JSONObject jsonObject, String key, int defaultValue) {
-        return getInt(jsonObject, key, (Integer)defaultValue);
+        return getInt(jsonObject, key, (Integer) defaultValue);
     }
 
     /**
@@ -187,7 +191,7 @@ public final class JSONUtils {
      * @see JSONUtils#getInt(String, String, Integer)
      */
     public static int getInt(String jsonData, String key, int defaultValue) {
-        return getInt(jsonData, key, (Integer)defaultValue);
+        return getInt(jsonData, key, (Integer) defaultValue);
     }
 
     /**
@@ -254,7 +258,7 @@ public final class JSONUtils {
      * @see JSONUtils#getDouble(JSONObject, String, Double)
      */
     public static double getDouble(JSONObject jsonObject, String key, double defaultValue) {
-        return getDouble(jsonObject, key, (Double)defaultValue);
+        return getDouble(jsonObject, key, (Double) defaultValue);
     }
 
     /**
@@ -265,7 +269,7 @@ public final class JSONUtils {
      * @see JSONUtils#getDouble(String, String, Double)
      */
     public static double getDouble(String jsonData, String key, double defaultValue) {
-        return getDouble(jsonData, key, (Double)defaultValue);
+        return getDouble(jsonData, key, (Double) defaultValue);
     }
 
     /**
@@ -796,8 +800,8 @@ public final class JSONUtils {
         }
 
         Map<String, String> keyAndValueMap = new HashMap<String, String>();
-        for (Iterator iter = sourceObj.keys(); iter.hasNext();) {
-            String key = (String)iter.next();
+        for (Iterator iter = sourceObj.keys(); iter.hasNext(); ) {
+            String key = (String) iter.next();
             keyAndValueMap.put(key, getString(sourceObj, key, ""));
         }
         return keyAndValueMap;

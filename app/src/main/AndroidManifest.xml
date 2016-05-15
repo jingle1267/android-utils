@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     package="com.worthed"
     android:versionCode="1"
     android:versionName="1.0">
@@ -39,7 +38,7 @@
             android:label="BitmapDemo" />
         <activity
             android:name="com.ihongqiqu.demo.ViewFinderActivity"
-            android:label="ViewFinderDemo"/>
+            android:label="ViewFinderDemo" />
 
         <!-- 注册自定义静态广播接收器 开机启动工具类需要此配置 -->
         <receiver android:name="com.ihongqiqu.app.StartAppReceiver" />
