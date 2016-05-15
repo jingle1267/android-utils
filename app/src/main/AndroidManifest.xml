@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.worthed">
+    <!-- 工具库中有些工具类需要这些权限 可根据应用需求进行删减 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <!-- 获取UUID用到 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name="com.ihongqiqu.app.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <!-- 工具库中不需要下列测试Activity -->
+        <activity
+            android:name="com.ihongqiqu.demo.MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ihongqiqu.demo.BitmapActivity"
+            android:label="BitmapDemo" />
+        <activity
+            android:name="com.ihongqiqu.demo.ViewFinderActivity"
+            android:label="ViewFinderDemo" />
+
+        <!-- 注册自定义静态广播接收器 开机启动工具类需要此配置 -->
+        <receiver android:name="com.ihongqiqu.app.StartAppReceiver" />
+    </application>
+
+</manifest>

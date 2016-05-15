@@ -1,8 +1,19 @@
-Android工具类库
-==============
+#  Android工具类库 [![Build Status](https://travis-ci.org/kibotu/android-utils.svg?branch=master)](https://travis-ci.org/kibotu/android-utils) [![](https://jitpack.io/v/kibotu/android-utils.svg)](https://jitpack.io/#kibotu/android-utils)  [![API](https://img.shields.io/badge/API-3%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=3) [![Gradle Version](https://img.shields.io/badge/gradle-2.13-green.svg)](https://docs.gradle.org/current/release-notes) [![Licence](https://img.shields.io/badge/licence-Apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
   
   囊括了一大部分Android应用开发过程当中常用的工具类。工具类来源整理自网络和自己编写。
   
+### How to install
+	
+	repositories {
+	    maven {
+	        url "https://jitpack.io"
+	    }
+	}
+		
+	dependencies {
+        compile 'com.github.kibotu:android-utils:1.0.0'
+    }
+      
 所有的工具类简介 (a - z):
 
 |类|介绍|
