@@ -1,0 +1,48 @@
+language: android
+jdk: oraclejdk8
+
+env:
+  matrix:
+    - ANDROID_TARGET=android-23  ANDROID_ABI=armeabi-v7a
+git:
+  depth: 10000
+
+matrix:
+  fast_finish: true
+
+android:
+  components:
+    - platform-tools
+    - tools
+
+    # The BuildTools version used by your project
+    - build-tools-23.0.3
+
+    # The SDK version used to compile your project
+    - android-23
+
+    # Additional components
+    - extra-google-google_play_services
+    - extra-google-m2repository
+    - extra-android-m2repository
+    - addon-google_apis-google-23
+
+  licenses:
+    - android-sdk-license-.+
+
+before_install:
+  - git submodule update --init --recursive
+  - chmod u+x gradlew
+  - android list sdk --no-ui --all --extended
+  - android list targets
+
+install: true
+
+script:
+  - ./gradlew -v
+  - ./gradlew clean build --stacktrace
+
+after_failure: true
+
+notifications:
+  email: false
