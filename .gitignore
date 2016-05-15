@@ -1,6 +1,8 @@
 
 # Created by https://www.gitignore.io/api/android,jetbrains,eclipse,jetbrains,windows,osx,gradle
 
+.idea
+
 ### Android ###
 # Built application files
 *.apk
