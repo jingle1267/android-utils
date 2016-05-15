@@ -32,7 +32,7 @@ import android.widget.TextView;
  */
 public class ViewFinder {
 
-    private static interface FindWrapper {
+    private interface FindWrapper {
 
         View findViewById(int id);
 

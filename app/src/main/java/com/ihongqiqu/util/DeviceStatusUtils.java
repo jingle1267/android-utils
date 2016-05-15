@@ -146,7 +146,7 @@ public class DeviceStatusUtils {
         }
         Window window = activity.getWindow();
         WindowManager.LayoutParams localLayoutParams = window.getAttributes();
-        localLayoutParams.screenBrightness = (float) brightness / 255;
+        localLayoutParams.screenBrightness = brightness / 255;
         window.setAttributes(localLayoutParams);
     }
 
