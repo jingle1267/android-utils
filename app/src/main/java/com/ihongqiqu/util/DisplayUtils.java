@@ -1,5 +1,5 @@
 /**
- * Copyright 2014 Zhenguo Jin (jinzhenguo1990@gmail.com)
+ * Copyright 2014 KJFrameForAndroid Open Source Project,张涛,Zhenguo Jin (jinzhenguo1990@gmail.com)
  * <p/>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -89,10 +89,9 @@ public final class DisplayUtils {
      * @return Dialog宽度
      */
     public static int getDialogW(Activity activity) {
-        DisplayMetrics dm = new DisplayMetrics();
+        DisplayMetrics dm;
         dm = activity.getResources().getDisplayMetrics();
         int w = dm.widthPixels - 100;
-        // int w = aty.getWindowManager().getDefaultDisplay().getWidth() - 100;
         return w;
     }
 
@@ -103,10 +102,9 @@ public final class DisplayUtils {
      * @return 屏幕宽度
      */
     public static int getScreenW(Activity activity) {
-        DisplayMetrics dm = new DisplayMetrics();
+        DisplayMetrics dm ;
         dm = activity.getResources().getDisplayMetrics();
         int w = dm.widthPixels;
-        // int w = aty.getWindowManager().getDefaultDisplay().getWidth();
         return w;
     }
 
@@ -120,7 +118,6 @@ public final class DisplayUtils {
         DisplayMetrics dm = new DisplayMetrics();
         dm = activity.getResources().getDisplayMetrics();
         int h = dm.heightPixels;
-        // int h = aty.getWindowManager().getDefaultDisplay().getHeight();
         return h;
     }
 
