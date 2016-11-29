@@ -20,3 +20,5 @@ android {
         abortOnError false
     }
 }
+dependencies {
+}
