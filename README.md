@@ -50,6 +50,7 @@
 |[BaseCrashHandler][40]|在 Application 中统一捕获异常，保存到文件中下次再打开时上传|
 |[RebootThreadExceptionHandler][41]|重启线程异常处理器，当发生未知异常时会提示异常信息并在一秒钟后重新启动应用。|
 |[StartAppReceiver][42]|重启应用广播接收器。|
+|[DeviceUtils][49]|获取设备唯一标志|
 
 ### Framework 内置工具类
 
@@ -228,4 +229,5 @@ dependencies {
 [46]: https://github.com/jingle1267/android-utils/tree/master/app/src/main/java/com/ihongqiqu/util/ChannelUtil.java
 [47]: http://ihongqiqu.com/2015/07/16/android-mutiple-channel-build/
 [48]: https://github.com/jingle1267/android-utils/tree/master/app/src/main/java/com/ihongqiqu/util/JSONUtils.java
+[49]: https://github.com/jingle1267/android-utils/tree/master/app/src/main/java/com/ihongqiqu/util/DeviceUtils.java
 
