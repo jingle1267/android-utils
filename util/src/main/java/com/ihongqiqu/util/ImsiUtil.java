@@ -201,6 +201,7 @@ public class ImsiUtil {
      *
      * @return
      */
+    @SuppressWarnings("WrongConstant")
     public IMSInfo initQualcommDoubleSim() {
         IMSInfo imsInfo = null;
         try {

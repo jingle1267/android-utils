@@ -6,9 +6,8 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.3.2'
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+        // jcenter bintray-release插件
+        classpath 'com.novoda:bintray-release:0.3.4'
     }
 }
 
@@ -16,6 +15,7 @@ allprojects {
     repositories {
         jcenter()
     }
+    tasks.getByPath(":util:mavenAndroidJavadocs").enabled = false
 }
 
 task clean(type: Delete) {
