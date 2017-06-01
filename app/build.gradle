@@ -29,6 +29,7 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.1.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
+    compile 'com.ihongqiqu.util:android-utils:1.0.0'
     // testCompile 'junit:junit:4.12'
-    compile project(path: ':util')
+    // compile project(path: ':util')
 }

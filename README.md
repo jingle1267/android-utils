@@ -120,14 +120,19 @@ AOSP 源码中包含Util关键字的类，整理出的列表如下：
 ### 如何使用 (How to install)
 
 ```xml	
-repositories {
-    maven {
-        url "https://jitpack.io"
+allprojects {
+    repositories {
+        // other repositories
+        maven {
+            url  "http://hongqiqu.bintray.com/maven"
+        }
     }
 }
-		
+```
+
+```xml
 dependencies {
-    compile 'com.github.kibotu:android-utils:1.0.0'
+    compile 'com.ihongqiqu.util:android-utils:1.0.0'
 }
 ```
 

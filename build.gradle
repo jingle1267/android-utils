@@ -9,11 +9,15 @@ buildscript {
         // jcenter bintray-release插件
         classpath 'com.novoda:bintray-release:0.3.4'
     }
+
 }
 
 allprojects {
     repositories {
         jcenter()
+        maven {
+            url  "http://hongqiqu.bintray.com/maven"
+        }
     }
     tasks.getByPath(":util:mavenAndroidJavadocs").enabled = false
 }
