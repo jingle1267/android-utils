@@ -226,10 +226,10 @@ dependencies {
 [37]: https://github.com/jingle1267/android-utils/tree/master/util/src/main/java/com/ihongqiqu/util/ViewUtils.java
 [38]: https://github.com/jingle1267/android-utils/tree/master/util/src/main/java/com/ihongqiqu/util/WindowUtils.java
 
-[39]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/app/BaseApplication.java
-[40]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/app/BaseCrashHandler.java
-[41]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/app/RebootThreadExceptionHandler.java
-[42]: https://github.com/jingle1267/android-utils/blob/master/src/com/ihongqiqu/app/StartAppReceiver.java
+[39]: https://github.com/jingle1267/android-utils/tree/master/app/src/com/ihongqiqu/app/BaseApplication.java
+[40]: https://github.com/jingle1267/android-utils/tree/master/app/src/com/ihongqiqu/app/BaseCrashHandler.java
+[41]: https://github.com/jingle1267/android-utils/tree/master/app/src/com/ihongqiqu/app/RebootThreadExceptionHandler.java
+[42]: https://github.com/jingle1267/android-utils/tree/master/app/src/com/ihongqiqu/app/StartAppReceiver.java
 [43]: http://ihongqiqu.com/2014/10/16/android-log/
 [44]: http://ihongqiqu.com
 [45]: https://github.com/jingle1267/android-utils/tree/master/util/src/main/java/com/ihongqiqu/util/ViewFinder.java

@@ -5,7 +5,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:padding="10dip"
         android:orientation="vertical">
@@ -14,10 +14,10 @@
             android:id="@+id/textView1"
             android:layout_margin="15dp"
             android:textSize="20sp"
-            android:gravity="left"
+            android:gravity="start"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="圆形图：" />
+            android:text="@string/str_circle_title" />
 
         <ImageView
             android:id="@+id/iv_round_origin"
@@ -34,10 +34,10 @@
             android:id="@+id/textView2"
             android:layout_margin="15dp"
             android:textSize="20sp"
-            android:gravity="left"
+            android:gravity="start"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="合并图：" />
+            android:text="@string/str_combine_img" />
 
         <ImageView
             android:id="@+id/iv_round_combine"
@@ -51,10 +51,10 @@
             android:background="@android:color/darker_gray" />
 
         <TextView
-            android:text="高斯模糊:"
+            android:text="@string/str_gaosimohu"
             android:layout_margin="15dp"
             android:textSize="20sp"
-            android:gravity="left"
+            android:gravity="start"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
@@ -64,7 +64,7 @@
 
             <Button
                 android:id="@+id/radius_small"
-                android:text="Radius -"
+                android:text="@string/str_radius_low"
                 android:layout_weight="1"
                 android:onClick="radiusSmall"
                 android:layout_width="wrap_content"
@@ -72,7 +72,7 @@
 
             <Button
                 android:id="@+id/radius_big"
-                android:text="Radius +"
+                android:text="@string/str_radius_high"
                 android:layout_weight="1"
                 android:onClick="radiusBig"
                 android:layout_width="wrap_content"

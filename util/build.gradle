@@ -37,7 +37,7 @@ publish {
     userOrg = 'hongqiqu'
     groupId = 'com.ihongqiqu.util'
     artifactId = 'android-utils'
-    publishVersion = '1.0.0'
+    publishVersion = '1.0.1'
     desc = 'android utils'
     website = 'https://github.com/jingle1267/android-utils'
 }

@@ -15,6 +15,8 @@
  */
 package com.ihongqiqu.util;
 
+import android.Manifest;
+
 import android.annotation.TargetApi;
 import android.app.ActivityManager;
 import android.app.ActivityManager.MemoryInfo;
@@ -31,6 +33,7 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.Signature;
 import android.net.Uri;
 import android.os.Build;
+import android.support.v4.app.ActivityCompat;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.util.Log;
@@ -506,17 +509,31 @@ public final class AppUtils {
     }
 
     /**
-     * 获取设备唯一标识
+     * 获取设备唯一标识 本方法调用需要READ_PHONE_STATE权限
+     *
      * @param context
      * @return
      */
     public static String getUUID(Context context) {
-        final TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+        String tmDevice = "", tmSerial = "", tmPhone = "", androidId = "";
+        if (ActivityCompat.checkSelfPermission(context, Manifest.permission.READ_PHONE_STATE)
+                == PackageManager.PERMISSION_GRANTED) {
+            try {
+                final TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
 
-        final String tmDevice, tmSerial, tmPhone, androidId;
-        tmDevice = "" + tm.getDeviceId();
-        tmSerial = "" + tm.getSimSerialNumber();
-        androidId = "" + android.provider.Settings.Secure.getString(context.getContentResolver(), android.provider.Settings.Secure.ANDROID_ID);
+                tmDevice = "" + tm.getDeviceId();
+                tmSerial = "" + tm.getSimSerialNumber();
+                androidId = "" + android.provider.Settings.Secure.getString(context.getContentResolver(), android.provider.Settings.Secure.ANDROID_ID);
+            } catch (Exception e) {
+                Log.e("AppUtils", "exception:" + e.getMessage());
+            }
+        } else {
+            Log.e("AppUtils", "没有 android.permission.READ_PHONE_STATE 权限");
+            tmDevice = "device";
+            tmSerial = "serial";
+            androidId = "androidid";
+        }
+
 
         UUID deviceUuid = new UUID(androidId.hashCode(), ((long) tmDevice.hashCode() << 32) | tmSerial.hashCode());
         String uniqueId = deviceUuid.toString();
@@ -527,6 +544,7 @@ public final class AppUtils {
 
     /**
      * 是否是主线程
+     *
      * @return
      */
     public static boolean isMainProcess(Context context) {
