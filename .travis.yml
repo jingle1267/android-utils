@@ -1,7 +1,6 @@
 language: android
 
-java:
-  version: openjdk8
+jdk: openjdk8
 
 sudo: false
 
