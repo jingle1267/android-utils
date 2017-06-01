@@ -8,7 +8,6 @@ import android.preference.PreferenceManager;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.util.Log;
-import com.ihongqiqu.demo.BuildConfig;
 import java.util.UUID;
 
 /**

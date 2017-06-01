@@ -34,7 +34,6 @@ import android.os.Build;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.util.Log;
-import com.ihongqiqu.demo.BuildConfig;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileFilter;

@@ -22,7 +22,6 @@ import android.content.Intent;
 import android.content.Intent.ShortcutIconResource;
 import android.database.Cursor;
 import android.net.Uri;
-import com.ihongqiqu.demo.R;
 
 /**
  * 创建删除快捷图标
@@ -65,21 +64,22 @@ public final class ShortCutUtils {
     /**
      * 为程序创建桌面快捷方式
      *
-     * @param activity Activity
+     * @param activity     Activity
+     * @param resId        图标资源ID
+     * @param shortCutName 图标名称，在桌面上显示的名字
      */
-    public static void addShortcut(Activity activity) {
+    public static void addShortcut(Activity activity, int resId, String shortCutName) {
         Intent shortcut = new Intent(
                 "com.android.launcher.action.INSTALL_SHORTCUT");
         // 快捷方式的名称
-        shortcut.putExtra(Intent.EXTRA_SHORTCUT_NAME,
-                activity.getString(R.string.app_name));
+        shortcut.putExtra(Intent.EXTRA_SHORTCUT_NAME, shortCutName);
         shortcut.putExtra("duplicate", false); // 不允许重复创建
         Intent shortcutIntent = new Intent(Intent.ACTION_MAIN);
         shortcutIntent.setClassName(activity, activity.getClass().getName());
         shortcut.putExtra(Intent.EXTRA_SHORTCUT_INTENT, shortcutIntent);
         // 快捷方式的图标
         ShortcutIconResource iconRes = ShortcutIconResource.fromContext(
-                activity, R.mipmap.ic_launcher);
+                activity, resId);
         shortcut.putExtra(Intent.EXTRA_SHORTCUT_ICON_RESOURCE, iconRes);
 
         activity.sendBroadcast(shortcut);

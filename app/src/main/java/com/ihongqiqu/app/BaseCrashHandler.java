@@ -19,9 +19,7 @@ import android.content.Context;
 import android.os.Environment;
 import android.os.Looper;
 import android.widget.Toast;
-
 import com.ihongqiqu.util.LogUtils;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.lang.Thread.UncaughtExceptionHandler;
