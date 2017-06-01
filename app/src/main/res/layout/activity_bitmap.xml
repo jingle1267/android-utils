@@ -82,7 +82,7 @@
 
         <ImageView
             android:id="@+id/iv_blur"
-            android:src="@drawable/sea"
+            android:src="@mipmap/sea"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 

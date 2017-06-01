@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.worthed">
+<manifest package="com.ihongqiqu.demo"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
     <!-- 工具库中有些工具类需要这些权限 可根据应用需求进行删减 -->
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.GET_TASKS" />
@@ -13,20 +14,20 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
-        android:name="com.ihongqiqu.app.BaseApplication"
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <!-- 工具库中不需要下列测试Activity -->
         <activity
-            android:name="com.ihongqiqu.demo.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name">
-            <!--<intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
         </activity>
         <activity
             android:name="com.ihongqiqu.demo.BitmapActivity"
