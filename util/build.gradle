@@ -9,7 +9,7 @@ android {
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.2"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -34,10 +34,10 @@ dependencies {
 }
 
 publish {
-    userOrg = 'hongqiqu'
-    groupId = 'com.ihongqiqu.util'
+    userOrg = 'ihongqiqu'
+    groupId = 'com.ihongqiqu'
     artifactId = 'android-utils'
-    publishVersion = '1.0.1'
+    publishVersion = '1.0.2'
     desc = 'android utils'
     website = 'https://github.com/jingle1267/android-utils'
 }

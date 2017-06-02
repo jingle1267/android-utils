@@ -1,4 +1,7 @@
-##  Android工具类库 [![Build Status](https://travis-ci.org/kibotu/android-utils.svg?branch=master)](https://travis-ci.org/kibotu/android-utils) [![](https://jitpack.io/v/kibotu/android-utils.svg)](https://jitpack.io/#kibotu/android-utils)  [![API](https://img.shields.io/badge/API-3%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=3) [![Gradle Version](https://img.shields.io/badge/gradle-2.13-green.svg)](https://docs.gradle.org/current/release-notes) [![Licence](https://img.shields.io/badge/licence-Apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
+##  Android工具类库 [![Build Status](https://travis-ci.org/jingle1267/android-utils.svg?branch=master)](https://travis-ci.org/jingle1267/android-utils) 
+[ ![Download](https://api.bintray.com/packages/ihongqiqu/maven/android-utils/images/download.svg) ](https://bintray.com/ihongqiqu/maven/android-utils/_latestVersion)
+[![API](https://img.shields.io/badge/API-15%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=15) [![Gradle Version](https://img.shields.io/badge/gradle-3.3-green.svg)](https://docs.gradle.org/current/release-notes) [![Licence](https://img.shields.io/badge/licence-Apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
+
   
   囊括了一大部分Android应用开发过程当中常用的工具类。工具类来源整理自网络和自己编写。
   
@@ -124,15 +127,16 @@ allprojects {
     repositories {
         // other repositories
         maven {
-            url  "http://hongqiqu.bintray.com/maven"
+            url  "http://dl.bintray.com/ihongqiqu/maven"
         }
     }
 }
 ```
 
+
 ```xml
 dependencies {
-    compile 'com.ihongqiqu.util:android-utils:1.0.0'
+    compile 'com.ihongqiqu:android-utils:1.0.2'
 }
 ```
 
