@@ -10,6 +10,7 @@ licenses:
   - 'android-sdk-license-.+'
   - 'android-sdk-license'
   - 'google-gdk-license-.+'
+  - '.+'
 
 android:
   components:
