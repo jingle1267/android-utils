@@ -9,6 +9,7 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Build;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
+import android.util.Log;
 
 import java.io.IOException;
 import java.util.Enumeration;
@@ -16,6 +17,8 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
 public class ChannelUtil {
+
+    private static final String TAG = "ChannelUtil";
 
     private static final String CHANNEL_KEY = "channel_key";
     private static final String CHANNEL_VERSION_KEY = "channel_version_key";
@@ -87,13 +90,13 @@ public class ChannelUtil {
                 }
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            Log.e(TAG, "getChannel failed", e);
         } finally {
             if (zipfile != null) {
                 try {
                     zipfile.close();
                 } catch (IOException e) {
-                    e.printStackTrace();
+                    Log.e(TAG, "getChannel failed", e);
                 }
             }
         }
@@ -154,7 +157,7 @@ public class ChannelUtil {
         try {
             return context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionCode;
         } catch (NameNotFoundException e) {
-            e.printStackTrace();
+            Log.e(TAG, "getChannel failed", e);
         }
         return -1;
     }

@@ -60,8 +60,8 @@ import javax.security.auth.x500.X500Principal;
  */
 public final class AppUtils {
 
-    private static final boolean DEBUG = true;
     private static final String TAG = "AppUtils";
+    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
 
     /**
      * Don't let anyone instantiate this class.
@@ -82,7 +82,7 @@ public final class AppUtils {
             String packageName = context.getPackageName();
             verCode = context.getPackageManager().getPackageInfo(packageName, 0).versionCode;
         } catch (NameNotFoundException e) {
-            e.printStackTrace();
+            Log.e(TAG, "Operation failed", e);
         }
         return verCode;
     }
@@ -99,7 +99,7 @@ public final class AppUtils {
             String packageName = context.getPackageName();
             verName = context.getPackageManager().getPackageInfo(packageName, 0).versionName;
         } catch (NameNotFoundException e) {
-            e.printStackTrace();
+            Log.e(TAG, "Operation failed", e);
         }
         return verName;
     }
@@ -180,7 +180,7 @@ public final class AppUtils {
         try {
             intent_service = new Intent(context, Class.forName(className));
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.e(TAG, "Operation failed", e);
         }
         if (intent_service != null) {
             ret = context.stopService(intent_service);
@@ -284,7 +284,7 @@ public final class AppUtils {
                     pkgName, PackageManager.GET_SIGNATURES);
             return hexdigest(pis.signatures[0].toByteArray());
         } catch (NameNotFoundException e) {
-            e.printStackTrace();
+            Log.e(TAG, "Operation failed", e);
             return null;
         }
     }
@@ -312,7 +312,7 @@ public final class AppUtils {
                 arrayOfChar[++j] = hexDigits[(k & 0xF)];
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.e(TAG, "Operation failed", e);
         }
         return "";
     }

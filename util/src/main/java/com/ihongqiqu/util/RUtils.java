@@ -16,6 +16,7 @@
 package com.ihongqiqu.util;
 
 import android.content.Context;
+import android.util.Log;
 
 /**
  * R资源反射工具类
@@ -23,6 +24,8 @@ import android.content.Context;
  * @author zhenguo
  */
 public final class RUtils {
+
+    private static final String TAG = "RUtils";
 
     public static final String POINT = "";
     public static final String R = "R";
@@ -59,7 +62,7 @@ public final class RUtils {
                     .forName(context.getPackageName() + POINT + R + JOIN + ANIM)
                     .getDeclaredField(name).get(null);
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.e(TAG, "Resource reflection failed", e);
             return -1;
         }
     }
@@ -76,7 +79,7 @@ public final class RUtils {
                     .forName(context.getPackageName() + POINT + R + JOIN + ATTR)
                     .getDeclaredField(name).get(null);
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.e(TAG, "Resource reflection failed", e);
             return -1;
         }
     }
@@ -94,7 +97,7 @@ public final class RUtils {
                             context.getPackageName() + POINT + R + JOIN + COLOR)
                     .getDeclaredField(name).get(null);
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.e(TAG, "Resource reflection failed", e);
             return -1;
         }
     }
@@ -112,7 +115,7 @@ public final class RUtils {
                             context.getPackageName() + POINT + R + JOIN + DIMEN)
                     .getDeclaredField(name).get(null);
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.e(TAG, "Resource reflection failed", e);
             return -1;
         }
     }
@@ -131,7 +134,7 @@ public final class RUtils {
                                     + DRAWABLE).getDeclaredField(name)
                     .get(null);
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.e(TAG, "Resource reflection failed", e);
             return -1;
         }
     }
@@ -148,7 +151,7 @@ public final class RUtils {
                     .forName(context.getPackageName() + POINT + R + JOIN + ID)
                     .getDeclaredField(name).get(null);
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.e(TAG, "Resource reflection failed", e);
             return -1;
         }
     }
@@ -166,7 +169,7 @@ public final class RUtils {
                             context.getPackageName() + POINT + R + JOIN
                                     + LAYOUT).getDeclaredField(name).get(null);
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.e(TAG, "Resource reflection failed", e);
             return -1;
         }
     }
@@ -183,7 +186,7 @@ public final class RUtils {
                     .forName(context.getPackageName() + POINT + R + JOIN + MENU)
                     .getDeclaredField(name).get(null);
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.e(TAG, "Resource reflection failed", e);
             return -1;
         }
     }
@@ -200,7 +203,7 @@ public final class RUtils {
                     .forName(context.getPackageName() + POINT + R + JOIN + RAW)
                     .getDeclaredField(name).get(null);
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.e(TAG, "Resource reflection failed", e);
             return -1;
         }
     }
@@ -218,7 +221,7 @@ public final class RUtils {
                             context.getPackageName() + POINT + R + JOIN
                                     + STRING).getDeclaredField(name).get(null);
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.e(TAG, "Resource reflection failed", e);
             return -1;
         }
     }
@@ -236,7 +239,7 @@ public final class RUtils {
                             context.getPackageName() + POINT + R + JOIN + STYLE)
                     .getDeclaredField(name).get(null);
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.e(TAG, "Resource reflection failed", e);
             return -1;
         }
     }
@@ -255,7 +258,7 @@ public final class RUtils {
                                     + STYLEABLE).getDeclaredField(name)
                     .get(null);
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.e(TAG, "Resource reflection failed", e);
             return null;
         }
     }
@@ -277,7 +280,7 @@ public final class RUtils {
                     .getDeclaredField(styleableName + "_" + attributeName)
                     .get(null);
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.e(TAG, "Resource reflection failed", e);
             return -1;
         }
     }

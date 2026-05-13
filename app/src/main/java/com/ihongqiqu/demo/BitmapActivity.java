@@ -44,7 +44,6 @@ public class BitmapActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bitmap);
         imageViewOrigin = (ImageView) findViewById(R.id.iv_round_origin);

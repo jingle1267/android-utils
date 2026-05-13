@@ -74,8 +74,10 @@ public class DoubleKeyValueMap<K1, K2, V> {
         Set<K1> k1Set = k1_k2V_map.keySet();
         result = new ArrayList<V>();
         for (K1 k1 : k1Set) {
-            Collection<V> values = k1_k2V_map.get(k1).values();
-            result.addAll(values);
+            ConcurrentHashMap<K2, V> inner = k1_k2V_map.get(k1);
+            if (inner != null) {
+                result.addAll(inner.values());
+            }
         }
         return result;
     }

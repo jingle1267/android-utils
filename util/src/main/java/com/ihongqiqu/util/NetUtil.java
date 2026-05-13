@@ -21,6 +21,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.NetworkInfo.State;
 import android.telephony.TelephonyManager;
+import android.util.Log;
 import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -36,6 +37,8 @@ import java.util.regex.Pattern;
  * @author jingle1267@163.com
  */
 public final class NetUtil {
+
+    private static final String TAG = "NetUtil";
 
     /**
      * 判断网络连接是否打开,包括移动数据连接
@@ -249,7 +252,7 @@ public final class NetUtil {
                 }
             }
         } catch (UnsupportedEncodingException ex) {
-            ex.printStackTrace();
+            Log.e(TAG, "Network util error", ex);
         }
         return params;
     }

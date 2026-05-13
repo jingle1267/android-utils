@@ -22,6 +22,7 @@ import android.app.DownloadManager.Request;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
+import android.util.Log;
 
 import java.lang.reflect.Method;
 
@@ -59,6 +60,8 @@ import java.lang.reflect.Method;
 @SuppressLint("InlinedApi")
 @TargetApi(Build.VERSION_CODES.GINGERBREAD)
 public class DownloadManagerPro {
+
+    private static final String TAG = "DownloadManagerPro";
 
     public static final Uri CONTENT_URI = Uri
             .parse("content://downloads/my_downloads");
@@ -171,7 +174,7 @@ public class DownloadManagerPro {
              * NoSuchMethodException, InvocationTargetException,
              * NullPointException
              */
-            e.printStackTrace();
+            Log.e(TAG, "Reflection call failed", e);
         }
         return -1;
     }
@@ -197,7 +200,7 @@ public class DownloadManagerPro {
              * NoSuchMethodException, InvocationTargetException,
              * NullPointException
              */
-            e.printStackTrace();
+            Log.e(TAG, "Reflection call failed", e);
         }
         return -1;
     }
@@ -225,7 +228,7 @@ public class DownloadManagerPro {
                     METHOD_NAME_PAUSE_DOWNLOAD, long[].class);
         } catch (Exception e) {
             // accept all exception
-            e.printStackTrace();
+            Log.e(TAG, "Reflection call failed", e);
         }
     }
 
@@ -240,7 +243,7 @@ public class DownloadManagerPro {
                     METHOD_NAME_RESUME_DOWNLOAD, long[].class);
         } catch (Exception e) {
             // accept all exception
-            e.printStackTrace();
+            Log.e(TAG, "Reflection call failed", e);
         }
     }
 
@@ -348,7 +351,7 @@ public class DownloadManagerPro {
                                 METHOD_NAME_SET_NOTI_CLASS, CharSequence.class);
                     } catch (Exception e) {
                         // accept all exception
-                        e.printStackTrace();
+                        Log.e(TAG, "Reflection call failed", e);
                     }
                 }
             }
@@ -362,7 +365,7 @@ public class DownloadManagerPro {
                      * NoSuchMethodException, InvocationTargetException,
                      * NullPointException
                      */
-                    e.printStackTrace();
+                    Log.e(TAG, "Reflection call failed", e);
                 }
             }
         }
@@ -383,7 +386,7 @@ public class DownloadManagerPro {
                                         CharSequence.class);
                     } catch (Exception e) {
                         // accept all exception
-                        e.printStackTrace();
+                        Log.e(TAG, "Reflection call failed", e);
                     }
                 }
             }
@@ -397,7 +400,7 @@ public class DownloadManagerPro {
                      * NoSuchMethodException, InvocationTargetException,
                      * NullPointException
                      */
-                    e.printStackTrace();
+                    Log.e(TAG, "Reflection call failed", e);
                 }
             }
         }

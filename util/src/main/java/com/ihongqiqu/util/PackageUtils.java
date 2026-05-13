@@ -491,7 +491,7 @@ public final class PackageUtils {
                     packageName, 0);
             return (app != null && (app.flags & ApplicationInfo.FLAG_SYSTEM) > 0);
         } catch (NameNotFoundException e) {
-            e.printStackTrace();
+            Log.e(TAG, "Operation failed", e);
         }
         return false;
     }
@@ -525,7 +525,7 @@ public final class PackageUtils {
             return packageName.equals(tasksInfo.get(0).topActivity
                     .getPackageName());
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.e(TAG, "Operation failed", e);
             return false;
         }
     }
@@ -547,7 +547,7 @@ public final class PackageUtils {
                         return pi.versionCode;
                     }
                 } catch (NameNotFoundException e) {
-                    e.printStackTrace();
+                    Log.e(TAG, "Operation failed", e);
                 }
             }
         }
@@ -578,7 +578,7 @@ public final class PackageUtils {
                         return APP_INSTALL_EXTERNAL;
                 }
             } catch (NumberFormatException e) {
-                e.printStackTrace();
+                Log.e(TAG, "Operation failed", e);
                 Log.e(TAG, "pm get-install-location error");
             }
         }

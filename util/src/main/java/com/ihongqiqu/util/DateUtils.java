@@ -16,6 +16,7 @@
 package com.ihongqiqu.util;
 
 import android.text.TextUtils;
+import android.util.Log;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -28,6 +29,8 @@ import java.util.Date;
  * @author jingle1267@163.com
  */
 public final class DateUtils {
+
+    private static final String TAG = "DateUtils";
 
     /**
      * 日期类型 *
@@ -62,7 +65,7 @@ public final class DateUtils {
             SimpleDateFormat df = new SimpleDateFormat(type);
             return df.format(date);
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.e(TAG, "Date parse failed", e);
         }
         return null;
     }
@@ -80,7 +83,7 @@ public final class DateUtils {
         try {
             date = df.parse(dateStr);
         } catch (ParseException e) {
-            e.printStackTrace();
+            Log.e(TAG, "Date parse failed", e);
         }
         return date;
 

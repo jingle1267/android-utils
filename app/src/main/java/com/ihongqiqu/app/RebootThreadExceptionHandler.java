@@ -21,6 +21,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Looper;
 import android.text.TextUtils;
+import android.util.Log;
 import android.widget.Toast;
 
 import java.lang.Thread.UncaughtExceptionHandler;
@@ -36,12 +37,16 @@ import java.util.GregorianCalendar;
  */
 public class RebootThreadExceptionHandler implements UncaughtExceptionHandler {
 
-    private Context context;
-    private String hintText;
+    private static final String TAG = "RebootThreadExcHandler";
+
+    private final Context context;
+    private final String hintText;
+    private final UncaughtExceptionHandler delegate;
 
     public RebootThreadExceptionHandler(Context context, String hintText) {
-        this.context = context;
+        this.context = context.getApplicationContext();
         this.hintText = hintText;
+        this.delegate = Thread.getDefaultUncaughtExceptionHandler();
         Thread.setDefaultUncaughtExceptionHandler(this);
     }
 
@@ -51,10 +56,17 @@ public class RebootThreadExceptionHandler implements UncaughtExceptionHandler {
 
     @Override
     public void uncaughtException(Thread thread, Throwable ex) {
-        ex.printStackTrace();// 输出异常信息到控制台
+        Log.e(TAG, "Uncaught exception", ex);
 
-        if (TextUtils.isEmpty(hintText)) {
-            /* 启动新线程提示程序异常 */
+        AlarmManager alarmManager = (AlarmManager) context
+                .getSystemService(Context.ALARM_SERVICE);
+        Calendar calendar = new GregorianCalendar();
+        calendar.add(Calendar.SECOND, 1);
+        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(),
+                PendingIntent.getBroadcast(context, 0, new Intent(context,
+                        StartAppReceiver.class), 0));
+
+        if (!TextUtils.isEmpty(hintText)) {
             new Thread(new Runnable() {
                 @Override
                 public void run() {
@@ -65,24 +77,22 @@ public class RebootThreadExceptionHandler implements UncaughtExceptionHandler {
                 }
             }).start();
 
-			/* 主线程等待1秒钟，让提示信息显示出来 */
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                Thread.currentThread().interrupt();
+                Log.w(TAG, "Interrupted while waiting for toast", e);
             }
         }
 
-		/* 设置定时器，在1秒钟后发出启动程序的广播 */
-        AlarmManager alarmManager = (AlarmManager) context
-                .getSystemService(Context.ALARM_SERVICE);
-        Calendar calendar = new GregorianCalendar();
-        calendar.add(Calendar.SECOND, 1);
-        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(),
-                PendingIntent.getBroadcast(context, 0, new Intent(context,
-                        StartAppReceiver.class), 0));
+        if (delegate != null && delegate != this) {
+            try {
+                delegate.uncaughtException(thread, ex);
+            } catch (Throwable t) {
+                Log.e(TAG, "Delegate uncaughtException failed", t);
+            }
+        }
 
-        android.os.Process.killProcess(android.os.Process.myPid()); // 结束程序
+        android.os.Process.killProcess(android.os.Process.myPid());
     }
-
 }

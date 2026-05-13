@@ -59,6 +59,8 @@ public final class PhoneUtil {
 
     /**
      * 调用系统打电话界面
+     * <p>从 Android 6.0 起需要 {@link android.Manifest.permission#CALL_PHONE} 运行时授权；
+     * 若未授权则直接返回。请在使用前通过 {@link android.app.Activity#requestPermissions(String[], int)} 等流程申请权限。</p>
      *
      * @param context     上下文
      * @param phoneNumber 手机号码
@@ -72,13 +74,6 @@ public final class PhoneUtil {
         Intent intent = new Intent(Intent.ACTION_CALL, uri);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         if (context.checkSelfPermission(Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    Activity#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for Activity#requestPermissions for more details.
             return;
         }
         context.startActivity(intent);
