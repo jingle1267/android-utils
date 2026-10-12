@@ -18,7 +18,9 @@ package com.ihongqiqu.app;
 import android.content.Context;
 import android.os.Environment;
 import android.os.Looper;
+import android.util.Log;
 import android.widget.Toast;
+import com.ihongqiqu.demo.BuildConfig;
 import com.ihongqiqu.util.LogUtils;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -32,10 +34,12 @@ import java.util.Date;
  */
 public class BaseCrashHandler implements UncaughtExceptionHandler {
 
+    private static final String TAG = "BaseCrashHandler";
+
     /**
      * 是否开启日志输出,在Debug状态下开启, 在Release状态下关闭以提示程序性能
      */
-    public static final boolean DEBUG = true;
+    public static final boolean DEBUG = BuildConfig.DEBUG;
 
     /**
      * 系统默认的UncaughtException处理类
@@ -89,6 +93,8 @@ public class BaseCrashHandler implements UncaughtExceptionHandler {
             try {
                 Thread.sleep(3000);
             } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                Log.w(TAG, "Interrupted during crash shutdown delay", e);
             }
             android.os.Process.killProcess(android.os.Process.myPid());
             System.exit(10);
@@ -146,6 +152,7 @@ public class BaseCrashHandler implements UncaughtExceptionHandler {
                     fos.flush();
                     fos.close();
                 } catch (Exception e) {
+                    Log.e(TAG, "Failed to write crash log file", e);
                 }
             }
 

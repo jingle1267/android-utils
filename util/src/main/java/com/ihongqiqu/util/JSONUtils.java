@@ -19,6 +19,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -31,6 +33,8 @@ import java.util.Map;
  * Created by zhenguo on 4/17/15.
  */
 public final class JSONUtils {
+
+    private static final String TAG = "JSONUtils";
 
     public static boolean isPrintException = true;
 
@@ -60,7 +64,7 @@ public final class JSONUtils {
             return jsonObject.getLong(key);
         } catch (JSONException e) {
             if (isPrintException) {
-                e.printStackTrace();
+                Log.w(TAG, "JSON error", e);
             }
             return defaultValue;
         }
@@ -88,7 +92,7 @@ public final class JSONUtils {
             return getLong(jsonObject, key, defaultValue);
         } catch (JSONException e) {
             if (isPrintException) {
-                e.printStackTrace();
+                Log.w(TAG, "JSON error", e);
             }
             return defaultValue;
         }
@@ -138,7 +142,7 @@ public final class JSONUtils {
             return jsonObject.getInt(key);
         } catch (JSONException e) {
             if (isPrintException) {
-                e.printStackTrace();
+                Log.w(TAG, "JSON error", e);
             }
             return defaultValue;
         }
@@ -166,7 +170,7 @@ public final class JSONUtils {
             return getInt(jsonObject, key, defaultValue);
         } catch (JSONException e) {
             if (isPrintException) {
-                e.printStackTrace();
+                Log.w(TAG, "JSON error", e);
             }
             return defaultValue;
         }
@@ -216,7 +220,7 @@ public final class JSONUtils {
             return jsonObject.getDouble(key);
         } catch (JSONException e) {
             if (isPrintException) {
-                e.printStackTrace();
+                Log.w(TAG, "JSON error", e);
             }
             return defaultValue;
         }
@@ -244,7 +248,7 @@ public final class JSONUtils {
             return getDouble(jsonObject, key, defaultValue);
         } catch (JSONException e) {
             if (isPrintException) {
-                e.printStackTrace();
+                Log.w(TAG, "JSON error", e);
             }
             return defaultValue;
         }
@@ -294,7 +298,7 @@ public final class JSONUtils {
             return jsonObject.getString(key);
         } catch (JSONException e) {
             if (isPrintException) {
-                e.printStackTrace();
+                Log.w(TAG, "JSON error", e);
             }
             return defaultValue;
         }
@@ -322,7 +326,7 @@ public final class JSONUtils {
             return getString(jsonObject, key, defaultValue);
         } catch (JSONException e) {
             if (isPrintException) {
-                e.printStackTrace();
+                Log.w(TAG, "JSON error", e);
             }
             return defaultValue;
         }
@@ -414,7 +418,7 @@ public final class JSONUtils {
             }
         } catch (JSONException e) {
             if (isPrintException) {
-                e.printStackTrace();
+                Log.w(TAG, "JSON error", e);
             }
             return defaultValue;
         }
@@ -443,7 +447,7 @@ public final class JSONUtils {
             return getStringArray(jsonObject, key, defaultValue);
         } catch (JSONException e) {
             if (isPrintException) {
-                e.printStackTrace();
+                Log.w(TAG, "JSON error", e);
             }
             return defaultValue;
         }
@@ -479,7 +483,7 @@ public final class JSONUtils {
             }
         } catch (JSONException e) {
             if (isPrintException) {
-                e.printStackTrace();
+                Log.w(TAG, "JSON error", e);
             }
             return defaultValue;
         }
@@ -508,7 +512,7 @@ public final class JSONUtils {
             return getStringList(jsonObject, key, defaultValue);
         } catch (JSONException e) {
             if (isPrintException) {
-                e.printStackTrace();
+                Log.w(TAG, "JSON error", e);
             }
             return defaultValue;
         }
@@ -536,7 +540,7 @@ public final class JSONUtils {
             return jsonObject.getJSONObject(key);
         } catch (JSONException e) {
             if (isPrintException) {
-                e.printStackTrace();
+                Log.w(TAG, "JSON error", e);
             }
             return defaultValue;
         }
@@ -564,7 +568,7 @@ public final class JSONUtils {
             return getJSONObject(jsonObject, key, defaultValue);
         } catch (JSONException e) {
             if (isPrintException) {
-                e.printStackTrace();
+                Log.w(TAG, "JSON error", e);
             }
             return defaultValue;
         }
@@ -621,7 +625,7 @@ public final class JSONUtils {
             return getJSONObjectCascade(jsonObject, defaultValue, keyArray);
         } catch (JSONException e) {
             if (isPrintException) {
-                e.printStackTrace();
+                Log.w(TAG, "JSON error", e);
             }
             return defaultValue;
         }
@@ -649,7 +653,7 @@ public final class JSONUtils {
             return jsonObject.getJSONArray(key);
         } catch (JSONException e) {
             if (isPrintException) {
-                e.printStackTrace();
+                Log.w(TAG, "JSON error", e);
             }
             return defaultValue;
         }
@@ -677,7 +681,7 @@ public final class JSONUtils {
             return getJSONArray(jsonObject, key, defaultValue);
         } catch (JSONException e) {
             if (isPrintException) {
-                e.printStackTrace();
+                Log.w(TAG, "JSON error", e);
             }
             return defaultValue;
         }
@@ -704,7 +708,7 @@ public final class JSONUtils {
             return jsonObject.getBoolean(key);
         } catch (JSONException e) {
             if (isPrintException) {
-                e.printStackTrace();
+                Log.w(TAG, "JSON error", e);
             }
             return defaultValue;
         }
@@ -732,7 +736,7 @@ public final class JSONUtils {
             return getBoolean(jsonObject, key, defaultValue);
         } catch (JSONException e) {
             if (isPrintException) {
-                e.printStackTrace();
+                Log.w(TAG, "JSON error", e);
             }
             return defaultValue;
         }
@@ -778,7 +782,7 @@ public final class JSONUtils {
             return getMap(jsonObject, key);
         } catch (JSONException e) {
             if (isPrintException) {
-                e.printStackTrace();
+                Log.w(TAG, "JSON error", e);
             }
             return null;
         }
@@ -827,7 +831,7 @@ public final class JSONUtils {
             return parseKeyAndValueToMap(jsonObject);
         } catch (JSONException e) {
             if (isPrintException) {
-                e.printStackTrace();
+                Log.w(TAG, "JSON error", e);
             }
             return null;
         }

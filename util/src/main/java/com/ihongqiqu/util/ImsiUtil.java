@@ -18,6 +18,7 @@ package com.ihongqiqu.util;
 import android.content.Context;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
+import android.util.Log;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -29,6 +30,8 @@ import java.lang.reflect.Method;
  */
 public class ImsiUtil {
 
+    private static final String TAG = "ImsiUtil";
+
     private Integer simId_1 = 0;
     private Integer simId_2 = 1;
     private String imsi_1 = "";
@@ -38,7 +41,6 @@ public class ImsiUtil {
     private Context mContext;
 
     public ImsiUtil(Context mContext) {
-        // TODO Auto-generated constructor stub
         this.mContext = mContext;
     }
 
@@ -223,7 +225,7 @@ public class ImsiUtil {
                 statephoneType_2 = (Integer) mx.invoke(obj);
                 flag = (Boolean) is.invoke(obj);
             } catch (Exception e) {
-                // TODO: handle exception
+                Log.w(TAG, "Optional MSimTelephonyManager API not available", e);
             }
             imsInfo = new IMSInfo();
             imsInfo.chipName = "高通芯片-getPreferredDataSubscription:"
@@ -253,7 +255,7 @@ public class ImsiUtil {
             imsi_1 = tm.getSubscriberId();
             imei_1 = tm.getDeviceId();
         } catch (Exception e) {
-            // TODO: handle exception
+            Log.w(TAG, "Failed to read IMSI/IMEI from TelephonyManager", e);
             imsInfo = null;
             return imsInfo;
         }

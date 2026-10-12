@@ -16,7 +16,10 @@ import java.util.UUID;
 
 public class DeviceUtils {
 
-    /**</span></p>  * deviceID的组成为：渠道标志+识别符来源标志+hash后的终端识别符
+    private static final String TAG = "DeviceUtils";
+
+    /**
+     * deviceID的组成为：渠道标志+识别符来源标志+hash后的终端识别符
      *
      * 渠道标志为：
      * 1，andriod（a）
@@ -71,7 +74,7 @@ public class DeviceUtils {
                 return deviceId.toString();
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.e(TAG, "getDeviceId", e);
             deviceId.append("id").append(UUID.randomUUID().toString());
         }
         if (BuildConfig.DEBUG) Log.e("getDeviceId : ", deviceId.toString());

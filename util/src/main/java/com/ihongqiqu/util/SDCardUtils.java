@@ -19,12 +19,16 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
+import android.util.Log;
+
 /**
  * SDcard操作工具类
  *
  * @author jingle1267@163.com
  */
 public final class SDCardUtils {
+
+    private static final String TAG = "SDCardUtils";
 
     /**
      * Don't let anyone instantiate this class.
@@ -107,7 +111,7 @@ public final class SDCardUtils {
                 fin.close();
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.e(TAG, "SDCard operation failed", e);
         }
         return buffer;
     }

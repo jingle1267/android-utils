@@ -200,7 +200,7 @@ public final class BitmapUtil {
                 os.write(buffer, 0, len);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            Log.e(TAG, "Operation failed", e);
         }
         return os.toByteArray();
     }
@@ -949,7 +949,7 @@ public final class BitmapUtil {
                     break;
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            Log.e(TAG, "Operation failed", e);
         }
         return degree;
     }

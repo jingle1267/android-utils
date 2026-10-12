@@ -2,6 +2,8 @@
 
 buildscript {
     repositories {
+        google()
+        mavenCentral()
         jcenter()
     }
     dependencies {
@@ -14,6 +16,8 @@ buildscript {
 
 allprojects {
     repositories {
+        google()
+        mavenCentral()
         jcenter()
         maven {
             //url  "http://hongqiqu.bintray.com/maven"

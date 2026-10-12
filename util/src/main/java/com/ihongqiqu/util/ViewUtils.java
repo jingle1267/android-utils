@@ -32,6 +32,7 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
+import android.util.Log;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -63,6 +64,8 @@ import java.util.List;
  * @author jingle1267@163.com
  */
 public final class ViewUtils {
+
+    private static final String TAG = "ViewUtils";
 
     /**
      * Don't let anyone instantiate this class.
@@ -114,7 +117,7 @@ public final class ViewUtils {
              * IllegalArgumentException, IllegalAccessException,
              * NullPointException
              */
-            e.printStackTrace();
+            Log.w(TAG, "Could not read GridView vertical spacing", e);
         }
         return verticalSpacing;
     }

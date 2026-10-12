@@ -17,6 +17,7 @@ package com.ihongqiqu.util;
 
 import android.content.Context;
 import android.text.TextUtils;
+import android.util.Log;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -30,6 +31,8 @@ import java.util.List;
  * @author jingle1267@163.com
  */
 public final class ResourceUtils {
+
+    private static final String TAG = "ResourceUtils";
 
     /**
      * Don't let anyone instantiate this class.
@@ -61,7 +64,7 @@ public final class ResourceUtils {
             }
             return s.toString();
         } catch (IOException e) {
-            e.printStackTrace();
+            Log.e(TAG, "Resource read failed", e);
             return null;
         }
     }
@@ -90,7 +93,7 @@ public final class ResourceUtils {
             }
             return s.toString();
         } catch (IOException e) {
-            e.printStackTrace();
+            Log.e(TAG, "Resource read failed", e);
             return null;
         }
     }
@@ -118,7 +121,7 @@ public final class ResourceUtils {
             br.close();
             return fileContent;
         } catch (IOException e) {
-            e.printStackTrace();
+            Log.e(TAG, "Resource read failed", e);
             return null;
         }
     }
@@ -147,7 +150,7 @@ public final class ResourceUtils {
             reader.close();
             return fileContent;
         } catch (IOException e) {
-            e.printStackTrace();
+            Log.e(TAG, "Resource read failed", e);
             return null;
         }
     }

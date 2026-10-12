@@ -24,6 +24,7 @@ import android.os.Build;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.text.TextUtils;
+import android.util.Log;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
@@ -74,6 +75,8 @@ import java.util.List;
  * @author jingle1267@163.com
  */
 public final class FileUtils {
+
+    private static final String TAG = "FileUtils";
 
     public static final long GB = 1073741824; // 1024 * 1024 * 1024
     public static final long MB = 1048576; // 1024 * 1024
@@ -180,12 +183,14 @@ public final class FileUtils {
                 return String.format("%.2f KB", length * 1.0 / KB);
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.e(TAG, "getFileSize", e);
         } finally {
-            try {
-                fis.close();
-            } catch (IOException e) {
-                e.printStackTrace();
+            if (fis != null) {
+                try {
+                    fis.close();
+                } catch (IOException e) {
+                    Log.e(TAG, "close FileInputStream", e);
+                }
             }
         }
         return "未知";
@@ -628,7 +633,7 @@ public final class FileUtils {
                 swapStream.write(buff, 0, rc);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            Log.e(TAG, "input2byte", e);
         }
         return swapStream.toByteArray();
     }

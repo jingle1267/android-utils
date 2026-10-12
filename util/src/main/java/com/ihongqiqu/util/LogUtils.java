@@ -38,12 +38,6 @@ public final class LogUtils {
     public static final int DEBUG_LEVEL = 0;
 
     /**
-     * 'System.out' switch.When it is true, you can see the 'System.out' log.
-     * Otherwise, you cannot.
-     */
-    public static final boolean DEBUG_SYSOUT = false;
-
-    /**
      * Send a {@link Log#VERBOSE} log message.
      *
      * @param obj
@@ -215,9 +209,6 @@ public final class LogUtils {
             String tag = getClassName();
             String method = callMethodAndLine();
             Log.v(tag, method);
-            if (DEBUG_SYSOUT) {
-                System.out.println(tag + "  " + method);
-            }
         }
     }
 
@@ -238,9 +229,6 @@ public final class LogUtils {
                 content = " ## " + "                ----    " + method;
             }
             Log.d(tag, content);
-            if (DEBUG_SYSOUT) {
-                System.out.println(tag + "  " + content + "  " + method);
-            }
         }
     }
 
@@ -261,9 +249,6 @@ public final class LogUtils {
                 content = " ## " + "                    ----    " + method;
             }
             Log.e(tag, content);
-            if (DEBUG_SYSOUT) {
-                System.err.println(tag + "  " + method + "  " + content);
-            }
         }
     }
 
@@ -278,9 +263,6 @@ public final class LogUtils {
             String method = callMethodAndLine();
             String hierarchy = getCallHierarchy();
             Log.v(tag, method + hierarchy);
-            if (DEBUG_SYSOUT) {
-                System.out.println(tag + "  " + method + hierarchy);
-            }
         }
     }
 
@@ -301,9 +283,6 @@ public final class LogUtils {
                 content = " ## " + "                ----    " + method;
             }
             Log.d(tag, content);
-            if (DEBUG_SYSOUT) {
-                System.out.println(tag + "  " + content + "  " + method);
-            }
         }
     }
 

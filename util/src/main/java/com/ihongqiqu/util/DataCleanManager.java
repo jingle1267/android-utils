@@ -17,6 +17,7 @@ package com.ihongqiqu.util;
 
 import android.content.Context;
 import android.os.Environment;
+import android.util.Log;
 
 import java.io.File;
 import java.math.BigDecimal;
@@ -28,6 +29,8 @@ import java.math.BigDecimal;
  * @author jingle1267@163.com
  */
 public class DataCleanManager {
+
+    private static final String TAG = "DataCleanManager";
 
     /**
      * 清除本应用内部缓存(/data/data/com.xxx.xxx/cache)
@@ -150,7 +153,7 @@ public class DataCleanManager {
                 }
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.e(TAG, "clean failed", e);
         }
         return size;
     }

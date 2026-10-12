@@ -21,6 +21,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.List;
 
+import android.util.Log;
+
 /**
  * ShellUtils
  * <ul>
@@ -40,6 +42,8 @@ import java.util.List;
  * @author jingle1267@163.com
  */
 public final class ShellUtils {
+
+    private static final String TAG = "ShellUtils";
 
     public static final String COMMAND_SU = "su";
     public static final String COMMAND_SH = "sh";
@@ -194,9 +198,9 @@ public final class ShellUtils {
                 }
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            Log.e(TAG, "Shell command failed", e);
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.e(TAG, "Shell command failed", e);
         } finally {
             try {
                 if (os != null) {
@@ -209,7 +213,7 @@ public final class ShellUtils {
                     errorResult.close();
                 }
             } catch (IOException e) {
-                e.printStackTrace();
+                Log.e(TAG, "Shell command failed", e);
             }
 
             if (process != null) {
